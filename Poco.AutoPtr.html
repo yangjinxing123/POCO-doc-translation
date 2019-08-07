@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::AutoPtr</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="template">template &lt; class C &gt;</h1>
+<h1 class="symbol">class AutoPtr</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Core<br />
+<b>Header:</b> Poco/AutoPtr.h</p>
+<h2>Description</h2>
+<div class="description">
+<p><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> is a &quot;smart&quot; pointer for classes implementing reference counting based garbage collection. To be usable with the <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> template, a class must implement the following behaviour: A class must maintain a reference count. The constructors of the object initialize the reference count to one. The class must implement a public <a href="Poco.AutoPtr.html#8856" title="Poco::AutoPtr::duplicate()">duplicate</a>() method: </p>
+<pre>void duplicate();
+</pre>
+<p>that increments the reference count by one. The class must implement a public release() method: </p>
+<pre>void release()
+</pre>
+<p>that decrements the reference count by one, and, if the reference count reaches zero, deletes the object. </p>
+<p><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> works in the following way: If an <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> is assigned an ordinary pointer to an object (via the constructor or the assignment operator), it takes ownership of the object and the object's reference  count remains unchanged. If the <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> is assigned another <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>, the object's reference count is incremented by one by calling <a href="Poco.AutoPtr.html#8856" title="Poco::AutoPtr::duplicate()">duplicate</a>() on its object. The destructor of <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> calls release() on its object. <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> supports dereferencing with both the -&gt; and the * operator. An attempt to dereference a null <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> results in a <a href="Poco.NullPointerException.html" title="class Poco::NullPointerException">NullPointerException</a> being thrown. <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> also implements all relational operators. Note that <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> allows casting of its encapsulated data types. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.AutoPtr.html#8817" title="Poco::AutoPtr::assign()">assign</a>, <a href="Poco.AutoPtr.html#8844" title="Poco::AutoPtr::cast()">cast</a>, <a href="Poco.AutoPtr.html#8856" title="Poco::AutoPtr::duplicate()">duplicate</a>, <a href="Poco.AutoPtr.html#8850" title="Poco::AutoPtr::get()">get</a>, <a href="Poco.AutoPtr.html#8855" title="Poco::AutoPtr::isNull()">isNull</a>, <a href="Poco.AutoPtr.html#8854" title="Poco::AutoPtr::operator !()">operator&nbsp;!</a>, <a href="Poco.AutoPtr.html#8863" title="Poco::AutoPtr::operator !=()">operator&nbsp;!=</a>, <a href="Poco.AutoPtr.html#8848" title="Poco::AutoPtr::operator *()">operator&nbsp;*</a>, <a href="Poco.AutoPtr.html#8869" title="Poco::AutoPtr::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.AutoPtr.html#8875" title="Poco::AutoPtr::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.AutoPtr.html#8836" title="Poco::AutoPtr::operator =()">operator&nbsp;=</a>, <a href="Poco.AutoPtr.html#8857" title="Poco::AutoPtr::operator ==()">operator&nbsp;==</a>, <a href="Poco.AutoPtr.html#8881" title="Poco::AutoPtr::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.AutoPtr.html#8887" title="Poco::AutoPtr::operator >=()">operator&nbsp;&gt;=</a>, <a href="Poco.AutoPtr.html#8852" title="Poco::AutoPtr::operator C *()">operator&nbsp;C&nbsp;*</a>, <a href="Poco.AutoPtr.html#8853" title="Poco::AutoPtr::operator const C *()">operator&nbsp;const&nbsp;C&nbsp;*</a>, <a href="Poco.AutoPtr.html#8846" title="Poco::AutoPtr::operator->()">operator-&gt;</a>, <a href="Poco.AutoPtr.html#8826" title="Poco::AutoPtr::reset()">reset</a>, <a href="Poco.AutoPtr.html#8842" title="Poco::AutoPtr::swap()">swap</a>, <a href="Poco.AutoPtr.html#8845" title="Poco::AutoPtr::unsafeCast()">unsafeCast</a></p>
+<h2>Constructors</h2>
+<h3><a id="8806">AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8807">AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8812">AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8814">AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8809">AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool shared<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="8816">~AutoPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="8817">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8819">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool shared<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8822">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8824">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8844">cast</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; cast() const;</p>
+<div class="description">
+<p>Casts the <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> via a dynamic cast to the given type. Returns an <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> containing NULL if the cast fails. Example: (assume class Sub: public Super) </p>
+<pre>AutoPtr&lt;Super&gt; super(new Sub());
+AutoPtr&lt;Sub&gt; sub = super.cast&lt;Sub&gt;();
+poco_assert (sub.get());
+</pre>
+</div>
+<h3><a id="8856">duplicate</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C * duplicate();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8850">get</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C * get();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8851">get</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C * get() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8855">isNull</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isNull() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8854">operator !</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator ! () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8863">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8865">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8867">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8848">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C &amp; operator * ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8849">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C &amp; operator * () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8869">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8871">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8873">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8875">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8877">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8879">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8836">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8838">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8840">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8857">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8859">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8861">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8881">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8883">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8885">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8887">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8889">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8891">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8852">operator C *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator C * ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8853">operator const C *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator const C * () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8846">operator-&gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C * operator-&gt; ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8847">operator-&gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C * operator-&gt; () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8826">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8827">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8829">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool shared<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8832">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8834">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8842">swap</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="8845">unsafeCast</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> &lt; Other &gt; unsafeCast() const;</p>
+<div class="description">
+<p>Casts the <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> via a static cast to the given type. Example: (assume class Sub: public Super) </p>
+<pre>AutoPtr&lt;Super&gt; super(new Sub());
+AutoPtr&lt;Sub&gt; sub = super.unsafeCast&lt;Sub&gt;();
+poco_assert (sub.get());
+</pre>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

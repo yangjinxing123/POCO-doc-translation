@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::JSON::Parser</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.JSON.html" class="namespace">Poco::JSON</a></h1>
+<h1 class="symbol">class Parser</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-JSON" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> JSON<br />
+<b>Package:</b> JSON<br />
+<b>Header:</b> Poco/JSON/Parser.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>A parser for reading <a href="https://www.ietf.org/rfc/rfc4627.txt" target="_blank">RFC 4627</a> compliant <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> from strings or streams. </p>
+<p>Simple usage example: </p>
+<p></p>
+<pre>std::string json = &quot;{ \&quot;name\&quot; : \&quot;Franky\&quot;, \&quot;children\&quot; : [ \&quot;Jonas\&quot;, \&quot;Ellen\&quot; ] }&quot;;
+Parser parser;
+Var result = parser.parse(json);
+// ... use result (see next example)
+parser.reset();
+std::ostringstream ostr;
+PrintHandler::Ptr pHandler = new PrintHandler(ostr);
+parser.setHandler(pHandler);
+parser.parse(json); // ostr.str() == json
+</pre>
+<p> </p>
+<p>The result of parsing a valid <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> document will be either an <a href="Poco.JSON.Object.html" title="class Poco::JSON::Object">Object</a> or an <a href="Poco.JSON.Array.html" title="class Poco::JSON::Array">Array</a>. Therefore the result of <a href="Poco.JSON.Parser.html#20306" title="Poco::JSON::Parser::parse()">parse</a>() is a <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Poco::Dynamic::Var</a> containing a <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">Poco::SharedPtr</a> to an <a href="Poco.JSON.Object.html" title="class Poco::JSON::Object">Object</a> or <a href="Poco.JSON.Array.html" title="class Poco::JSON::Array">Array</a> instance. </p>
+<p>Example: </p>
+<p></p>
+<pre>std::string json = &quot;{ \&quot;name\&quot; : \&quot;Franky\&quot;, \&quot;children\&quot; : [ \&quot;Jonas\&quot;, \&quot;Ellen\&quot; ] }&quot;;
+Parser parser;
+Var result = parser.parse(json);
+Object::Ptr object = result.extract&lt;Object::Ptr&gt;();
+std::string name = object.getValue&lt;std::string&gt;(&quot;name&quot;);
+Array::Ptr children = object.getArray(&quot;children&quot;);
+</pre>
+<p> </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a></p>
+<p><b>All Base Classes: </b><a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.JSON.Parser.html#20313" title="Poco::JSON::Parser::asVar()">asVar</a>, <a href="Poco.JSON.Parser.html#20299" title="Poco::JSON::Parser::getAllowComments()">getAllowComments</a>, <a href="Poco.JSON.Parser.html#20302" title="Poco::JSON::Parser::getAllowNullByte()">getAllowNullByte</a>, <a href="Poco.JSON.Parser.html#20305" title="Poco::JSON::Parser::getDepth()">getDepth</a>, <a href="Poco.JSON.Parser.html#20312" title="Poco::JSON::Parser::getHandler()">getHandler</a>, <a href="Poco.JSON.Parser.html#20306" title="Poco::JSON::Parser::parse()">parse</a>, <a href="Poco.JSON.Parser.html#20296" title="Poco::JSON::Parser::reset()">reset</a>, <a href="Poco.JSON.Parser.html#20314" title="Poco::JSON::Parser::result()">result</a>, <a href="Poco.JSON.Parser.html#20297" title="Poco::JSON::Parser::setAllowComments()">setAllowComments</a>, <a href="Poco.JSON.Parser.html#20300" title="Poco::JSON::Parser::setAllowNullByte()">setAllowNullByte</a>, <a href="Poco.JSON.Parser.html#20303" title="Poco::JSON::Parser::setDepth()">setDepth</a>, <a href="Poco.JSON.Parser.html#20310" title="Poco::JSON::Parser::setHandler()">setHandler</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.JSON.ParserImpl.html#20344" title="Poco::JSON::ParserImpl::asVarImpl()">asVarImpl</a>, <a href="Poco.JSON.ParserImpl.html#20330" title="Poco::JSON::ParserImpl::getAllowCommentsImpl()">getAllowCommentsImpl</a>, <a href="Poco.JSON.ParserImpl.html#20333" title="Poco::JSON::ParserImpl::getAllowNullByteImpl()">getAllowNullByteImpl</a>, <a href="Poco.JSON.ParserImpl.html#20336" title="Poco::JSON::ParserImpl::getDepthImpl()">getDepthImpl</a>, <a href="Poco.JSON.ParserImpl.html#20343" title="Poco::JSON::ParserImpl::getHandlerImpl()">getHandlerImpl</a>, <a href="Poco.JSON.ParserImpl.html#20337" title="Poco::JSON::ParserImpl::parseImpl()">parseImpl</a>, <a href="Poco.JSON.ParserImpl.html#20327" title="Poco::JSON::ParserImpl::resetImpl()">resetImpl</a>, <a href="Poco.JSON.ParserImpl.html#20345" title="Poco::JSON::ParserImpl::resultImpl()">resultImpl</a>, <a href="Poco.JSON.ParserImpl.html#20328" title="Poco::JSON::ParserImpl::setAllowCommentsImpl()">setAllowCommentsImpl</a>, <a href="Poco.JSON.ParserImpl.html#20331" title="Poco::JSON::ParserImpl::setAllowNullByteImpl()">setAllowNullByteImpl</a>, <a href="Poco.JSON.ParserImpl.html#20334" title="Poco::JSON::ParserImpl::setDepthImpl()">setDepthImpl</a>, <a href="Poco.JSON.ParserImpl.html#20341" title="Poco::JSON::ParserImpl::setHandlerImpl()">setHandlerImpl</a></p>
+<h2>Constructors</h2>
+<h3><a id="20292">Parser</a></h3>
+<p class="decl"><a href="Poco.JSON.Parser.html" title="class Poco::JSON::Parser">Parser</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; pHandler = new ParseHandler,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t bufSize = JSON_PARSE_BUFFER_SIZE<br />);</p>
+<div class="description">
+<p>Creates <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> <a href="Poco.JSON.Parser.html" title="class Poco::JSON::Parser">Parser</a>, using the given <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a> and buffer size. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="20295">~Parser</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.JSON.Parser.html" title="class Poco::JSON::Parser">Parser</a>();</p>
+<div class="description">
+<p>Destroys <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> <a href="Poco.JSON.Parser.html" title="class Poco::JSON::Parser">Parser</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="20313">asVar</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> asVar() const;</p>
+<div class="description">
+<p>Returns the result of parsing; </p>
+</div>
+<h3><a id="20299">getAllowComments</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool getAllowComments() const;</p>
+<div class="description">
+<p>Returns true if comments are allowed, false otherwise. </p>
+<p>By default, comments are not allowed. </p>
+</div>
+<h3><a id="20302">getAllowNullByte</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool getAllowNullByte() const;</p>
+<div class="description">
+<p>Returns true if null byte is allowed, false otherwise. </p>
+<p>By default, null bytes are allowed. </p>
+</div>
+<h3><a id="20305">getDepth</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t getDepth() const;</p>
+<div class="description">
+<p>Returns the allowed <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> depth. </p>
+</div>
+<h3><a id="20312">getHandler</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; getHandler();</p>
+<div class="description">
+<p>Returns the <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a>. </p>
+</div>
+<h3><a id="20306">parse</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> parse(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; json<br />);</p>
+<div class="description">
+<p>Parses <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> from a string. </p>
+</div>
+<h3><a id="20308">parse</a></h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> parse(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; in<br />);</p>
+<div class="description">
+<p>Parses <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> from an input stream. </p>
+</div>
+<h3><a id="20296">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset();</p>
+<div class="description">
+<p>Resets the parser. </p>
+</div>
+<h3><a id="20314">result</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> result() const;</p>
+<div class="description">
+<p>Returns the result of parsing as <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a>; </p>
+</div>
+<h3><a id="20297">setAllowComments</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setAllowComments(<br />&nbsp;&nbsp;&nbsp;&nbsp;bool comments<br />);</p>
+<div class="description">
+<p>Allow or disallow comments. By default, comments are not allowed. </p>
+</div>
+<h3><a id="20300">setAllowNullByte</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setAllowNullByte(<br />&nbsp;&nbsp;&nbsp;&nbsp;bool nullByte<br />);</p>
+<div class="description">
+<p>Allow or disallow null byte in strings.  </p>
+<p>By default, null byte is allowed. </p>
+</div>
+<h3><a id="20303">setDepth</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setDepth(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t depth<br />);</p>
+<div class="description">
+<p>Sets the allowed <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> depth. </p>
+</div>
+<h3><a id="20310">setHandler</a></h3>
+<p class="decl">void setHandler(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; pHandler<br />);</p>
+<div class="description">
+<p>Set the <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a>. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

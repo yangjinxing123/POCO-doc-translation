@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::LoggingFactory</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class LoggingFactory</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Logging<br />
+<b>Header:</b> Poco/LoggingFactory.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>An extensible factory for channels and formatters. </p>
+<p>The following channel classes are pre-registered: </p>
+<ul>
+<li><a href="Poco.AsyncChannel.html" title="class Poco::AsyncChannel">AsyncChannel</a> </li>
+<li><a href="Poco.ConsoleChannel.html" title="class Poco::ConsoleChannel">ConsoleChannel</a> </li>
+<li><a href="Poco.EventLogChannel.html" title="class Poco::EventLogChannel">EventLogChannel</a> (Windows platforms only) </li>
+<li><a href="Poco.FileChannel.html" title="class Poco::FileChannel">FileChannel</a> </li>
+<li><a href="Poco.FormattingChannel.html" title="class Poco::FormattingChannel">FormattingChannel</a> </li>
+<li><a href="Poco.NullChannel.html" title="class Poco::NullChannel">NullChannel</a> </li>
+<li><a href="Poco.SplitterChannel.html" title="class Poco::SplitterChannel">SplitterChannel</a> </li>
+<li><a href="Poco.SyslogChannel.html" title="class Poco::SyslogChannel">SyslogChannel</a> (Unix platforms only) </li>
+</ul>
+<p>The following formatter classes are pre-registered: </p>
+<ul>
+<li><a href="Poco.PatternFormatter.html" title="class Poco::PatternFormatter">PatternFormatter</a> </li>
+</ul>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.LoggingFactory.html#15064" title="Poco::LoggingFactory::createChannel()">createChannel</a>, <a href="Poco.LoggingFactory.html#15066" title="Poco::LoggingFactory::createFormatter()">createFormatter</a>, <a href="Poco.LoggingFactory.html#15068" title="Poco::LoggingFactory::defaultFactory()">defaultFactory</a>, <a href="Poco.LoggingFactory.html#15058" title="Poco::LoggingFactory::registerChannelClass()">registerChannelClass</a>, <a href="Poco.LoggingFactory.html#15061" title="Poco::LoggingFactory::registerFormatterClass()">registerFormatterClass</a></p>
+<h2>Types</h2>
+<h3><a id="15054">ChannelInstantiator</a></h3>
+<p class="decl">typedef <a href="Poco.AbstractInstantiator.html" title="class Poco::AbstractInstantiator">AbstractInstantiator</a> &lt; <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> &gt; <a href="Poco.LoggingFactory.html#15054" title="Poco::LoggingFactory::ChannelInstantiator">ChannelInstantiator</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15055">FormatterFactory</a></h3>
+<p class="decl">typedef <a href="Poco.AbstractInstantiator.html" title="class Poco::AbstractInstantiator">AbstractInstantiator</a> &lt; <a href="Poco.Formatter.html" title="class Poco::Formatter">Formatter</a> &gt; <a href="Poco.LoggingFactory.html#15055" title="Poco::LoggingFactory::FormatterFactory">FormatterFactory</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="15056">LoggingFactory</a></h3>
+<p class="decl"><a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>();</p>
+<div class="description">
+<p>Creates the <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>. </p>
+<p>Automatically registers class factories for the built-in channel and formatter classes. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="15057">~LoggingFactory</a></h3>
+<p class="decl">~<a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="15064">createChannel</a></h3>
+<p class="decl"><a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * createChannel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; className<br />) const;</p>
+<div class="description">
+<p>Creates a new <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> instance from specified class. </p>
+<p>Throws a <a href="Poco.NotFoundException.html" title="class Poco::NotFoundException">NotFoundException</a> if the specified channel class has not been registered. </p>
+</div>
+<h3><a id="15066">createFormatter</a></h3>
+<p class="decl"><a href="Poco.Formatter.html" title="class Poco::Formatter">Formatter</a> * createFormatter(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; className<br />) const;</p>
+<div class="description">
+<p>Creates a new <a href="Poco.Formatter.html" title="class Poco::Formatter">Formatter</a> instance from specified class. </p>
+<p>Throws a <a href="Poco.NotFoundException.html" title="class Poco::NotFoundException">NotFoundException</a> if the specified formatter class has not been registered. </p>
+</div>
+<h3><a id="15068">defaultFactory</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a> &amp; defaultFactory();</p>
+<div class="description">
+<p>Returns a reference to the default <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>. </p>
+</div>
+<h3><a id="15058">registerChannelClass</a></h3>
+<p class="decl">void registerChannelClass(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; className,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.LoggingFactory.html#15054" title="Poco::LoggingFactory::ChannelInstantiator">ChannelInstantiator</a> * pFactory<br />);</p>
+<div class="description">
+<p>Registers a channel class with the <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>. </p>
+</div>
+<h3><a id="15061">registerFormatterClass</a></h3>
+<p class="decl">void registerFormatterClass(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; className,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.LoggingFactory.html#15055" title="Poco::LoggingFactory::FormatterFactory">FormatterFactory</a> * pFactory<br />);</p>
+<div class="description">
+<p>Registers a formatter class with the <a href="Poco.LoggingFactory.html" title="class Poco::LoggingFactory">LoggingFactory</a>. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

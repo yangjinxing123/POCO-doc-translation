@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Namespace Poco::Dynamic</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">namespace Dynamic</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<h2>Overview</h2>
+<p><b>Namespaces:</b> 
+<a href="Poco.Dynamic.Impl.html" title="namespace Poco::Dynamic::Impl">Impl</a></p>
+<p><b>Classes:</b> 
+<a href="Poco.Dynamic.Pair.html" title="class Poco::Dynamic::Pair">Pair</a>, <a href="Poco.Dynamic.Struct.html" title="class Poco::Dynamic::Struct">Struct</a>, <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a>, <a href="Poco.Dynamic.VarHolder.html" title="class Poco::Dynamic::VarHolder">VarHolder</a>, <a href="Poco.Dynamic.VarHolderImpl.html" title="class Poco::Dynamic::VarHolderImpl">VarHolderImpl</a>, <a href="Poco.Dynamic.VarIterator.html" title="class Poco::Dynamic::VarIterator">VarIterator</a></p>
+<p><b>Types:</b> 
+<a href="Poco.Dynamic.html#11287" title="Poco::Dynamic::Array">Array</a>, <a href="Poco.Dynamic.html#11285" title="Poco::Dynamic::Deque">Deque</a>, <a href="Poco.Dynamic.html#11286" title="Poco::Dynamic::List">List</a>, <a href="Poco.Dynamic.html#11284" title="Poco::Dynamic::Vector">Vector</a></p>
+<p><b>Functions:</b> 
+<a href="Poco.Dynamic.html#10710" title="Poco::Dynamic::operator !=()">operator&nbsp;!=</a>, <a href="Poco.Dynamic.html#10689" title="Poco::Dynamic::operator *()">operator&nbsp;*</a>, <a href="Poco.Dynamic.html#10701" title="Poco::Dynamic::operator *=()">operator&nbsp;*=</a>, <a href="Poco.Dynamic.html#10680" title="Poco::Dynamic::operator +()">operator&nbsp;+</a>, <a href="Poco.Dynamic.html#10695" title="Poco::Dynamic::operator +=()">operator&nbsp;+=</a>, <a href="Poco.Dynamic.html#10686" title="Poco::Dynamic::operator -()">operator&nbsp;-</a>, <a href="Poco.Dynamic.html#10698" title="Poco::Dynamic::operator -=()">operator&nbsp;-=</a>, <a href="Poco.Dynamic.html#10692" title="Poco::Dynamic::operator /()">operator&nbsp;/</a>, <a href="Poco.Dynamic.html#10704" title="Poco::Dynamic::operator /=()">operator&nbsp;/=</a>, <a href="Poco.Dynamic.html#10713" title="Poco::Dynamic::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.Dynamic.html#10716" title="Poco::Dynamic::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.Dynamic.html#10707" title="Poco::Dynamic::operator ==()">operator&nbsp;==</a>, <a href="Poco.Dynamic.html#10719" title="Poco::Dynamic::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.Dynamic.html#10722" title="Poco::Dynamic::operator >=()">operator&nbsp;&gt;=</a>, <a href="Poco.Dynamic.html#10676" title="Poco::Dynamic::operator []()">operator&nbsp;[]</a></p>
+<h2>Namespaces</h2>
+<h3><a href="Poco.Dynamic.Impl.html" class="class">namespace Impl</a></h3>
+<h2>Classes</h2>
+<h3><a href="Poco.Dynamic.Pair.html" class="class">class Pair</a></h3>
+<p> <a href="Poco.Dynamic.Pair.html" title="class Poco::Dynamic::Pair">Pair</a> allows to define a pair of values.&nbsp;<a href="Poco.Dynamic.Pair.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Dynamic.Struct.html" class="class">class Struct</a></h3>
+<p> <a href="Poco.Dynamic.Struct.html" title="class Poco::Dynamic::Struct">Struct</a> allows to define a named collection of <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> objects.&nbsp;<a href="Poco.Dynamic.Struct.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Dynamic.Var.html" class="class">class Var</a></h3>
+<p> <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> allows to store data of different types and to convert between these types transparently.&nbsp;<a href="Poco.Dynamic.Var.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Dynamic.VarHolder.html" class="class">class VarHolder</a></h3>
+<p> Interface for a data holder used by the <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> class.&nbsp;<a href="Poco.Dynamic.VarHolder.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Dynamic.VarHolderImpl.html" class="class">class VarHolderImpl</a></h3>
+<p> Template based implementation of a <a href="Poco.Dynamic.VarHolder.html" title="class Poco::Dynamic::VarHolder">VarHolder</a>.&nbsp;<a href="Poco.Dynamic.VarHolderImpl.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Dynamic.VarIterator.html" class="class">class VarIterator</a></h3>
+<p> <a href="Poco.Dynamic.VarIterator.html" title="class Poco::Dynamic::VarIterator">VarIterator</a> class.&nbsp;<a href="Poco.Dynamic.VarIterator.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Types</h2>
+<h3><a id="11287">Array</a></h3>
+<p class="decl">typedef <a href="Poco.Dynamic.html#11284" title="Poco::Dynamic::Vector">Vector</a> <a href="Poco.Dynamic.html#11287" title="Poco::Dynamic::Array">Array</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="11285">Deque</a></h3>
+<p class="decl">typedef std::deque &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &gt; <a href="Poco.Dynamic.html#11285" title="Poco::Dynamic::Deque">Deque</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="11286">List</a></h3>
+<p class="decl">typedef std::list &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &gt; <a href="Poco.Dynamic.html#11286" title="Poco::Dynamic::List">List</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="11284">Vector</a></h3>
+<p class="decl">typedef std::vector &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &gt; <a href="Poco.Dynamic.html#11284" title="Poco::Dynamic::Vector">Vector</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Functions</h2>
+<h3><a id="10710">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10752">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10794">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10836">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10878">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10920">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10962">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11004">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11046">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11088">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11130">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="11148">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with bool </p>
+</div>
+<h3><a id="11154">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with std::string </p>
+</div>
+<h3><a id="11160">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#19434" title="Poco::UTF16String">UTF16String</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#19434" title="Poco::UTF16String">UTF16String</a> </p>
+</div>
+<h3><a id="11166">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Inequality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with const char* </p>
+</div>
+<h3><a id="10689">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10731">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10773">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10815">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10857">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10899">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10941">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10983">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11025">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11067">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11109">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10701">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10743">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10785">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10827">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10869">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10911">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10953">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10995">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11037">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11079">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11121">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Multiplication assignment operator for multiplying <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10680">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> non-member functions </p>
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to const char* </p>
+</div>
+<h3><a id="10683">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to char </p>
+</div>
+<h3><a id="10725">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10767">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10809">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10851">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10893">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10935">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10977">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11019">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11061">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to float </p>
+</div>
+<h3><a id="11103">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to double </p>
+</div>
+<h3><a id="10695">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to char </p>
+</div>
+<h3><a id="10737">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10779">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10821">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10863">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10905">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10947">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10989">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11031">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11073">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to float </p>
+</div>
+<h3><a id="11115">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Addition assignment operator for adding <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> to double </p>
+</div>
+<h3><a id="10686">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from char </p>
+</div>
+<h3><a id="10728">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10770">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10812">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10854">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10896">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10938">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10980">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11022">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11064">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from float </p>
+</div>
+<h3><a id="11106">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from double </p>
+</div>
+<h3><a id="10698">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from char </p>
+</div>
+<h3><a id="10740">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10782">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10824">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10866">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10908">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10950">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10992">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11034">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11076">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from float </p>
+</div>
+<h3><a id="11118">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Subtraction assignment operator for subtracting <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> from double </p>
+</div>
+<h3><a id="10692">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10734">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10776">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10818">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10860">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10902">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10944">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10986">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11028">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11070">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11112">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10704">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline char operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10746">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10788">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10830">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10872">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10914">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10956">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="10998">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11040">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11082">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline float operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11124">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline double operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Division assignment operator for dividing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10713">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10755">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10797">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10839">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10881">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10923">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10965">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11007">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11049">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11091">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11133">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10716">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10758">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10800">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10842">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10884">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10926">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10968">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11010">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11052">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11094">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11136">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Less than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10707">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10749">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10791">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10833">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10875">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10917">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10959">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11001">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11043">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11085">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11127">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="11145">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with bool </p>
+</div>
+<h3><a id="11151">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with std::string </p>
+</div>
+<h3><a id="11157">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#19434" title="Poco::UTF16String">UTF16String</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#19434" title="Poco::UTF16String">UTF16String</a> </p>
+</div>
+<h3><a id="11163">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Equality operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with const char* </p>
+</div>
+<h3><a id="10719">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10761">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10803">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10845">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10887">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10929">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10971">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11013">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11055">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11097">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11139">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10722">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const char &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with char </p>
+</div>
+<h3><a id="10764">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> </p>
+</div>
+<h3><a id="10806">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> </p>
+</div>
+<h3><a id="10848">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> </p>
+</div>
+<h3><a id="10890">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> </p>
+</div>
+<h3><a id="10932">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> </p>
+</div>
+<h3><a id="10974">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> </p>
+</div>
+<h3><a id="11016">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> </p>
+</div>
+<h3><a id="11058">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> </p>
+</div>
+<h3><a id="11100">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const float &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with float </p>
+</div>
+<h3><a id="11142">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const double &amp; other,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; da<br />);</p>
+<div class="description">
+<p>Greater than or equal operator for comparing <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> with double </p>
+</div>
+<h3><a id="10676">operator []</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; Var::operator[] (<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p>inlines </p>
+<p></p>
+<p><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> members </p>
+</div>
+<h3><a id="10678">operator []</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">inline const <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Var</a> &amp; Var::operator[] (<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Crypto::PKCS12Container</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Crypto.html" class="namespace">Poco::Crypto</a></h1>
+<h1 class="symbol">class PKCS12Container</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Crypto" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Crypto<br />
+<b>Package:</b> Certificate<br />
+<b>Header:</b> Poco/Crypto/PKCS12Container.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements PKCS#12 container functionality. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Crypto.PKCS12Container.html#572" title="Poco::Crypto::PKCS12Container::getCACerts()">getCACerts</a>, <a href="Poco.Crypto.PKCS12Container.html#573" title="Poco::Crypto::PKCS12Container::getFriendlyName()">getFriendlyName</a>, <a href="Poco.Crypto.PKCS12Container.html#574" title="Poco::Crypto::PKCS12Container::getFriendlyNamesCA()">getFriendlyNamesCA</a>, <a href="Poco.Crypto.PKCS12Container.html#569" title="Poco::Crypto::PKCS12Container::getKey()">getKey</a>, <a href="Poco.Crypto.PKCS12Container.html#571" title="Poco::Crypto::PKCS12Container::getX509Certificate()">getX509Certificate</a>, <a href="Poco.Crypto.PKCS12Container.html#568" title="Poco::Crypto::PKCS12Container::hasKey()">hasKey</a>, <a href="Poco.Crypto.PKCS12Container.html#570" title="Poco::Crypto::PKCS12Container::hasX509Certificate()">hasX509Certificate</a>, <a href="Poco.Crypto.PKCS12Container.html#565" title="Poco::Crypto::PKCS12Container::operator =()">operator&nbsp;=</a></p>
+<h2>Types</h2>
+<h3><a id="555">CAList</a></h3>
+<p class="decl">typedef <a href="Poco.Crypto.X509Certificate.html#697" title="Poco::Crypto::X509Certificate::List">X509Certificate::List</a> <a href="Poco.Crypto.PKCS12Container.html#555" title="Poco::Crypto::PKCS12Container::CAList">CAList</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="556">CANameList</a></h3>
+<p class="decl">typedef std::vector &lt; std::string &gt; <a href="Poco.Crypto.PKCS12Container.html#556" title="Poco::Crypto::PKCS12Container::CANameList">CANameList</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="563">PKCS12Container</a></h3>
+<p class="decl"><a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a> &amp; cont<br />);</p>
+<div class="description">
+<p>Copy constructor. </p>
+</div>
+<h3><a id="557">PKCS12Container</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; istr,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; password = ""<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a> object from a stream. </p>
+</div>
+<h3><a id="560">PKCS12Container</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; password = ""<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a> object from a file. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="567">~PKCS12Container</a></h3>
+<p class="decl">~<a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="572">getCACerts</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.Crypto.PKCS12Container.html#555" title="Poco::Crypto::PKCS12Container::CAList">CAList</a> &amp; getCACerts() const;</p>
+<div class="description">
+<p>Returns the list of CA certificates in this container. </p>
+</div>
+<h3><a id="573">getFriendlyName</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; getFriendlyName() const;</p>
+<div class="description">
+<p>Returns the friendly name of the certificate bag. </p>
+</div>
+<h3><a id="574">getFriendlyNamesCA</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.Crypto.PKCS12Container.html#556" title="Poco::Crypto::PKCS12Container::CANameList">CANameList</a> &amp; getFriendlyNamesCA() const;</p>
+<div class="description">
+<p>Returns a list of CA certificates friendly names. </p>
+</div>
+<h3><a id="569">getKey</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> getKey() const;</p>
+<div class="description">
+<p>Return key as openssl EVP_PKEY wrapper object. </p>
+</div>
+<h3><a id="571">getX509Certificate</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; getX509Certificate() const;</p>
+<div class="description">
+<p>Returns the X509 certificate. Throws <a href="Poco.NotFoundException.html" title="class Poco::NotFoundException">NotFoundException</a> if there is no certificate. </p>
+</div>
+<h3><a id="568">hasKey</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool hasKey() const;</p>
+<div class="description">
+<p>Returns true if container contains the key. </p>
+</div>
+<h3><a id="570">hasX509Certificate</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool hasX509Certificate() const;</p>
+<div class="description">
+<p>Returns true if container has X509 certificate. </p>
+</div>
+<h3><a id="565">operator =</a></h3>
+<p class="decl"><a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.PKCS12Container.html" title="class Poco::Crypto::PKCS12Container">PKCS12Container</a> &amp; cont<br />);</p>
+<div class="description">
+<p>Assignment operator. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

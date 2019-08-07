@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::XML::QName</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.XML.html" class="namespace">Poco::XML</a></h1>
+<h1 class="symbol">class QName</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-XML" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> XML<br />
+<b>Package:</b> XML<br />
+<b>Header:</b> Poco/XML/QName.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class represents a qualified <a href="Poco.XML.html" title="namespace Poco::XML">XML</a> name in the stream parser. </p>
+<p>Note that the optional prefix is just a &quot;syntactic sugar&quot;. In particular, it is ignored by the comparison operators and the std::ostream insertion operator. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.XML.QName.html#31831" title="Poco::XML::QName::localName()">localName</a>, <a href="Poco.XML.QName.html#31830" title="Poco::XML::QName::namespaceURI()">namespaceURI</a>, <a href="Poco.XML.QName.html#31832" title="Poco::XML::QName::prefix()">prefix</a>, <a href="Poco.XML.QName.html#31836" title="Poco::XML::QName::toString()">toString</a></p>
+<h2>Constructors</h2>
+<h3><a id="31820">QName</a></h3>
+<p class="decl"><a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31821">QName</a></h3>
+<p class="decl"><a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31823">QName</a></h3>
+<p class="decl"><a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; ns,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31826">QName</a></h3>
+<p class="decl"><a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; ns,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; prefix<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="31831">localName</a></h3>
+<p class="decl">const std::string &amp; localName() const;</p>
+<div class="description">
+<p>Returns the local part of the name. </p>
+</div>
+<h3><a id="31834">localName</a></h3>
+<p class="decl">std::string &amp; localName();</p>
+<div class="description">
+<p>Returns the local part of the name. </p>
+</div>
+<h3><a id="31830">namespaceURI</a></h3>
+<p class="decl">const std::string &amp; namespaceURI() const;</p>
+<div class="description">
+<p>Returns the namespace <a href="Poco.URI.html" title="class Poco::URI">URI</a> part of the name. </p>
+</div>
+<h3><a id="31833">namespaceURI</a></h3>
+<p class="decl">std::string &amp; namespaceURI();</p>
+<div class="description">
+<p>Returns the namespace <a href="Poco.URI.html" title="class Poco::URI">URI</a> part of the name. </p>
+</div>
+<h3><a id="31832">prefix</a></h3>
+<p class="decl">const std::string &amp; prefix() const;</p>
+<div class="description">
+<p>Returns the namespace prefix of the name. </p>
+</div>
+<h3><a id="31835">prefix</a></h3>
+<p class="decl">std::string &amp; prefix();</p>
+<div class="description">
+<p>Returns the namespace prefix of the name. </p>
+</div>
+<h3><a id="31836">toString</a></h3>
+<p class="decl">std::string toString() const;</p>
+<div class="description">
+<p>Returns a printable representation in the [&lt;namespace&gt;#]&lt;name&gt; form. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

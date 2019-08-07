@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::LinearHashTable</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="template">template &lt; class Value, class HashFunc = Hash &lt; Value &gt; &gt;</h1>
+<h1 class="symbol">class LinearHashTable</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Hashing<br />
+<b>Header:</b> Poco/LinearHashTable.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements a linear hash table. </p>
+<p>In a linear hash table, the available address space grows or shrinks dynamically. A linar hash table thus supports any number of insertions or deletions without lookup or insertion performance deterioration. </p>
+<p>Linear hashing was discovered by Witold Litwin in 1980 and described in the paper LINEAR HASHING: A NEW TOOL FOR FILE AND TABLE ADDRESSING. </p>
+<p>For more information on linear hashing, see &lt;<a href="http://en.wikipedia.org/wiki/Linear_hash" target="_blank">http://en.wikipedia.org/wiki/Linear_hash</a>&gt;. </p>
+<p>The <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> is not thread safe. </p>
+<p>Value must support comparison for equality. </p>
+<p>Find, insert and delete operations are basically O(1) with regard to the total number of elements in the table, and O(N) with regard to the number of elements in the bucket where the element is stored. On average, every bucket stores one element; the exact number depends on the quality of the hash function. In most cases, the maximum number of elements in a bucket should not exceed 3. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.LinearHashTable.html#14007" title="Poco::LinearHashTable::begin()">begin</a>, <a href="Poco.LinearHashTable.html#14027" title="Poco::LinearHashTable::bucketAddress()">bucketAddress</a>, <a href="Poco.LinearHashTable.html#14029" title="Poco::LinearHashTable::bucketAddressForHash()">bucketAddressForHash</a>, <a href="Poco.LinearHashTable.html#14026" title="Poco::LinearHashTable::buckets()">buckets</a>, <a href="Poco.LinearHashTable.html#14033" title="Poco::LinearHashTable::calcSize()">calcSize</a>, <a href="Poco.LinearHashTable.html#14023" title="Poco::LinearHashTable::clear()">clear</a>, <a href="Poco.LinearHashTable.html#14015" title="Poco::LinearHashTable::count()">count</a>, <a href="Poco.LinearHashTable.html#14025" title="Poco::LinearHashTable::empty()">empty</a>, <a href="Poco.LinearHashTable.html#14008" title="Poco::LinearHashTable::end()">end</a>, <a href="Poco.LinearHashTable.html#14019" title="Poco::LinearHashTable::erase()">erase</a>, <a href="Poco.LinearHashTable.html#14011" title="Poco::LinearHashTable::find()">find</a>, <a href="Poco.LinearHashTable.html#14017" title="Poco::LinearHashTable::insert()">insert</a>, <a href="Poco.LinearHashTable.html#14032" title="Poco::LinearHashTable::merge()">merge</a>, <a href="Poco.LinearHashTable.html#14003" title="Poco::LinearHashTable::operator =()">operator&nbsp;=</a>, <a href="Poco.LinearHashTable.html#14024" title="Poco::LinearHashTable::size()">size</a>, <a href="Poco.LinearHashTable.html#14031" title="Poco::LinearHashTable::split()">split</a>, <a href="Poco.LinearHashTable.html#14005" title="Poco::LinearHashTable::swap()">swap</a></p>
+<h2>Nested Classes</h2>
+<h3><a href="Poco.LinearHashTable.ConstIterator.html" class="class">class ConstIterator</a></h3>
+<p>&nbsp;<a href="Poco.LinearHashTable.ConstIterator.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.LinearHashTable.Iterator.html" class="class">class Iterator</a></h3>
+<p>&nbsp;<a href="Poco.LinearHashTable.Iterator.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Types</h2>
+<h3><a id="13950">Bucket</a></h3>
+<p class="decl">typedef std::vector &lt; Value &gt; <a href="Poco.LinearHashTable.html#13950" title="Poco::LinearHashTable::Bucket">Bucket</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13952">BucketIterator</a></h3>
+<p class="decl">typedef typename Bucket::iterator <a href="Poco.LinearHashTable.html#13952" title="Poco::LinearHashTable::BucketIterator">BucketIterator</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13951">BucketVec</a></h3>
+<p class="decl">typedef std::vector &lt; <a href="Poco.LinearHashTable.html#13950" title="Poco::LinearHashTable::Bucket">Bucket</a> &gt; <a href="Poco.LinearHashTable.html#13951" title="Poco::LinearHashTable::BucketVec">BucketVec</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13953">BucketVecIterator</a></h3>
+<p class="decl">typedef typename BucketVec::iterator <a href="Poco.LinearHashTable.html#13953" title="Poco::LinearHashTable::BucketVecIterator">BucketVecIterator</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13948">ConstPointer</a></h3>
+<p class="decl">typedef const Value * <a href="Poco.LinearHashTable.html#13948" title="Poco::LinearHashTable::ConstPointer">ConstPointer</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13946">ConstReference</a></h3>
+<p class="decl">typedef const Value &amp; <a href="Poco.LinearHashTable.html#13946" title="Poco::LinearHashTable::ConstReference">ConstReference</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13949">Hash</a></h3>
+<p class="decl">typedef HashFunc <a href="Poco.LinearHashTable.html#13949" title="Poco::LinearHashTable::Hash">Hash</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13947">Pointer</a></h3>
+<p class="decl">typedef Value * <a href="Poco.LinearHashTable.html#13947" title="Poco::LinearHashTable::Pointer">Pointer</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13945">Reference</a></h3>
+<p class="decl">typedef Value &amp; <a href="Poco.LinearHashTable.html#13945" title="Poco::LinearHashTable::Reference">Reference</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="13944">ValueType</a></h3>
+<p class="decl">typedef Value <a href="Poco.LinearHashTable.html#13944" title="Poco::LinearHashTable::ValueType">ValueType</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="13998">LinearHashTable</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t initialReserve = 64<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>, using the given initialReserve. </p>
+</div>
+<h3><a id="14000">LinearHashTable</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> &amp; table<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> by copying another one. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="14002">~LinearHashTable</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="14007">begin</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.ConstIterator.html" title="class Poco::LinearHashTable::ConstIterator">ConstIterator</a> begin() const;</p>
+<div class="description">
+<p>Returns an iterator pointing to the first entry, if one exists. </p>
+</div>
+<h3><a id="14009">begin</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.Iterator.html" title="class Poco::LinearHashTable::Iterator">Iterator</a> begin();</p>
+<div class="description">
+<p>Returns an iterator pointing to the first entry, if one exists. </p>
+</div>
+<h3><a id="14026">buckets</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t buckets() const;</p>
+<div class="description">
+<p>Returns the number of allocated buckets. </p>
+</div>
+<h3><a id="14023">clear</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void clear();</p>
+<div class="description">
+<p>Erases all elements. </p>
+</div>
+<h3><a id="14015">count</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t count(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />) const;</p>
+<div class="description">
+<p>Returns the number of elements with the given value, with is either 1 or 0. </p>
+</div>
+<h3><a id="14025">empty</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool empty() const;</p>
+<div class="description">
+<p>Returns true if and only if the table is empty. </p>
+</div>
+<h3><a id="14008">end</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.ConstIterator.html" title="class Poco::LinearHashTable::ConstIterator">ConstIterator</a> end() const;</p>
+<div class="description">
+<p>Returns an iterator pointing to the end of the table. </p>
+</div>
+<h3><a id="14010">end</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.Iterator.html" title="class Poco::LinearHashTable::Iterator">Iterator</a> end();</p>
+<div class="description">
+<p>Returns an iterator pointing to the end of the table. </p>
+</div>
+<h3><a id="14019">erase</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void erase(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.LinearHashTable.Iterator.html" title="class Poco::LinearHashTable::Iterator">Iterator</a> it<br />);</p>
+<div class="description">
+<p>Erases the element pointed to by it. </p>
+</div>
+<h3><a id="14021">erase</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void erase(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />);</p>
+<div class="description">
+<p>Erases the element with the given value, if it exists. </p>
+</div>
+<h3><a id="14011">find</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.ConstIterator.html" title="class Poco::LinearHashTable::ConstIterator">ConstIterator</a> find(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />) const;</p>
+<div class="description">
+<p>Finds an entry in the table. </p>
+</div>
+<h3><a id="14013">find</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.Iterator.html" title="class Poco::LinearHashTable::Iterator">Iterator</a> find(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />);</p>
+<div class="description">
+<p>Finds an entry in the table. </p>
+</div>
+<h3><a id="14017">insert</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::pair &lt; <a href="Poco.LinearHashTable.Iterator.html" title="class Poco::LinearHashTable::Iterator">Iterator</a>, bool &gt; insert(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />);</p>
+<div class="description">
+<p>Inserts an element into the table. </p>
+<p>If the element already exists in the table, a pair(iterator, false) with iterator pointing to the  existing element is returned. Otherwise, the element is inserted an a  pair(iterator, true) with iterator pointing to the new element is returned. </p>
+</div>
+<h3><a id="14003">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> &amp; table<br />);</p>
+<div class="description">
+<p>Assigns another <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a>. </p>
+</div>
+<h3><a id="14024">size</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t size() const;</p>
+<div class="description">
+<p>Returns the number of elements in the table. </p>
+</div>
+<h3><a id="14005">swap</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> &amp; table<br />);</p>
+<div class="description">
+<p>Swaps the <a href="Poco.LinearHashTable.html" title="class Poco::LinearHashTable">LinearHashTable</a> with another one. </p>
+</div>
+<h3><a id="14027">bucketAddress</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t bucketAddress(<br />&nbsp;&nbsp;&nbsp;&nbsp;const Value &amp; value<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14029">bucketAddressForHash</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t bucketAddressForHash(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t hash<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14033">calcSize</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static std::size_t calcSize(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t initialSize<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14032">merge</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void merge();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14031">split</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void split();</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

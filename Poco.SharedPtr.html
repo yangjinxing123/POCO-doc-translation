@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::SharedPtr</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="template">template &lt; class C, class RC = ReferenceCounter, class RP = ReleasePolicy &lt; C &gt; &gt;</h1>
+<h1 class="symbol">class SharedPtr</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Core<br />
+<b>Header:</b> Poco/SharedPtr.h</p>
+<h2>Description</h2>
+<div class="description">
+<p><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> is a &quot;smart&quot; pointer for classes implementing reference counting based garbage collection. <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> is thus similar to <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a>. Unlike the <a href="Poco.AutoPtr.html" title="class Poco::AutoPtr">AutoPtr</a> template, which can only be used with classes that support reference counting, <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> can be used with any class. For this to work, a <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> manages a reference count for the object it manages. </p>
+<p><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> works in the following way: If an <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> is assigned an ordinary pointer to an object (via the constructor or the assignment operator), it takes ownership of the object and the object's reference  count is initialized to one. If the <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> is assigned another <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>, the object's reference count is incremented by one. The destructor of <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> decrements the object's reference count by one and deletes the object if the reference count reaches zero. <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> supports dereferencing with both the -&gt; and the * operator. An attempt to dereference a null <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> results in a <a href="Poco.NullPointerException.html" title="class Poco::NullPointerException">NullPointerException</a> being thrown. <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> also implements all relational operators and a cast operator in case dynamic casting of the encapsulated data types is required. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.SharedPtr.html#17410" title="Poco::SharedPtr::assign()">assign</a>, <a href="Poco.SharedPtr.html#17431" title="Poco::SharedPtr::cast()">cast</a>, <a href="Poco.SharedPtr.html#17437" title="Poco::SharedPtr::get()">get</a>, <a href="Poco.SharedPtr.html#17442" title="Poco::SharedPtr::isNull()">isNull</a>, <a href="Poco.SharedPtr.html#17441" title="Poco::SharedPtr::operator !()">operator&nbsp;!</a>, <a href="Poco.SharedPtr.html#17449" title="Poco::SharedPtr::operator !=()">operator&nbsp;!=</a>, <a href="Poco.SharedPtr.html#17435" title="Poco::SharedPtr::operator *()">operator&nbsp;*</a>, <a href="Poco.SharedPtr.html#17455" title="Poco::SharedPtr::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.SharedPtr.html#17461" title="Poco::SharedPtr::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.SharedPtr.html#17423" title="Poco::SharedPtr::operator =()">operator&nbsp;=</a>, <a href="Poco.SharedPtr.html#17443" title="Poco::SharedPtr::operator ==()">operator&nbsp;==</a>, <a href="Poco.SharedPtr.html#17467" title="Poco::SharedPtr::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.SharedPtr.html#17473" title="Poco::SharedPtr::operator >=()">operator&nbsp;&gt;=</a>, <a href="Poco.SharedPtr.html#17439" title="Poco::SharedPtr::operator C *()">operator&nbsp;C&nbsp;*</a>, <a href="Poco.SharedPtr.html#17440" title="Poco::SharedPtr::operator const C *()">operator&nbsp;const&nbsp;C&nbsp;*</a>, <a href="Poco.SharedPtr.html#17433" title="Poco::SharedPtr::operator->()">operator-&gt;</a>, <a href="Poco.SharedPtr.html#17479" title="Poco::SharedPtr::referenceCount()">referenceCount</a>, <a href="Poco.SharedPtr.html#17416" title="Poco::SharedPtr::reset()">reset</a>, <a href="Poco.SharedPtr.html#17429" title="Poco::SharedPtr::swap()">swap</a>, <a href="Poco.SharedPtr.html#17432" title="Poco::SharedPtr::unsafeCast()">unsafeCast</a></p>
+<h2>Constructors</h2>
+<h3><a id="17402">SharedPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17403">SharedPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17405">SharedPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other, class OtherRP &gt; <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, OtherRP &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17407">SharedPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="17409">~SharedPtr</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="17410">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17412">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17414">assign</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other, class OtherRP &gt; <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, OtherRP &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17431">cast</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, RP &gt; cast() const;</p>
+<div class="description">
+<p>Casts the <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> via a dynamic cast to the given type. Returns an <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> containing NULL if the cast fails. Example: (assume class Sub: public Super) </p>
+<pre>SharedPtr&lt;Super&gt; super(new Sub());
+SharedPtr&lt;Sub&gt; sub = super.cast&lt;Sub&gt;();
+poco_assert (sub.get());
+</pre>
+</div>
+<h3><a id="17437">get</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C * get();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17438">get</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C * get() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17442">isNull</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isNull() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17441">operator !</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator ! () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17449">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17451">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17453">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17435">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C &amp; operator * ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17436">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C &amp; operator * () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17455">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17457">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17459">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17461">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17463">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17465">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17423">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17425">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17427">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other, class OtherRP &gt; <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, OtherRP &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17443">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17445">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17447">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17467">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17469">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17471">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17473">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17475">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17477">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17439">operator C *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator C * ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17440">operator const C *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator const C * () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17433">operator-&gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">C * operator-&gt; ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17434">operator-&gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const C * operator-&gt; () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17479">referenceCount</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int referenceCount() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17416">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17417">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;C * ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17419">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17421">reset</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other, class OtherRP &gt; void reset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, OtherRP &gt; &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17429">swap</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &amp; ptr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="17432">unsafeCast</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; class Other &gt; <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; Other, RC, RP &gt; unsafeCast() const;</p>
+<div class="description">
+<p>Casts the <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> via a static cast to the given type. Example: (assume class Sub: public Super) </p>
+<pre>SharedPtr&lt;Super&gt; super(new Sub());
+SharedPtr&lt;Sub&gt; sub = super.unsafeCast&lt;Sub&gt;();
+poco_assert (sub.get());
+</pre>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

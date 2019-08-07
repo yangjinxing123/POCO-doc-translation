@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Logger</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class Logger</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Logging<br />
+<b>Header:</b> Poco/Logger.h</p>
+<h2>Description</h2>
+<div class="description">
+<p><a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> is a special <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> that acts as the main entry point into the logging framework. </p>
+<p>An application uses instances of the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> class to generate its log messages and send them on their way to their final destination. <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> instances are organized in a hierarchical, tree-like manner and are maintained by the framework. Every <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> object has exactly one direct ancestor, with the exception of the root logger. A newly created logger inherits its properties - channel and level - from its direct ancestor. Every logger is connected to a channel, to which it passes on its messages. Furthermore, every logger has a log level, which is used for filtering messages based on their priority. Only messages with a priority equal to or higher than the specified level are passed on. For example, if the level of a logger is set to three (PRIO_ERROR), only messages with priority PRIO_ERROR, PRIO_CRITICAL and PRIO_FATAL will propagate. If the level is set to zero, the logger is effectively disabled. </p>
+<p>The name of a logger determines the logger's place within the logger hierarchy. The name of the root logger is always &quot;&quot;, the empty string. For all other loggers, the name is made up of one or more components, separated by a period. For example, the loggers with the name HTTPServer.RequestHandler and HTTPServer.Listener are descendants of the logger HTTPServer, which itself is a descendant of the root logger. There is not limit as to how deep the logger hierarchy can become. Once a logger has been created and it has inherited the channel and level from its ancestor, it loses the connection to it. So changes to the level or channel of a logger do not affect its descendants. This greatly simplifies the implementation of the framework and is no real restriction, because almost always levels and channels are set up at application startup and never changed afterwards. Nevertheless, there are methods to simultaneously change the level and channel of all loggers in a certain hierarchy. </p>
+<p>There are also convenience macros available that wrap the actual logging statement into a check whether the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is sufficient to actually log the message. This allows to increase the application performance if many complex log statements are used. The macros also add the source file path and line number into the log message so that it is available to formatters. Variants of these macros that allow message formatting with <a href="Poco.html#13077" title="Poco::format()">Poco::format</a>() are also available. Up to four arguments are supported. </p>
+<p>Examples: </p>
+<pre>poco_warning(logger, &quot;This is a warning&quot;);
+poco_information_f2(logger, &quot;An informational message with args: %d, %d&quot;, 1, 2);
+</pre>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Channel.html" title="class Poco::Channel">Channel</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Channel.html" title="class Poco::Channel">Channel</a>, <a href="Poco.Configurable.html" title="class Poco::Configurable">Configurable</a>, <a href="Poco.RefCountedObject.html" title="class Poco::RefCountedObject">RefCountedObject</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Logger.html#15039" title="Poco::Logger::add()">add</a>, <a href="Poco.Logger.html#15004" title="Poco::Logger::create()">create</a>, <a href="Poco.Logger.html#14386" title="Poco::Logger::critical()">critical</a>, <a href="Poco.Logger.html#14791" title="Poco::Logger::debug()">debug</a>, <a href="Poco.Logger.html#15011" title="Poco::Logger::destroy()">destroy</a>, <a href="Poco.Logger.html#14953" title="Poco::Logger::dump()">dump</a>, <a href="Poco.Logger.html#14467" title="Poco::Logger::error()">error</a>, <a href="Poco.Logger.html#14305" title="Poco::Logger::fatal()">fatal</a>, <a href="Poco.Logger.html#15041" title="Poco::Logger::find()">find</a>, <a href="Poco.Logger.html#14968" title="Poco::Logger::format()">format</a>, <a href="Poco.Logger.html#14986" title="Poco::Logger::formatDump()">formatDump</a>, <a href="Poco.Logger.html#15000" title="Poco::Logger::get()">get</a>, <a href="Poco.Logger.html#14288" title="Poco::Logger::getChannel()">getChannel</a>, <a href="Poco.Logger.html#14291" title="Poco::Logger::getLevel()">getLevel</a>, <a href="Poco.Logger.html#15009" title="Poco::Logger::has()">has</a>, <a href="Poco.Logger.html#14710" title="Poco::Logger::information()">information</a>, <a href="Poco.Logger.html#14958" title="Poco::Logger::is()">is</a>, <a href="Poco.Logger.html#14297" title="Poco::Logger::log()">log</a>, <a href="Poco.Logger.html#14285" title="Poco::Logger::name()">name</a>, <a href="Poco.Logger.html#15014" title="Poco::Logger::names()">names</a>, <a href="Poco.Logger.html#14629" title="Poco::Logger::notice()">notice</a>, <a href="Poco.Logger.html#15037" title="Poco::Logger::parent()">parent</a>, <a href="Poco.Logger.html#15016" title="Poco::Logger::parseLevel()">parseLevel</a>, <a href="Poco.Logger.html#15008" title="Poco::Logger::root()">root</a>, <a href="Poco.Logger.html#14286" title="Poco::Logger::setChannel()">setChannel</a>, <a href="Poco.Logger.html#14289" title="Poco::Logger::setLevel()">setLevel</a>, <a href="Poco.Logger.html#14294" title="Poco::Logger::setProperty()">setProperty</a>, <a href="Poco.Logger.html#15013" title="Poco::Logger::shutdown()">shutdown</a>, <a href="Poco.Logger.html#14872" title="Poco::Logger::trace()">trace</a>, <a href="Poco.Logger.html#15002" title="Poco::Logger::unsafeGet()">unsafeGet</a>, <a href="Poco.Logger.html#14548" title="Poco::Logger::warning()">warning</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Channel.html#9490" title="Poco::Channel::close()">close</a>, <a href="Poco.RefCountedObject.html#17086" title="Poco::RefCountedObject::duplicate()">duplicate</a>, <a href="Poco.Channel.html#9496" title="Poco::Channel::getProperty()">getProperty</a>, <a href="Poco.Channel.html#9491" title="Poco::Channel::log()">log</a>, <a href="Poco.Channel.html#9489" title="Poco::Channel::open()">open</a>, <a href="Poco.RefCountedObject.html#17088" title="Poco::RefCountedObject::referenceCount()">referenceCount</a>, <a href="Poco.RefCountedObject.html#17087" title="Poco::RefCountedObject::release()">release</a>, <a href="Poco.Channel.html#9493" title="Poco::Channel::setProperty()">setProperty</a></p>
+<h2>Types</h2>
+<h3><a id="15019">LoggerMap</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef std::map &lt; std::string, <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> * &gt; <a href="Poco.Logger.html#15019" title="Poco::Logger::LoggerMap">LoggerMap</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="15020">Logger</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * pChannel,<br />&nbsp;&nbsp;&nbsp;&nbsp;int level<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="15024">~Logger</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="15004">create</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> &amp; create(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * pChannel,<br />&nbsp;&nbsp;&nbsp;&nbsp;int level = Message::PRIO_INFORMATION<br />);</p>
+<div class="description">
+<p>Creates and returns a reference to a <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. The <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> and log level as set as specified. </p>
+</div>
+<h3><a id="14386">critical</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_CRITICAL, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_CRITICAL and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14388">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_CRITICAL, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_CRITICAL and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14392">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14395">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14399">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14404">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14410">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14417">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14425">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14434">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14444">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14455">critical</a></h3>
+<p class="decl">void critical(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14961">critical</a></h3>
+<p class="decl">bool critical() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_CRITICAL. </p>
+</div>
+<h3><a id="14791">debug</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_DEBUG, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_DEBUG and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14793">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_DEBUG, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_DEBUG and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14797">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14800">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14804">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14809">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14815">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14822">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14830">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14839">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14849">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14860">debug</a></h3>
+<p class="decl">void debug(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14966">debug</a></h3>
+<p class="decl">bool debug() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_DEBUG. </p>
+</div>
+<h3><a id="15011">destroy</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void destroy(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p>Destroys the logger with the specified name. Does nothing if the logger is not found. </p>
+<p>After a logger has been destroyed, all references to it become invalid.	 </p>
+</div>
+<h3><a id="14953">dump</a></h3>
+<p class="decl">void dump(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t length,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Message.html#15277" title="enum  Poco::Message::Priority">Message::Priority</a> prio = Message::PRIO_DEBUG<br />);</p>
+<div class="description">
+<p>Logs the given message, followed by the data in buffer. </p>
+<p>The data in buffer is written in canonical hex+ASCII form: Offset (4 bytes) in hexadecimal, followed by sixteen  space-separated, two column, hexadecimal bytes, followed by the same sixteen bytes as ASCII characters. For bytes outside the range 32 .. 127, a dot is printed. </p>
+</div>
+<h3><a id="14467">error</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_ERROR, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_ERROR and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14469">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_ERROR, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_ERROR and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14473">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14476">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14480">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14485">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14491">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14498">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14506">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14515">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14525">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14536">error</a></h3>
+<p class="decl">void error(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14962">error</a></h3>
+<p class="decl">bool error() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_ERROR. </p>
+</div>
+<h3><a id="14305">fatal</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_FATAL, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_FATAL and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14307">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_FATAL, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_FATAL and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14311">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14314">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14318">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14323">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14329">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14336">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14344">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14353">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14363">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14374">fatal</a></h3>
+<p class="decl">void fatal(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14960">fatal</a></h3>
+<p class="decl">bool fatal() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_FATAL. </p>
+</div>
+<h3><a id="14968">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg<br />);</p>
+<div class="description">
+<p>Replaces all occurences of $0 in fmt with the string given in arg and returns the result. To include a dollar sign in the result string, specify two dollar signs ($$) in the format string. </p>
+</div>
+<h3><a id="14971">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg1<br />);</p>
+<div class="description">
+<p>Replaces all occurences of $&lt;n&gt; in fmt with the string given in arg&lt;n&gt; and returns the result. To include a dollar sign in the result string, specify two dollar signs ($$) in the format string. </p>
+</div>
+<h3><a id="14975">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg2<br />);</p>
+<div class="description">
+<p>Replaces all occurences of $&lt;n&gt; in fmt with the string given in arg&lt;n&gt; and returns the result. To include a dollar sign in the result string, specify two dollar signs ($$) in the format string. </p>
+</div>
+<h3><a id="14980">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; arg3<br />);</p>
+<div class="description">
+<p>Replaces all occurences of $&lt;n&gt; in fmt with the string given in arg&lt;n&gt; and returns the result. To include a dollar sign in the result string, specify two dollar signs ($$) in the format string. </p>
+</div>
+<h3><a id="14986">formatDump</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void formatDump(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; message,<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t length<br />);</p>
+<div class="description">
+<p>Creates a hex-dump of the given buffer and appends it to the given message string. </p>
+</div>
+<h3><a id="15000">get</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> &amp; get(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p>Returns a reference to the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> does not yet exist, it is created, based on its parent logger. </p>
+</div>
+<h3><a id="14288">getChannel</a></h3>
+<p class="decl"><a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * getChannel() const;</p>
+<div class="description">
+<p>Returns the <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> attached to the logger. </p>
+</div>
+<h3><a id="14291">getLevel</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int getLevel() const;</p>
+<div class="description">
+<p>Returns the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level. </p>
+</div>
+<h3><a id="15009">has</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> * has(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p>Returns a pointer to the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name if it exists, or a null pointer otherwse. </p>
+</div>
+<h3><a id="14710">information</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_INFORMATION, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_INFORMATION and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14712">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_INFORMATION, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_INFORMATION and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14716">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14719">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14723">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14728">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14734">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14741">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14749">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14758">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14768">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14779">information</a></h3>
+<p class="decl">void information(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14965">information</a></h3>
+<p class="decl">bool information() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_INFORMATION. </p>
+</div>
+<h3><a id="14958">is</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool is(<br />&nbsp;&nbsp;&nbsp;&nbsp;int level<br />) const;</p>
+<div class="description">
+<p>Returns true if at least the given log level is set. </p>
+</div>
+<h3><a id="14297">log</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void log(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Message.html" title="class Poco::Message">Message</a> &amp; msg<br />);</p>
+<div class="description">
+<p>Logs the given message if its priority is greater than or equal to the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Channel.html#9491" title="Poco::Channel::log()">Poco::Channel::log()</a></p></div>
+<h3><a id="14299">log</a></h3>
+<p class="decl">void log(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Exception.html" title="class Poco::Exception">Exception</a> &amp; exc<br />);</p>
+<div class="description">
+<p>Logs the given exception with priority PRIO_ERROR.	 </p>
+</div>
+<h3><a id="14301">log</a></h3>
+<p class="decl">void log(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Exception.html" title="class Poco::Exception">Exception</a> &amp; exc,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>Logs the given exception with priority PRIO_ERROR.	 </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14285">name</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; name() const;</p>
+<div class="description">
+<p>Returns the name of the logger, which is set as the message source on all messages created by the logger. </p>
+</div>
+<h3><a id="15014">names</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void names(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; std::string &gt; &amp; names<br />);</p>
+<div class="description">
+<p>Fills the given vector with the names of all currently defined loggers. </p>
+</div>
+<h3><a id="14629">notice</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_NOTICE, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_NOTICE and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14631">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_NOTICE, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_NOTICE and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14635">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14638">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14642">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14647">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14653">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14660">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14668">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14677">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14687">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14698">notice</a></h3>
+<p class="decl">void notice(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14964">notice</a></h3>
+<p class="decl">bool notice() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_NOTICE. </p>
+</div>
+<h3><a id="15016">parseLevel</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static int parseLevel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; level<br />);</p>
+<div class="description">
+<p>Parses a symbolic log level from a string and returns the resulting numeric level. </p>
+<p>Valid symbolic levels are: </p>
+<ul>
+<li>none (turns off logging) </li>
+<li>fatal </li>
+<li>critical </li>
+<li>error </li>
+<li>warning </li>
+<li>notice </li>
+<li>information </li>
+<li>debug </li>
+<li>trace </li>
+</ul>
+<p>The level is not case sensitive. </p>
+</div>
+<h3><a id="15008">root</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> &amp; root();</p>
+<div class="description">
+<p>Returns a reference to the root logger, which is the ultimate ancestor of all Loggers. </p>
+</div>
+<h3><a id="14286">setChannel</a></h3>
+<p class="decl">void setChannel(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * pChannel<br />);</p>
+<div class="description">
+<p>Attaches the given <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> to the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>. </p>
+</div>
+<h3><a id="14993">setChannel</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void setChannel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> * pChannel<br />);</p>
+<div class="description">
+<p>Attaches the given <a href="Poco.Channel.html" title="class Poco::Channel">Channel</a> to all loggers that are descendants of the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. </p>
+</div>
+<h3><a id="14289">setLevel</a></h3>
+<p class="decl">void setLevel(<br />&nbsp;&nbsp;&nbsp;&nbsp;int level<br />);</p>
+<div class="description">
+<p>Sets the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level. </p>
+<p>See <a href="Poco.Message.html#15277" title="enum  Poco::Message::Priority">Message::Priority</a> for valid log levels. Setting the log level to zero turns off logging for that <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>. </p>
+</div>
+<h3><a id="14292">setLevel</a></h3>
+<p class="decl">void setLevel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; level<br />);</p>
+<div class="description">
+<p>Sets the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level using a symbolic value. </p>
+<p>Valid values are: </p>
+<ul>
+<li>none (turns off logging) </li>
+<li>fatal </li>
+<li>critical </li>
+<li>error </li>
+<li>warning </li>
+<li>notice </li>
+<li>information </li>
+<li>debug </li>
+<li>trace </li>
+</ul>
+</div>
+<h3><a id="14990">setLevel</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void setLevel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;int level<br />);</p>
+<div class="description">
+<p>Sets the given log level on all loggers that are descendants of the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. </p>
+</div>
+<h3><a id="14294">setProperty</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void setProperty(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Sets or changes a configuration property. </p>
+<p>Only the &quot;channel&quot; and &quot;level&quot; properties are supported, which allow setting the target channel and log level, respectively, via the <a href="Poco.LoggingRegistry.html" title="class Poco::LoggingRegistry">LoggingRegistry</a>. The &quot;channel&quot; and &quot;level&quot; properties are set-only. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Channel.html#9493" title="Poco::Channel::setProperty()">Poco::Channel::setProperty()</a></p></div>
+<h3><a id="14996">setProperty</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void setProperty(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; loggerName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; propertyName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Sets or changes a configuration property for all loggers that are descendants of the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. </p>
+</div>
+<h3><a id="15013">shutdown</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void shutdown();</p>
+<div class="description">
+<p>Shuts down the logging framework and releases all Loggers. </p>
+</div>
+<h3><a id="14872">trace</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_TRACE, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_TRACE and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14874">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_TRACE, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_TRACE and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14878">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14881">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14885">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14890">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14896">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14903">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14911">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14920">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14930">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14941">trace</a></h3>
+<p class="decl">void trace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14967">trace</a></h3>
+<p class="decl">bool trace() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_TRACE. </p>
+</div>
+<h3><a id="15002">unsafeGet</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> &amp; unsafeGet(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p>Returns a reference to the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> with the given name. If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> does not yet exist, it is created, based on its parent logger. </p>
+<p>WARNING: This method is not thread safe. You should probably use <a href="Poco.Logger.html#15000" title="Poco::Logger::get()">get</a>() instead. The only time this method should be used is during program initialization, when only one thread is running. </p>
+</div>
+<h3><a id="14548">warning</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_WARNING, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_WARNING and the given message text and sends it to the attached channel. </p>
+</div>
+<h3><a id="14550">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; msg,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p>If the <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a>'s log level is at least PRIO_WARNING, creates a <a href="Poco.Message.html" title="class Poco::Message">Message</a> with priority PRIO_WARNING and the given message text and sends it to the attached channel. </p>
+<p><a href="Poco.File.html" title="class Poco::File">File</a> must be a static string, such as the value of the __FILE__ macro. The string is not copied internally for performance reasons.	 </p>
+</div>
+<h3><a id="14554">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14557">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14561">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14566">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14572">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14579">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14587">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14596">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14606">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14617">warning</a></h3>
+<p class="decl">void warning(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value3,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value4,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value5,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value6,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value7,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value8,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value9,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; value10<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="14963">warning</a></h3>
+<p class="decl">bool warning() const;</p>
+<div class="description">
+<p>Returns true if the log level is at least PRIO_WARNING. </p>
+</div>
+<h3><a id="15039">add</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void add(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> * pLogger<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15041">find</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> * find(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15033">format</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; fmt,<br />&nbsp;&nbsp;&nbsp;&nbsp;int argc,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string argv[]<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15025">log</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void log(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; text,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Message.html#15277" title="enum  Poco::Message::Priority">Message::Priority</a> prio<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15028">log</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void log(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; text,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Message.html#15277" title="enum  Poco::Message::Priority">Message::Priority</a> prio,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * file,<br />&nbsp;&nbsp;&nbsp;&nbsp;int line<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15037">parent</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Logger.html" title="class Poco::Logger">Logger</a> &amp; parent(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Variables</h2>
+<h3><a id="15018">ROOT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Logger.html#15018" title="Poco::Logger::ROOT">ROOT</a>;</p>
+<div class="description">
+<p>The name of the root logger (&quot;&quot;).	 </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

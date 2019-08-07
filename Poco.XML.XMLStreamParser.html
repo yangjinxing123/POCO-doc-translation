@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::XML::XMLStreamParser</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.XML.html" class="namespace">Poco::XML</a></h1>
+<h1 class="symbol">class XMLStreamParser</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-XML" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> XML<br />
+<b>Package:</b> XML<br />
+<b>Header:</b> Poco/XML/XMLStreamParser.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>The streaming <a href="Poco.XML.html" title="namespace Poco::XML">XML</a> pull parser and streaming <a href="Poco.XML.html" title="namespace Poco::XML">XML</a> serializer. The parser is a conforming, non-validating <a href="Poco.XML.html" title="namespace Poco::XML">XML</a> 1.0 implementation (see Implementation Notes for details). The application character encoding (that is, the encoding used in the application's memory) for both parser and serializer is UTF-8. The output encoding of the serializer is UTF-8 as well. The parser supports UTF-8, UTF-16, ISO-8859-1, and US-ASCII input encodings. </p>
+<p>Attribute map: </p>
+<p>Attribute map lookup. If attribute is not found, then the version without the default value throws an appropriate parsing exception while the version with the default value returns that value. </p>
+<p>Note also that there is no <a href="Poco.XML.XMLStreamParser.html#31943" title="Poco::XML::XMLStreamParser::attribute()">attribute</a>(ns, name) version since it would conflict with <a href="Poco.XML.XMLStreamParser.html#31943" title="Poco::XML::XMLStreamParser::attribute()">attribute</a>(name, dv) (qualified attributes are not very common). </p>
+<p>Attribute map is valid throughout at the &quot;element level&quot; until end_element and not just during <a href="Poco.XML.XMLStreamParser.html#31874" title="Poco::XML::XMLStreamParser::EV_START_ELEMENT">EV_START_ELEMENT</a>. As a special case, the map is still valid after <a href="Poco.XML.XMLStreamParser.html#31931" title="Poco::XML::XMLStreamParser::peek()">peek</a>() that returned end_element until this end_element event is retrieved with <a href="Poco.XML.XMLStreamParser.html#31918" title="Poco::XML::XMLStreamParser::next()">next</a>(). </p>
+<p>Using parser: </p>
+<p></p>
+<pre>XMLStreamParser p(ifs, argv[1]);
+for (XMLStreamParser::EventType e: p)
+{
+    switch (e)
+    {
+    case XMLStreamParser::EV_START_ELEMENT:
+        cerr &lt;&lt; p.line () &lt;&lt; ':' &lt;&lt; p.column () &lt;&lt; &quot;: start &quot; &lt;&lt; p.name () &lt;&lt; endl;
+        break;
+    case XMLStreamParser::EV_END_ELEMENT:
+        cerr &lt;&lt; p.line () &lt;&lt; ':' &lt;&lt; p.column () &lt;&lt; &quot;: end &quot; &lt;&lt; p.name () &lt;&lt; endl;
+        break;
+    case XMLStreamParser::EV_START_ATTRIBUTE:
+        ...
+    case XMLStreamParser::EV_END_ATTRIBUTE:
+        ...
+    case XMLStreamParser::EV_CHARACTERS:
+        ...
+    }
+}
+</pre>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.XML.XMLStreamParser.html#31943" title="Poco::XML::XMLStreamParser::attribute()">attribute</a>, <a href="Poco.XML.XMLStreamParser.html#31967" title="Poco::XML::XMLStreamParser::attributeMap()">attributeMap</a>, <a href="Poco.XML.XMLStreamParser.html#31963" title="Poco::XML::XMLStreamParser::attributePresent()">attributePresent</a>, <a href="Poco.XML.XMLStreamParser.html#31906" title="Poco::XML::XMLStreamParser::begin()">begin</a>, <a href="Poco.XML.XMLStreamParser.html#31942" title="Poco::XML::XMLStreamParser::column()">column</a>, <a href="Poco.XML.XMLStreamParser.html#31968" title="Poco::XML::XMLStreamParser::content()">content</a>, <a href="Poco.XML.XMLStreamParser.html#31984" title="Poco::XML::XMLStreamParser::element()">element</a>, <a href="Poco.XML.XMLStreamParser.html#31907" title="Poco::XML::XMLStreamParser::end()">end</a>, <a href="Poco.XML.XMLStreamParser.html#31932" title="Poco::XML::XMLStreamParser::event()">event</a>, <a href="Poco.XML.XMLStreamParser.html#31934" title="Poco::XML::XMLStreamParser::getQName()">getQName</a>, <a href="Poco.XML.XMLStreamParser.html#31933" title="Poco::XML::XMLStreamParser::inputName()">inputName</a>, <a href="Poco.XML.XMLStreamParser.html#31941" title="Poco::XML::XMLStreamParser::line()">line</a>, <a href="Poco.XML.XMLStreamParser.html#31936" title="Poco::XML::XMLStreamParser::localName()">localName</a>, <a href="Poco.XML.XMLStreamParser.html#31935" title="Poco::XML::XMLStreamParser::namespaceURI()">namespaceURI</a>, <a href="Poco.XML.XMLStreamParser.html#31918" title="Poco::XML::XMLStreamParser::next()">next</a>, <a href="Poco.XML.XMLStreamParser.html#31919" title="Poco::XML::XMLStreamParser::nextExpect()">nextExpect</a>, <a href="Poco.XML.XMLStreamParser.html#31931" title="Poco::XML::XMLStreamParser::peek()">peek</a>, <a href="Poco.XML.XMLStreamParser.html#31937" title="Poco::XML::XMLStreamParser::prefix()">prefix</a>, <a href="Poco.XML.XMLStreamParser.html#31938" title="Poco::XML::XMLStreamParser::value()">value</a></p>
+<h2>Nested Classes</h2>
+<h3><a href="Poco.XML.XMLStreamParser.AttributeValueType.html" class="class">struct AttributeValueType</a></h3>
+<p>&nbsp;<a href="Poco.XML.XMLStreamParser.AttributeValueType.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.XML.XMLStreamParser.Iterator.html" class="class">struct Iterator</a></h3>
+<p>&nbsp;<a href="Poco.XML.XMLStreamParser.Iterator.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Types</h2>
+<h3><a id="31892">AttributeMapType</a></h3>
+<p class="decl">typedef std::map &lt; <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a>, <a href="Poco.XML.XMLStreamParser.AttributeValueType.html" title="struct Poco::XML::XMLStreamParser::AttributeValueType">AttributeValueType</a> &gt; <a href="Poco.XML.XMLStreamParser.html#31892" title="Poco::XML::XMLStreamParser::AttributeMapType">AttributeMapType</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31882">FeatureType</a></h3>
+<p class="decl">typedef unsigned short <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a>;</p>
+<div class="description">
+<p>If both receive_attributes_event and <a href="Poco.XML.XMLStreamParser.html#31885" title="Poco::XML::XMLStreamParser::RECEIVE_ATTRIBUTE_MAP">RECEIVE_ATTRIBUTE_MAP</a> are specified, then <a href="Poco.XML.XMLStreamParser.html#31886" title="Poco::XML::XMLStreamParser::RECEIVE_ATTRIBUTES_EVENT">RECEIVE_ATTRIBUTES_EVENT</a> is assumed. </p>
+</div>
+<h2>Enumerations</h2>
+<h3><a id="31873">EventType</a></h3>
+<div class="description">
+<p>Parsing events. </p>
+</div>
+<p class="decl"><a id="31874">EV_START_ELEMENT</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31875">EV_END_ELEMENT</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31876">EV_START_ATTRIBUTE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31877">EV_END_ATTRIBUTE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31878">EV_CHARACTERS</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31879">EV_START_NAMESPACE_DECL</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31880">EV_END_NAMESPACE_DECL</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="31881">EV_EOF</a></p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="31908">XMLStreamParser</a></h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.html" title="class Poco::XML::XMLStreamParser">XMLStreamParser</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; param423,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; inputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> = RECEIVE_DEFAULT<br />);</p>
+<div class="description">
+<p>The parser constructor takes three arguments: the stream to parse, input name that is used in diagnostics to identify the document being parsed, and the list of events we want the parser to report. </p>
+<p>Parse std::istream. Input name is used in diagnostics to identify the document being parsed. </p>
+<p>If stream exceptions are enabled then std::ios_base::failure exception is used to report io errors (badbit and failbit). Otherwise, those are reported as the parsing exception. </p>
+</div>
+<h3><a id="31912">XMLStreamParser</a></h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.html" title="class Poco::XML::XMLStreamParser">XMLStreamParser</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * data,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t size,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; inputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> = RECEIVE_DEFAULT<br />);</p>
+<div class="description">
+<p>Parse memory buffer that contains the whole document. Input name is used in diagnostics to identify the document being parsed. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="31917">~XMLStreamParser</a></h3>
+<p class="decl">~<a href="Poco.XML.XMLStreamParser.html" title="class Poco::XML::XMLStreamParser">XMLStreamParser</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.XML.XMLStreamParser.html" title="class Poco::XML::XMLStreamParser">XMLStreamParser</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="31943">attribute</a></h3>
+<p class="decl">const std::string &amp; attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31945">attribute</a></h3>
+<p class="decl">template &lt; typename T &gt; T attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31947">attribute</a></h3>
+<p class="decl">std::string attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; deflt<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31950">attribute</a></h3>
+<p class="decl">template &lt; typename T &gt; T attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const T &amp; deflt<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31953">attribute</a></h3>
+<p class="decl">const std::string &amp; attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31955">attribute</a></h3>
+<p class="decl">template &lt; typename T &gt; T attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31957">attribute</a></h3>
+<p class="decl">std::string attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; deflt<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31960">attribute</a></h3>
+<p class="decl">template &lt; typename T &gt; T attribute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;const T &amp; deflt<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31967">attributeMap</a></h3>
+<p class="decl">const <a href="Poco.XML.XMLStreamParser.html#31892" title="Poco::XML::XMLStreamParser::AttributeMapType">AttributeMapType</a> &amp; attributeMap() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31963">attributePresent</a></h3>
+<p class="decl">bool attributePresent(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31965">attributePresent</a></h3>
+<p class="decl">bool attributePresent(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31906">begin</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.Iterator.html" title="struct Poco::XML::XMLStreamParser::Iterator">Iterator</a> begin();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31942">column</a></h3>
+<p class="decl"><a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> column() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31968">content</a></h3>
+<p class="decl">void content(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.Content.html" title="struct Poco::XML::Content">Content</a><br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31970">content</a></h3>
+<p class="decl"><a href="Poco.XML.Content.html" title="struct Poco::XML::Content">Content</a> content() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31984">element</a></h3>
+<p class="decl">std::string element();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31985">element</a></h3>
+<p class="decl">template &lt; typename T &gt; T element();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31986">element</a></h3>
+<p class="decl">std::string element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31988">element</a></h3>
+<p class="decl">std::string element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31990">element</a></h3>
+<p class="decl">template &lt; typename T &gt; T element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31992">element</a></h3>
+<p class="decl">template &lt; typename T &gt; T element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31994">element</a></h3>
+<p class="decl">std::string element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; deflt<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31997">element</a></h3>
+<p class="decl">std::string element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; deflt<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="32000">element</a></h3>
+<p class="decl">template &lt; typename T &gt; T element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const T &amp; deflt<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="32003">element</a></h3>
+<p class="decl">template &lt; typename T &gt; T element(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;const T &amp; deflt<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31907">end</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.Iterator.html" title="struct Poco::XML::XMLStreamParser::Iterator">Iterator</a> end();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31932">event</a></h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a> event();</p>
+<div class="description">
+<p>Return the event that was last returned by the call to <a href="Poco.XML.XMLStreamParser.html#31918" title="Poco::XML::XMLStreamParser::next()">next</a>() or <a href="Poco.XML.XMLStreamParser.html#31931" title="Poco::XML::XMLStreamParser::peek()">peek</a>(). </p>
+</div>
+<h3><a id="31934">getQName</a></h3>
+<p class="decl">const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; getQName() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31933">inputName</a></h3>
+<p class="decl">const std::string &amp; inputName() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31941">line</a></h3>
+<p class="decl"><a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> line() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31936">localName</a></h3>
+<p class="decl">const std::string &amp; localName() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31935">namespaceURI</a></h3>
+<p class="decl">const std::string &amp; namespaceURI() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31918">next</a></h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a> next();</p>
+<div class="description">
+<p>Call the <a href="Poco.XML.XMLStreamParser.html#31918" title="Poco::XML::XMLStreamParser::next()">next</a>() function when we are ready to handle the next piece of <a href="Poco.XML.html" title="namespace Poco::XML">XML</a>. </p>
+</div>
+<h3><a id="31919">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a><br />);</p>
+<div class="description">
+<p>Get the next event and make sure that it's what's expected. If it is not, then throw an appropriate parsing exception. </p>
+</div>
+<h3><a id="31921">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31924">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31927">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; ns,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31971">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.Content.html" title="struct Poco::XML::Content">Content</a><br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31975">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.QName.html" title="class Poco::XML::QName">QName</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.Content.html" title="struct Poco::XML::Content">Content</a><br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31979">nextExpect</a></h3>
+<p class="decl">void nextExpect(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; ns,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.Content.html" title="struct Poco::XML::Content">Content</a><br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31931">peek</a></h3>
+<p class="decl"><a href="Poco.XML.XMLStreamParser.html#31873" title="enum  Poco::XML::XMLStreamParser::EventType">EventType</a> peek();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31937">prefix</a></h3>
+<p class="decl">const std::string &amp; prefix() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31938">value</a></h3>
+<p class="decl">std::string &amp; value();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31939">value</a></h3>
+<p class="decl">const std::string &amp; value() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31940">value</a></h3>
+<p class="decl">template &lt; typename T &gt; T value() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Variables</h2>
+<h3><a id="31886">RECEIVE_ATTRIBUTES_EVENT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31886" title="Poco::XML::XMLStreamParser::RECEIVE_ATTRIBUTES_EVENT">RECEIVE_ATTRIBUTES_EVENT</a> = 0x0008;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31885">RECEIVE_ATTRIBUTE_MAP</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31885" title="Poco::XML::XMLStreamParser::RECEIVE_ATTRIBUTE_MAP">RECEIVE_ATTRIBUTE_MAP</a> = 0x0004;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31884">RECEIVE_CHARACTERS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31884" title="Poco::XML::XMLStreamParser::RECEIVE_CHARACTERS">RECEIVE_CHARACTERS</a> = 0x0002;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31888">RECEIVE_DEFAULT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31888" title="Poco::XML::XMLStreamParser::RECEIVE_DEFAULT">RECEIVE_DEFAULT</a> = <a href="Poco.XML.XMLStreamParser.html#31883" title="Poco::XML::XMLStreamParser::RECEIVE_ELEMENTS">RECEIVE_ELEMENTS</a> | <a href="Poco.XML.XMLStreamParser.html#31884" title="Poco::XML::XMLStreamParser::RECEIVE_CHARACTERS">RECEIVE_CHARACTERS</a> | <a href="Poco.XML.XMLStreamParser.html#31885" title="Poco::XML::XMLStreamParser::RECEIVE_ATTRIBUTE_MAP">RECEIVE_ATTRIBUTE_MAP</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31883">RECEIVE_ELEMENTS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31883" title="Poco::XML::XMLStreamParser::RECEIVE_ELEMENTS">RECEIVE_ELEMENTS</a> = 0x0001;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="31887">RECEIVE_NAMESPACE_DECLS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.XML.XMLStreamParser.html#31882" title="Poco::XML::XMLStreamParser::FeatureType">FeatureType</a> <a href="Poco.XML.XMLStreamParser.html#31887" title="Poco::XML::XMLStreamParser::RECEIVE_NAMESPACE_DECLS">RECEIVE_NAMESPACE_DECLS</a> = 0x0010;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Crypto::EVPPKey</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Crypto.html" class="namespace">Poco::Crypto</a></h1>
+<h1 class="symbol">class EVPPKey</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Crypto" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Crypto<br />
+<b>Package:</b> CryptoCore<br />
+<b>Header:</b> Poco/Crypto/EVPPKey.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Utility class for conversion of native keys to EVP. Currently, only <a href="#655" title="RSA">RSA</a> and EC keys are supported. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Crypto.EVPPKey.html#440" title="Poco::Crypto::EVPPKey::duplicate()">duplicate</a>, <a href="Poco.Crypto.EVPPKey.html#436" title="Poco::Crypto::EVPPKey::isSupported()">isSupported</a>, <a href="Poco.Crypto.EVPPKey.html#425" title="Poco::Crypto::EVPPKey::operator !=()">operator&nbsp;!=</a>, <a href="Poco.Crypto.EVPPKey.html#420" title="Poco::Crypto::EVPPKey::operator =()">operator&nbsp;=</a>, <a href="Poco.Crypto.EVPPKey.html#423" title="Poco::Crypto::EVPPKey::operator ==()">operator&nbsp;==</a>, <a href="Poco.Crypto.EVPPKey.html#439" title="Poco::Crypto::EVPPKey::operator EVP_PKEY *()">operator&nbsp;EVP_PKEY&nbsp;*</a>, <a href="Poco.Crypto.EVPPKey.html#438" title="Poco::Crypto::EVPPKey::operator const EVP_PKEY *()">operator&nbsp;const&nbsp;EVP_PKEY&nbsp;*</a>, <a href="Poco.Crypto.EVPPKey.html#427" title="Poco::Crypto::EVPPKey::save()">save</a>, <a href="Poco.Crypto.EVPPKey.html#435" title="Poco::Crypto::EVPPKey::type()">type</a></p>
+<h2>Constructors</h2>
+<h3><a id="402">EVPPKey</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; ecCurveName<br />);</p>
+<div class="description">
+<p>Constructs <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> from ECC curve name. </p>
+<p>Only EC keys can be wrapped by an <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> created using this constructor. </p>
+</div>
+<h3><a id="404">EVPPKey</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * ecCurveName<br />);</p>
+<div class="description">
+<p>Constructs <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> from ECC curve name. </p>
+<p>Only EC keys can be wrapped by an <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> created using this constructor. </p>
+</div>
+<h3><a id="406">EVPPKey</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;EVP_PKEY * pEVPPKey<br />);</p>
+<div class="description">
+<p>Constructs <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> from EVP_PKEY pointer. The content behind the supplied pointer is internally duplicated. </p>
+</div>
+<h3><a id="408">EVPPKey</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename K &gt; explicit <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;K * pKey<br />);</p>
+<div class="description">
+<p>Constructs <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> from a &quot;native&quot; OpenSSL (<a href="#655" title="RSA">RSA</a> or EC_KEY), or a <a href="Poco.html" title="namespace Poco">Poco</a> wrapper (<a href="Poco.Crypto.RSAKey.html" title="class Poco::Crypto::RSAKey">RSAKey</a>, <a href="Poco.Crypto.ECKey.html" title="class Poco::Crypto::ECKey">ECKey</a>) key pointer. </p>
+</div>
+<h3><a id="418">EVPPKey</a></h3>
+<p class="decl"><a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> &amp; other<br />);</p>
+<div class="description">
+<p>Copy constructor. </p>
+</div>
+<h3><a id="410">EVPPKey</a></h3>
+<p class="decl"><a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; publicKeyFile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyFile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPassphrase = ""<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>, by reading public and private key from the given files and using the given passphrase for the private key. Can only by used for signing if a private key is available. </p>
+</div>
+<h3><a id="414">EVPPKey</a></h3>
+<p class="decl"><a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream * pPublicKeyStream,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream * pPrivateKeyStream,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPassphrase = ""<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>. Can only by used for signing if pPrivKey is not null. If a private key file is specified, you don't need to specify a public key file. OpenSSL will auto-create it from the private key. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="422">~EVPPKey</a></h3>
+<p class="decl">~<a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="440">duplicate</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static EVP_PKEY * duplicate(<br />&nbsp;&nbsp;&nbsp;&nbsp;const EVP_PKEY * pFromKey,<br />&nbsp;&nbsp;&nbsp;&nbsp;EVP_PKEY * * pToKey<br />);</p>
+<div class="description">
+<p>Duplicates pFromKey into *pToKey and returns </p>
+</div>
+<h3><a id="436">isSupported</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isSupported(<br />&nbsp;&nbsp;&nbsp;&nbsp;int type<br />) const;</p>
+<div class="description">
+<p>Returns true if OpenSSL type is supported </p>
+</div>
+<h3><a id="425">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> &amp; other<br />) const;</p>
+<div class="description">
+<p>Comparison operator. Returns true if public key components and parameters of the other key are different from this key. </p>
+<p>Works as expected when one key contains only public key, while the other one contains private (thus also public) key. </p>
+</div>
+<h3><a id="420">operator =</a></h3>
+<p class="decl"><a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> &amp; other<br />);</p>
+<div class="description">
+<p>Assignment operator. </p>
+</div>
+<h3><a id="423">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> &amp; other<br />) const;</p>
+<div class="description">
+<p>Comparison operator. Returns true if public key components and parameters of the other key are equal to this key. </p>
+<p>Works as expected when one key contains only public key, while the other one contains private (thus also public) key. </p>
+</div>
+<h3><a id="439">operator EVP_PKEY *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator EVP_PKEY * ();</p>
+<div class="description">
+<p>Returns pointer to the OpenSSL EVP_PKEY structure. </p>
+</div>
+<h3><a id="438">operator const EVP_PKEY *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">operator const EVP_PKEY * () const;</p>
+<div class="description">
+<p>Returns const pointer to the OpenSSL EVP_PKEY structure. </p>
+</div>
+<h3><a id="427">save</a></h3>
+<p class="decl">void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; publicKeyFile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyFile = "",<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPassphrase = ""<br />) const;</p>
+<div class="description">
+<p>Exports the public and/or private keys to the given files. </p>
+<p>If an empty filename is specified, the corresponding key is not exported. </p>
+</div>
+<h3><a id="431">save</a></h3>
+<p class="decl">void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream * pPublicKeyStream,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream * pPrivateKeyStream = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPassphrase = ""<br />) const;</p>
+<div class="description">
+<p>Exports the public and/or private key to the given streams. </p>
+<p>If a null pointer is passed for a stream, the corresponding key is not exported. </p>
+</div>
+<h3><a id="435">type</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int type() const;</p>
+<div class="description">
+<p>Retuns the <a href="Poco.Crypto.EVPPKey.html" title="class Poco::Crypto::EVPPKey">EVPPKey</a> type NID. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

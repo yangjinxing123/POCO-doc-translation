@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Crypto::X509Certificate</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Crypto.html" class="namespace">Poco::Crypto</a></h1>
+<h1 class="symbol">class X509Certificate</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Crypto" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Crypto<br />
+<b>Package:</b> Certificate<br />
+<b>Header:</b> Poco/Crypto/X509Certificate.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class represents a X509 Certificate. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Known Derived Classes: </b><a href="Poco.Net.X509Certificate.html" title="class Poco::Net::X509Certificate">Poco::Net::X509Certificate</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Crypto.X509Certificate.html#745" title="Poco::Crypto::X509Certificate::certificate()">certificate</a>, <a href="Poco.Crypto.X509Certificate.html#731" title="Poco::Crypto::X509Certificate::commonName()">commonName</a>, <a href="Poco.Crypto.X509Certificate.html#746" title="Poco::Crypto::X509Certificate::dup()">dup</a>, <a href="Poco.Crypto.X509Certificate.html#743" title="Poco::Crypto::X509Certificate::equals()">equals</a>, <a href="Poco.Crypto.X509Certificate.html#736" title="Poco::Crypto::X509Certificate::expiresOn()">expiresOn</a>, <a href="Poco.Crypto.X509Certificate.html#732" title="Poco::Crypto::X509Certificate::extractNames()">extractNames</a>, <a href="Poco.Crypto.X509Certificate.html#759" title="Poco::Crypto::X509Certificate::init()">init</a>, <a href="Poco.Crypto.X509Certificate.html#741" title="Poco::Crypto::X509Certificate::issuedBy()">issuedBy</a>, <a href="Poco.Crypto.X509Certificate.html#725" title="Poco::Crypto::X509Certificate::issuerName()">issuerName</a>, <a href="Poco.Crypto.X509Certificate.html#755" title="Poco::Crypto::X509Certificate::load()">load</a>, <a href="Poco.Crypto.X509Certificate.html#718" title="Poco::Crypto::X509Certificate::operator =()">operator&nbsp;=</a>, <a href="Poco.Crypto.X509Certificate.html#748" title="Poco::Crypto::X509Certificate::print()">print</a>, <a href="Poco.Crypto.X509Certificate.html#750" title="Poco::Crypto::X509Certificate::readPEM()">readPEM</a>, <a href="Poco.Crypto.X509Certificate.html#737" title="Poco::Crypto::X509Certificate::save()">save</a>, <a href="Poco.Crypto.X509Certificate.html#724" title="Poco::Crypto::X509Certificate::serialNumber()">serialNumber</a>, <a href="Poco.Crypto.X509Certificate.html#747" title="Poco::Crypto::X509Certificate::signatureAlgorithm()">signatureAlgorithm</a>, <a href="Poco.Crypto.X509Certificate.html#728" title="Poco::Crypto::X509Certificate::subjectName()">subjectName</a>, <a href="Poco.Crypto.X509Certificate.html#720" title="Poco::Crypto::X509Certificate::swap()">swap</a>, <a href="Poco.Crypto.X509Certificate.html#735" title="Poco::Crypto::X509Certificate::validFrom()">validFrom</a>, <a href="Poco.Crypto.X509Certificate.html#723" title="Poco::Crypto::X509Certificate::version()">version</a>, <a href="Poco.Crypto.X509Certificate.html#752" title="Poco::Crypto::X509Certificate::writePEM()">writePEM</a></p>
+<h2>Types</h2>
+<h3><a id="697">List</a></h3>
+<p class="decl">typedef std::vector &lt; <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &gt; <a href="Poco.Crypto.X509Certificate.html#697" title="Poco::Crypto::X509Certificate::List">List</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Enumerations</h2>
+<h3><a id="698">NID</a></h3>
+<div class="description">
+<p>Name identifier for extracting information from a certificate subject's or issuer's distinguished name. </p>
+</div>
+<p class="decl"><a id="699">NID_COMMON_NAME</a> = 13</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="700">NID_COUNTRY</a> = 14</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="701">NID_LOCALITY_NAME</a> = 15</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="702">NID_STATE_OR_PROVINCE</a> = 16</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="703">NID_ORGANIZATION_NAME</a> = 17</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="704">NID_ORGANIZATION_UNIT_NAME</a> = 18</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="705">NID_PKCS9_EMAIL_ADDRESS</a> = 48</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="706">NID_SERIAL_NUMBER</a> = 105</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="707">X509Certificate</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; istr<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> object by reading a certificate in PEM format from a stream. </p>
+</div>
+<h3><a id="709">X509Certificate</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; path<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> object by reading a certificate in PEM format from a file. </p>
+</div>
+<h3><a id="711">X509Certificate</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;X509 * pCert<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> from an existing OpenSSL certificate. Ownership is taken of the certificate. </p>
+</div>
+<h3><a id="716">X509Certificate</a></h3>
+<p class="decl"><a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; cert<br />);</p>
+<div class="description">
+<p>Creates the certificate by copying another one. </p>
+</div>
+<h3><a id="713">X509Certificate</a></h3>
+<p class="decl"><a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;X509 * pCert,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool shared<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> from an existing OpenSSL certificate. Ownership is taken of the certificate. If shared is true, the certificate's reference count is incremented. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="722">~X509Certificate</a></h3>
+<p class="decl">~<a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="745">certificate</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const X509 * certificate() const;</p>
+<div class="description">
+<p>Returns the underlying OpenSSL certificate. </p>
+</div>
+<h3><a id="731">commonName</a></h3>
+<p class="decl">std::string commonName() const;</p>
+<div class="description">
+<p>Returns the common name stored in the certificate subject's distinguished name. </p>
+</div>
+<h3><a id="746">dup</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">X509 * dup() const;</p>
+<div class="description">
+<p>Duplicates and returns the underlying OpenSSL certificate. Note that the caller assumes responsibility for the lifecycle of the created certificate. </p>
+</div>
+<h3><a id="743">equals</a></h3>
+<p class="decl">bool equals(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; otherCertificate<br />) const;</p>
+<div class="description">
+<p>Checks whether the certificate is equal to the other certificate, by comparing the hashes of both certificates. </p>
+<p>Returns true if both certificates are identical, otherwise false. </p>
+</div>
+<h3><a id="736">expiresOn</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">Poco::DateTime</a> expiresOn() const;</p>
+<div class="description">
+<p>Returns the date and time the certificate expires. </p>
+</div>
+<h3><a id="732">extractNames</a></h3>
+<p class="decl">void extractNames(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; commonName,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::set &lt; std::string &gt; &amp; domainNames<br />) const;</p>
+<div class="description">
+<p>Extracts the common name and the alias domain names from the certificate. </p>
+</div>
+<h3><a id="741">issuedBy</a></h3>
+<p class="decl">bool issuedBy(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; issuerCertificate<br />) const;</p>
+<div class="description">
+<p>Checks whether the certificate has been issued by the issuer given by issuerCertificate. This can be used to validate a certificate chain. </p>
+<p>Verifies if the certificate has been signed with the issuer's private key, using the public key from the issuer certificate. </p>
+<p>Returns true if verification against the issuer certificate was successful, false otherwise. </p>
+</div>
+<h3><a id="725">issuerName</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; issuerName() const;</p>
+<div class="description">
+<p>Returns the certificate issuer's distinguished name. </p>
+</div>
+<h3><a id="726">issuerName</a></h3>
+<p class="decl">std::string issuerName(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Crypto.X509Certificate.html#698" title="enum  Poco::Crypto::X509Certificate::NID">NID</a> nid<br />) const;</p>
+<div class="description">
+<p>Extracts the information specified by the given <a href="Poco.Crypto.X509Certificate.html#698" title="enum  Poco::Crypto::X509Certificate::NID">NID</a> (name identifier) from the certificate issuer's distinguished name. </p>
+</div>
+<h3><a id="718">operator =</a></h3>
+<p class="decl"><a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; cert<br />);</p>
+<div class="description">
+<p>Assigns a certificate. </p>
+</div>
+<h3><a id="748">print</a></h3>
+<p class="decl">void print(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream &amp; out<br />) const;</p>
+<div class="description">
+<p>Prints the certificate information to ostream. </p>
+</div>
+<h3><a id="750">readPEM</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Crypto.X509Certificate.html#697" title="Poco::Crypto::X509Certificate::List">List</a> readPEM(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; pemFileName<br />);</p>
+<div class="description">
+<p>Reads and returns a list of certificates from the specified PEM file. </p>
+</div>
+<h3><a id="737">save</a></h3>
+<p class="decl">void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream &amp; stream<br />) const;</p>
+<div class="description">
+<p>Writes the certificate to the given stream. The certificate is written in PEM format. </p>
+</div>
+<h3><a id="739">save</a></h3>
+<p class="decl">void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; path<br />) const;</p>
+<div class="description">
+<p>Writes the certificate to the file given by path. The certificate is written in PEM format. </p>
+</div>
+<h3><a id="724">serialNumber</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; serialNumber() const;</p>
+<div class="description">
+<p>Returns the certificate serial number as a string in decimal encoding. </p>
+</div>
+<h3><a id="747">signatureAlgorithm</a></h3>
+<p class="decl">std::string signatureAlgorithm() const;</p>
+<div class="description">
+<p>Returns the certificate signature algorithm long name. </p>
+</div>
+<h3><a id="728">subjectName</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; subjectName() const;</p>
+<div class="description">
+<p>Returns the certificate subject's distinguished name. </p>
+</div>
+<h3><a id="729">subjectName</a></h3>
+<p class="decl">std::string subjectName(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Crypto.X509Certificate.html#698" title="enum  Poco::Crypto::X509Certificate::NID">NID</a> nid<br />) const;</p>
+<div class="description">
+<p>Extracts the information specified by the given <a href="Poco.Crypto.X509Certificate.html#698" title="enum  Poco::Crypto::X509Certificate::NID">NID</a> (name identifier) from the certificate subject's distinguished name. </p>
+</div>
+<h3><a id="720">swap</a></h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Crypto.X509Certificate.html" title="class Poco::Crypto::X509Certificate">X509Certificate</a> &amp; cert<br />);</p>
+<div class="description">
+<p>Exchanges the certificate with another one. </p>
+</div>
+<h3><a id="735">validFrom</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">Poco::DateTime</a> validFrom() const;</p>
+<div class="description">
+<p>Returns the date and time the certificate is valid from. </p>
+</div>
+<h3><a id="723">version</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">long version() const;</p>
+<div class="description">
+<p>Returns the version of the certificate. </p>
+</div>
+<h3><a id="752">writePEM</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void writePEM(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; pemFileName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Crypto.X509Certificate.html#697" title="Poco::Crypto::X509Certificate::List">List</a> &amp; list<br />);</p>
+<div class="description">
+<p>Writes the list of certificates to the specified PEM file. </p>
+</div>
+<h3><a id="759">init</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void init();</p>
+<div class="description">
+<p>Extracts issuer and subject name from the certificate. </p>
+</div>
+<h3><a id="755">load</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void load(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; stream<br />);</p>
+<div class="description">
+<p>Loads the certificate from the given stream. The certificate must be in PEM format. </p>
+</div>
+<h3><a id="757">load</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void load(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; path<br />);</p>
+<div class="description">
+<p>Loads the certificate from the given file. The certificate must be in PEM format. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

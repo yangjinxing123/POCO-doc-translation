@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::XML::WhitespaceFilter</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.XML.html" class="namespace">Poco::XML</a></h1>
+<h1 class="symbol">class WhitespaceFilter</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-XML" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> XML<br />
+<b>Package:</b> SAX<br />
+<b>Header:</b> Poco/SAX/WhitespaceFilter.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This implementation of the SAX2 <a href="Poco.XML.XMLFilter.html" title="class Poco::XML::XMLFilter">XMLFilter</a> interface filters all whitespace-only character data element content. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.XML.XMLFilterImpl.html" title="class Poco::XML::XMLFilterImpl">XMLFilterImpl</a>, <a href="Poco.XML.LexicalHandler.html" title="class Poco::XML::LexicalHandler">LexicalHandler</a></p>
+<p><b>All Base Classes: </b><a href="Poco.XML.ContentHandler.html" title="class Poco::XML::ContentHandler">ContentHandler</a>, <a href="Poco.XML.DTDHandler.html" title="class Poco::XML::DTDHandler">DTDHandler</a>, <a href="Poco.XML.EntityResolver.html" title="class Poco::XML::EntityResolver">EntityResolver</a>, <a href="Poco.XML.ErrorHandler.html" title="class Poco::XML::ErrorHandler">ErrorHandler</a>, <a href="Poco.XML.LexicalHandler.html" title="class Poco::XML::LexicalHandler">LexicalHandler</a>, <a href="Poco.XML.XMLFilter.html" title="class Poco::XML::XMLFilter">XMLFilter</a>, <a href="Poco.XML.XMLFilterImpl.html" title="class Poco::XML::XMLFilterImpl">XMLFilterImpl</a>, <a href="Poco.XML.XMLReader.html" title="class Poco::XML::XMLReader">XMLReader</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.XML.WhitespaceFilter.html#31296" title="Poco::XML::WhitespaceFilter::characters()">characters</a>, <a href="Poco.XML.WhitespaceFilter.html#31318" title="Poco::XML::WhitespaceFilter::comment()">comment</a>, <a href="Poco.XML.WhitespaceFilter.html#31317" title="Poco::XML::WhitespaceFilter::endCDATA()">endCDATA</a>, <a href="Poco.XML.WhitespaceFilter.html#31311" title="Poco::XML::WhitespaceFilter::endDTD()">endDTD</a>, <a href="Poco.XML.WhitespaceFilter.html#31286" title="Poco::XML::WhitespaceFilter::endDocument()">endDocument</a>, <a href="Poco.XML.WhitespaceFilter.html#31292" title="Poco::XML::WhitespaceFilter::endElement()">endElement</a>, <a href="Poco.XML.WhitespaceFilter.html#31314" title="Poco::XML::WhitespaceFilter::endEntity()">endEntity</a>, <a href="Poco.XML.WhitespaceFilter.html#31283" title="Poco::XML::WhitespaceFilter::getProperty()">getProperty</a>, <a href="Poco.XML.WhitespaceFilter.html#31300" title="Poco::XML::WhitespaceFilter::ignorableWhitespace()">ignorableWhitespace</a>, <a href="Poco.XML.WhitespaceFilter.html#31304" title="Poco::XML::WhitespaceFilter::processingInstruction()">processingInstruction</a>, <a href="Poco.XML.WhitespaceFilter.html#31277" title="Poco::XML::WhitespaceFilter::setProperty()">setProperty</a>, <a href="Poco.XML.WhitespaceFilter.html#31322" title="Poco::XML::WhitespaceFilter::setupParse()">setupParse</a>, <a href="Poco.XML.WhitespaceFilter.html#31316" title="Poco::XML::WhitespaceFilter::startCDATA()">startCDATA</a>, <a href="Poco.XML.WhitespaceFilter.html#31307" title="Poco::XML::WhitespaceFilter::startDTD()">startDTD</a>, <a href="Poco.XML.WhitespaceFilter.html#31285" title="Poco::XML::WhitespaceFilter::startDocument()">startDocument</a>, <a href="Poco.XML.WhitespaceFilter.html#31287" title="Poco::XML::WhitespaceFilter::startElement()">startElement</a>, <a href="Poco.XML.WhitespaceFilter.html#31312" title="Poco::XML::WhitespaceFilter::startEntity()">startEntity</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.XML.ContentHandler.html#30860" title="Poco::XML::ContentHandler::characters()">characters</a>, <a href="Poco.XML.LexicalHandler.html#31032" title="Poco::XML::LexicalHandler::comment()">comment</a>, <a href="Poco.XML.LexicalHandler.html#31031" title="Poco::XML::LexicalHandler::endCDATA()">endCDATA</a>, <a href="Poco.XML.LexicalHandler.html#31025" title="Poco::XML::LexicalHandler::endDTD()">endDTD</a>, <a href="Poco.XML.ContentHandler.html#30850" title="Poco::XML::ContentHandler::endDocument()">endDocument</a>, <a href="Poco.XML.ContentHandler.html#30856" title="Poco::XML::ContentHandler::endElement()">endElement</a>, <a href="Poco.XML.LexicalHandler.html#31028" title="Poco::XML::LexicalHandler::endEntity()">endEntity</a>, <a href="Poco.XML.ContentHandler.html#30874" title="Poco::XML::ContentHandler::endPrefixMapping()">endPrefixMapping</a>, <a href="Poco.XML.ErrorHandler.html#30988" title="Poco::XML::ErrorHandler::error()">error</a>, <a href="Poco.XML.ErrorHandler.html#30990" title="Poco::XML::ErrorHandler::fatalError()">fatalError</a>, <a href="Poco.XML.XMLReader.html#31438" title="Poco::XML::XMLReader::getContentHandler()">getContentHandler</a>, <a href="Poco.XML.XMLReader.html#31435" title="Poco::XML::XMLReader::getDTDHandler()">getDTDHandler</a>, <a href="Poco.XML.XMLReader.html#31432" title="Poco::XML::XMLReader::getEntityResolver()">getEntityResolver</a>, <a href="Poco.XML.XMLReader.html#31441" title="Poco::XML::XMLReader::getErrorHandler()">getErrorHandler</a>, <a href="Poco.XML.XMLReader.html#31445" title="Poco::XML::XMLReader::getFeature()">getFeature</a>, <a href="Poco.XML.XMLFilter.html#31327" title="Poco::XML::XMLFilter::getParent()">getParent</a>, <a href="Poco.XML.XMLReader.html#31453" title="Poco::XML::XMLReader::getProperty()">getProperty</a>, <a href="Poco.XML.ContentHandler.html#30864" title="Poco::XML::ContentHandler::ignorableWhitespace()">ignorableWhitespace</a>, <a href="Poco.XML.DTDHandler.html#30880" title="Poco::XML::DTDHandler::notationDecl()">notationDecl</a>, <a href="Poco.XML.XMLFilterImpl.html#31422" title="Poco::XML::XMLFilterImpl::parent()">parent</a>, <a href="Poco.XML.XMLReader.html#31455" title="Poco::XML::XMLReader::parse()">parse</a>, <a href="Poco.XML.XMLReader.html#31459" title="Poco::XML::XMLReader::parseMemoryNP()">parseMemoryNP</a>, <a href="Poco.XML.ContentHandler.html#30868" title="Poco::XML::ContentHandler::processingInstruction()">processingInstruction</a>, <a href="Poco.XML.EntityResolver.html#30965" title="Poco::XML::EntityResolver::releaseInputSource()">releaseInputSource</a>, <a href="Poco.XML.EntityResolver.html#30962" title="Poco::XML::EntityResolver::resolveEntity()">resolveEntity</a>, <a href="Poco.XML.XMLReader.html#31436" title="Poco::XML::XMLReader::setContentHandler()">setContentHandler</a>, <a href="Poco.XML.XMLReader.html#31433" title="Poco::XML::XMLReader::setDTDHandler()">setDTDHandler</a>, <a href="Poco.XML.ContentHandler.html#30847" title="Poco::XML::ContentHandler::setDocumentLocator()">setDocumentLocator</a>, <a href="Poco.XML.XMLReader.html#31430" title="Poco::XML::XMLReader::setEntityResolver()">setEntityResolver</a>, <a href="Poco.XML.XMLReader.html#31439" title="Poco::XML::XMLReader::setErrorHandler()">setErrorHandler</a>, <a href="Poco.XML.XMLReader.html#31442" title="Poco::XML::XMLReader::setFeature()">setFeature</a>, <a href="Poco.XML.XMLFilter.html#31328" title="Poco::XML::XMLFilter::setParent()">setParent</a>, <a href="Poco.XML.XMLReader.html#31447" title="Poco::XML::XMLReader::setProperty()">setProperty</a>, <a href="Poco.XML.XMLFilterImpl.html#31423" title="Poco::XML::XMLFilterImpl::setupParse()">setupParse</a>, <a href="Poco.XML.ContentHandler.html#30876" title="Poco::XML::ContentHandler::skippedEntity()">skippedEntity</a>, <a href="Poco.XML.LexicalHandler.html#31030" title="Poco::XML::LexicalHandler::startCDATA()">startCDATA</a>, <a href="Poco.XML.LexicalHandler.html#31021" title="Poco::XML::LexicalHandler::startDTD()">startDTD</a>, <a href="Poco.XML.ContentHandler.html#30849" title="Poco::XML::ContentHandler::startDocument()">startDocument</a>, <a href="Poco.XML.ContentHandler.html#30851" title="Poco::XML::ContentHandler::startElement()">startElement</a>, <a href="Poco.XML.LexicalHandler.html#31026" title="Poco::XML::LexicalHandler::startEntity()">startEntity</a>, <a href="Poco.XML.ContentHandler.html#30871" title="Poco::XML::ContentHandler::startPrefixMapping()">startPrefixMapping</a>, <a href="Poco.XML.DTDHandler.html#30884" title="Poco::XML::DTDHandler::unparsedEntityDecl()">unparsedEntityDecl</a>, <a href="Poco.XML.ErrorHandler.html#30986" title="Poco::XML::ErrorHandler::warning()">warning</a></p>
+<h2>Constructors</h2>
+<h3><a id="31273">WhitespaceFilter</a></h3>
+<p class="decl"><a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a>();</p>
+<div class="description">
+<p>Creates the <a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a>, with no parent. </p>
+</div>
+<h3><a id="31274">WhitespaceFilter</a></h3>
+<p class="decl"><a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.XML.XMLReader.html" title="class Poco::XML::XMLReader">XMLReader</a> * pReader<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a> with the specified parent. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="31276">~WhitespaceFilter</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.XML.WhitespaceFilter.html" title="class Poco::XML::WhitespaceFilter">WhitespaceFilter</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="31296">characters</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void characters(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32054" title="Poco::XML::XMLChar">XMLChar</a> ch[],<br />&nbsp;&nbsp;&nbsp;&nbsp;int start,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31398" title="Poco::XML::XMLFilterImpl::characters()">Poco::XML::XMLFilterImpl::characters()</a></p></div>
+<h3><a id="31318">comment</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void comment(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32054" title="Poco::XML::XMLChar">XMLChar</a> ch[],<br />&nbsp;&nbsp;&nbsp;&nbsp;int start,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31032" title="Poco::XML::LexicalHandler::comment()">Poco::XML::LexicalHandler::comment()</a></p></div>
+<h3><a id="31317">endCDATA</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void endCDATA();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31031" title="Poco::XML::LexicalHandler::endCDATA()">Poco::XML::LexicalHandler::endCDATA()</a></p></div>
+<h3><a id="31311">endDTD</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void endDTD();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31025" title="Poco::XML::LexicalHandler::endDTD()">Poco::XML::LexicalHandler::endDTD()</a></p></div>
+<h3><a id="31286">endDocument</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void endDocument();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31388" title="Poco::XML::XMLFilterImpl::endDocument()">Poco::XML::XMLFilterImpl::endDocument()</a></p></div>
+<h3><a id="31292">endElement</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void endElement(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; uri,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; localName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; qname<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31394" title="Poco::XML::XMLFilterImpl::endElement()">Poco::XML::XMLFilterImpl::endElement()</a></p></div>
+<h3><a id="31314">endEntity</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void endEntity(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31028" title="Poco::XML::LexicalHandler::endEntity()">Poco::XML::LexicalHandler::endEntity()</a></p></div>
+<h3><a id="31283">getProperty</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void * getProperty(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; propertyId<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31362" title="Poco::XML::XMLFilterImpl::getProperty()">Poco::XML::XMLFilterImpl::getProperty()</a></p></div>
+<h3><a id="31300">ignorableWhitespace</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void ignorableWhitespace(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32054" title="Poco::XML::XMLChar">XMLChar</a> ch[],<br />&nbsp;&nbsp;&nbsp;&nbsp;int start,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31402" title="Poco::XML::XMLFilterImpl::ignorableWhitespace()">Poco::XML::XMLFilterImpl::ignorableWhitespace()</a></p></div>
+<h3><a id="31304">processingInstruction</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void processingInstruction(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; target,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; data<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31406" title="Poco::XML::XMLFilterImpl::processingInstruction()">Poco::XML::XMLFilterImpl::processingInstruction()</a></p></div>
+<h3><a id="31277">setProperty</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void setProperty(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; propertyId,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; value<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31356" title="Poco::XML::XMLFilterImpl::setProperty()">Poco::XML::XMLFilterImpl::setProperty()</a></p></div>
+<h3><a id="31280">setProperty</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void setProperty(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; propertyId,<br />&nbsp;&nbsp;&nbsp;&nbsp;void * value<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31359" title="Poco::XML::XMLFilterImpl::setProperty()">Poco::XML::XMLFilterImpl::setProperty()</a></p></div>
+<h3><a id="31316">startCDATA</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void startCDATA();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31030" title="Poco::XML::LexicalHandler::startCDATA()">Poco::XML::LexicalHandler::startCDATA()</a></p></div>
+<h3><a id="31307">startDTD</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void startDTD(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; publicId,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; systemId<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31021" title="Poco::XML::LexicalHandler::startDTD()">Poco::XML::LexicalHandler::startDTD()</a></p></div>
+<h3><a id="31285">startDocument</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void startDocument();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31387" title="Poco::XML::XMLFilterImpl::startDocument()">Poco::XML::XMLFilterImpl::startDocument()</a></p></div>
+<h3><a id="31287">startElement</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void startElement(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; uri,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; localName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; qname,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.Attributes.html" title="class Poco::XML::Attributes">Attributes</a> &amp; attrList<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31389" title="Poco::XML::XMLFilterImpl::startElement()">Poco::XML::XMLFilterImpl::startElement()</a></p></div>
+<h3><a id="31312">startEntity</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void startEntity(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.XML.html#32055" title="Poco::XML::XMLString">XMLString</a> &amp; name<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.LexicalHandler.html#31026" title="Poco::XML::LexicalHandler::startEntity()">Poco::XML::LexicalHandler::startEntity()</a></p></div>
+<h3><a id="31322">setupParse</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void setupParse();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.XML.XMLFilterImpl.html#31423" title="Poco::XML::XMLFilterImpl::setupParse()">Poco::XML::XMLFilterImpl::setupParse()</a></p></div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Redis::Command</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Redis.html" class="namespace">Poco::Redis</a></h1>
+<h1 class="symbol">class Command</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Redis" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Redis<br />
+<b>Package:</b> Redis<br />
+<b>Header:</b> Poco/Redis/Command.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Helper class for creating commands. This class contains factory methods for commonly used <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> commands. </p>
+<p>There are two ways of building commands: </p>
+<p></p>
+<ol>
+<li>Use this class and the factory methods </li>
+<li>Use the <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> or <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> class and build the command using the add method or &lt;&lt; operator. </li>
+</ol>
+<p>For example: </p>
+<p></p>
+<pre>Command cmd = Command::set(&quot;mykey&quot;, &quot;Hello&quot;);
+</pre>
+<p>is the same as: </p>
+<p></p>
+<pre>Array cmd;
+cmd &lt;&lt; &quot;SET&quot; &lt;&lt; &quot;mykey&quot; &lt;&lt; &quot;Hello&quot;;
+</pre>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Redis.Command.html#27167" title="Poco::Redis::Command::append()">append</a>, <a href="Poco.Redis.Command.html#27170" title="Poco::Redis::Command::blpop()">blpop</a>, <a href="Poco.Redis.Command.html#27173" title="Poco::Redis::Command::brpop()">brpop</a>, <a href="Poco.Redis.Command.html#27176" title="Poco::Redis::Command::brpoplpush()">brpoplpush</a>, <a href="Poco.Redis.Command.html#27180" title="Poco::Redis::Command::decr()">decr</a>, <a href="Poco.Redis.Command.html#27183" title="Poco::Redis::Command::del()">del</a>, <a href="Poco.Redis.Command.html#27381" title="Poco::Redis::Command::discard()">discard</a>, <a href="Poco.Redis.Command.html#27380" title="Poco::Redis::Command::exec()">exec</a>, <a href="Poco.Redis.Command.html#27189" title="Poco::Redis::Command::exists()">exists</a>, <a href="Poco.Redis.Command.html#27375" title="Poco::Redis::Command::expire()">expire</a>, <a href="Poco.Redis.Command.html#27187" title="Poco::Redis::Command::get()">get</a>, <a href="Poco.Redis.Command.html#27191" title="Poco::Redis::Command::hdel()">hdel</a>, <a href="Poco.Redis.Command.html#27197" title="Poco::Redis::Command::hexists()">hexists</a>, <a href="Poco.Redis.Command.html#27200" title="Poco::Redis::Command::hget()">hget</a>, <a href="Poco.Redis.Command.html#27203" title="Poco::Redis::Command::hgetall()">hgetall</a>, <a href="Poco.Redis.Command.html#27205" title="Poco::Redis::Command::hincrby()">hincrby</a>, <a href="Poco.Redis.Command.html#27209" title="Poco::Redis::Command::hkeys()">hkeys</a>, <a href="Poco.Redis.Command.html#27211" title="Poco::Redis::Command::hlen()">hlen</a>, <a href="Poco.Redis.Command.html#27213" title="Poco::Redis::Command::hmget()">hmget</a>, <a href="Poco.Redis.Command.html#27216" title="Poco::Redis::Command::hmset()">hmset</a>, <a href="Poco.Redis.Command.html#27219" title="Poco::Redis::Command::hset()">hset</a>, <a href="Poco.Redis.Command.html#27229" title="Poco::Redis::Command::hstrlen()">hstrlen</a>, <a href="Poco.Redis.Command.html#27232" title="Poco::Redis::Command::hvals()">hvals</a>, <a href="Poco.Redis.Command.html#27234" title="Poco::Redis::Command::incr()">incr</a>, <a href="Poco.Redis.Command.html#27237" title="Poco::Redis::Command::lindex()">lindex</a>, <a href="Poco.Redis.Command.html#27240" title="Poco::Redis::Command::linsert()">linsert</a>, <a href="Poco.Redis.Command.html#27245" title="Poco::Redis::Command::llen()">llen</a>, <a href="Poco.Redis.Command.html#27247" title="Poco::Redis::Command::lpop()">lpop</a>, <a href="Poco.Redis.Command.html#27249" title="Poco::Redis::Command::lpush()">lpush</a>, <a href="Poco.Redis.Command.html#27257" title="Poco::Redis::Command::lrange()">lrange</a>, <a href="Poco.Redis.Command.html#27261" title="Poco::Redis::Command::lrem()">lrem</a>, <a href="Poco.Redis.Command.html#27265" title="Poco::Redis::Command::lset()">lset</a>, <a href="Poco.Redis.Command.html#27269" title="Poco::Redis::Command::ltrim()">ltrim</a>, <a href="Poco.Redis.Command.html#27273" title="Poco::Redis::Command::mget()">mget</a>, <a href="Poco.Redis.Command.html#27275" title="Poco::Redis::Command::mset()">mset</a>, <a href="Poco.Redis.Command.html#27379" title="Poco::Redis::Command::multi()">multi</a>, <a href="Poco.Redis.Command.html#27378" title="Poco::Redis::Command::ping()">ping</a>, <a href="Poco.Redis.Command.html#27358" title="Poco::Redis::Command::rename()">rename</a>, <a href="Poco.Redis.Command.html#27362" title="Poco::Redis::Command::rpop()">rpop</a>, <a href="Poco.Redis.Command.html#27364" title="Poco::Redis::Command::rpoplpush()">rpoplpush</a>, <a href="Poco.Redis.Command.html#27367" title="Poco::Redis::Command::rpush()">rpush</a>, <a href="Poco.Redis.Command.html#27278" title="Poco::Redis::Command::sadd()">sadd</a>, <a href="Poco.Redis.Command.html#27284" title="Poco::Redis::Command::scard()">scard</a>, <a href="Poco.Redis.Command.html#27286" title="Poco::Redis::Command::sdiff()">sdiff</a>, <a href="Poco.Redis.Command.html#27292" title="Poco::Redis::Command::sdiffstore()">sdiffstore</a>, <a href="Poco.Redis.Command.html#27299" title="Poco::Redis::Command::set()">set</a>, <a href="Poco.Redis.Command.html#27311" title="Poco::Redis::Command::sinter()">sinter</a>, <a href="Poco.Redis.Command.html#27317" title="Poco::Redis::Command::sinterstore()">sinterstore</a>, <a href="Poco.Redis.Command.html#27324" title="Poco::Redis::Command::sismember()">sismember</a>, <a href="Poco.Redis.Command.html#27327" title="Poco::Redis::Command::smembers()">smembers</a>, <a href="Poco.Redis.Command.html#27329" title="Poco::Redis::Command::smove()">smove</a>, <a href="Poco.Redis.Command.html#27333" title="Poco::Redis::Command::spop()">spop</a>, <a href="Poco.Redis.Command.html#27336" title="Poco::Redis::Command::srandmember()">srandmember</a>, <a href="Poco.Redis.Command.html#27339" title="Poco::Redis::Command::srem()">srem</a>, <a href="Poco.Redis.Command.html#27345" title="Poco::Redis::Command::sunion()">sunion</a>, <a href="Poco.Redis.Command.html#27351" title="Poco::Redis::Command::sunionstore()">sunionstore</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Redis.Array.html#27063" title="Poco::Redis::Array::add()">add</a>, <a href="Poco.Redis.Array.html#27070" title="Poco::Redis::Array::addRedisType()">addRedisType</a>, <a href="Poco.Redis.Array.html#27072" title="Poco::Redis::Array::addSimpleString()">addSimpleString</a>, <a href="Poco.Redis.Array.html#27074" title="Poco::Redis::Array::begin()">begin</a>, <a href="Poco.Redis.Array.html#27075" title="Poco::Redis::Array::clear()">clear</a>, <a href="Poco.Redis.Array.html#27076" title="Poco::Redis::Array::end()">end</a>, <a href="Poco.Redis.Array.html#27077" title="Poco::Redis::Array::get()">get</a>, <a href="Poco.Redis.Array.html#27079" title="Poco::Redis::Array::getType()">getType</a>, <a href="Poco.Redis.Array.html#27081" title="Poco::Redis::Array::isNull()">isNull</a>, <a href="Poco.Redis.Array.html#27082" title="Poco::Redis::Array::makeNull()">makeNull</a>, <a href="Poco.Redis.Array.html#27057" title="Poco::Redis::Array::operator <<()">operator&nbsp;&lt;&lt;</a>, <a href="Poco.Redis.Array.html#27084" title="Poco::Redis::Array::size()">size</a>, <a href="Poco.Redis.Array.html#27083" title="Poco::Redis::Array::toString()">toString</a></p>
+<h2>Types</h2>
+<h3><a id="27161">StringVec</a></h3>
+<p class="decl">typedef std::vector &lt; std::string &gt; <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="27162">Command</a></h3>
+<p class="decl"><a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; command<br />);</p>
+<div class="description">
+<p>Creates a command. </p>
+</div>
+<h3><a id="27164">Command</a></h3>
+<p class="decl"><a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> &amp; copy<br />);</p>
+<div class="description">
+<p>Creates a command by copying another one. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="27166">~Command</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a>();</p>
+<div class="description">
+<p>Destroys the command. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="27167">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> append(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Creates and returns an APPEND command. </p>
+</div>
+<h3><a id="27170">blpop</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> blpop(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; lists,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> timeout = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a BLPOP command. </p>
+</div>
+<h3><a id="27173">brpop</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> brpop(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; lists,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> timeout = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a BRPOP command. </p>
+</div>
+<h3><a id="27176">brpoplpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> brpoplpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; sourceList,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; destinationList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> timeout = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a BRPOPLPUSH command. </p>
+</div>
+<h3><a id="27180">decr</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> decr(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> by = 0<br />);</p>
+<div class="description">
+<p>Creates and returns an DECR or DECRBY command. Calls DECR when by is omitted or zero. </p>
+</div>
+<h3><a id="27183">del</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> del(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key<br />);</p>
+<div class="description">
+<p>Creates and returns an DEL command. </p>
+</div>
+<h3><a id="27185">del</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> del(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; keys<br />);</p>
+<div class="description">
+<p>Creates and returns an DEL command. </p>
+</div>
+<h3><a id="27381">discard</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> discard();</p>
+<div class="description">
+<p>Creates and returns a DISCARD command. </p>
+</div>
+<h3><a id="27380">exec</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> exec();</p>
+<div class="description">
+<p>Creates and returns a EXEC command. </p>
+</div>
+<h3><a id="27189">exists</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> exists(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key<br />);</p>
+<div class="description">
+<p>Creates and returns an EXISTS command. </p>
+</div>
+<h3><a id="27375">expire</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> expire(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> seconds<br />);</p>
+<div class="description">
+<p>Creates and returns an EXPIRE command. </p>
+</div>
+<h3><a id="27187">get</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> get(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key<br />);</p>
+<div class="description">
+<p>Creates and returns an GET command. </p>
+</div>
+<h3><a id="27191">hdel</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hdel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field<br />);</p>
+<div class="description">
+<p>Creates and returns an HDEL command. </p>
+</div>
+<h3><a id="27194">hdel</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hdel(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; fields<br />);</p>
+<div class="description">
+<p>Creates and returns an HDEL command. </p>
+</div>
+<h3><a id="27197">hexists</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hexists(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field<br />);</p>
+<div class="description">
+<p>Creates and returns an HEXISTS command. </p>
+</div>
+<h3><a id="27200">hget</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hget(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field<br />);</p>
+<div class="description">
+<p>Creates and returns an HGET command. </p>
+</div>
+<h3><a id="27203">hgetall</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hgetall(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash<br />);</p>
+<div class="description">
+<p>Creates and returns an HGETALL command. </p>
+</div>
+<h3><a id="27205">hincrby</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hincrby(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> by = 1<br />);</p>
+<div class="description">
+<p>Creates and returns an HINCRBY command. </p>
+</div>
+<h3><a id="27209">hkeys</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hkeys(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash<br />);</p>
+<div class="description">
+<p>Creates and returns an HKEYS command. </p>
+</div>
+<h3><a id="27211">hlen</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hlen(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash<br />);</p>
+<div class="description">
+<p>Creates and returns an HLEN command. </p>
+</div>
+<h3><a id="27213">hmget</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hmget(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; fields<br />);</p>
+<div class="description">
+<p>Creates and returns an HMGET command. </p>
+</div>
+<h3><a id="27216">hmset</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hmset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::map &lt; std::string, std::string &gt; &amp; fields<br />);</p>
+<div class="description">
+<p>Creates and returns a HMSET command. </p>
+</div>
+<h3><a id="27219">hset</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns an HSET or HSETNX (when create is false) command. </p>
+</div>
+<h3><a id="27224">hset</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns an HSET or HSETNX (when create is false) command. </p>
+</div>
+<h3><a id="27229">hstrlen</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hstrlen(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; field<br />);</p>
+<div class="description">
+<p>Creates and returns an HSTRLEN command (Available for <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> 3.2). </p>
+</div>
+<h3><a id="27232">hvals</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> hvals(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hash<br />);</p>
+<div class="description">
+<p>Creates and returns an HVALS command. </p>
+</div>
+<h3><a id="27234">incr</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> incr(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> by = 0<br />);</p>
+<div class="description">
+<p>Creates and returns an INCR or INCRBY command. Calls INCR when by is omitted or zero. </p>
+</div>
+<h3><a id="27237">lindex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lindex(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> index = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a LINDEX command. </p>
+</div>
+<h3><a id="27240">linsert</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> linsert(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool before,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; reference,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Creates and returns a LINSERT command. </p>
+</div>
+<h3><a id="27245">llen</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> llen(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list<br />);</p>
+<div class="description">
+<p>Creates and returns a LLEN command. </p>
+</div>
+<h3><a id="27247">lpop</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lpop(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list<br />);</p>
+<div class="description">
+<p>Creates and returns a LPOP command. </p>
+</div>
+<h3><a id="27249">lpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a LPUSH or LPUSHX (when create is false) command. </p>
+</div>
+<h3><a id="27253">lpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a LPUSH or LPUSHX (when create is false) command. </p>
+</div>
+<h3><a id="27257">lrange</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lrange(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> start = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> stop = - 1<br />);</p>
+<div class="description">
+<p>Creates and returns a LRANGE command. When start and stop is omitted an LRANGE command will returned that returns all items of the list. </p>
+</div>
+<h3><a id="27261">lrem</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lrem(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> count,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Creates and returns a LREM command. </p>
+</div>
+<h3><a id="27265">lset</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> lset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> index,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Creates and returns a LSET command. </p>
+</div>
+<h3><a id="27269">ltrim</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> ltrim(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> start = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> stop = - 1<br />);</p>
+<div class="description">
+<p>Creates and returns a LTRIM command. </p>
+</div>
+<h3><a id="27273">mget</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> mget(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; keys<br />);</p>
+<div class="description">
+<p>Creates and returns a MGET command. </p>
+</div>
+<h3><a id="27275">mset</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> mset(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::map &lt; std::string, std::string &gt; &amp; keyvalues,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a MSET or MSETNX (when create is false) command. </p>
+</div>
+<h3><a id="27379">multi</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> multi();</p>
+<div class="description">
+<p>Creates and returns a MULTI command. </p>
+</div>
+<h3><a id="27378">ping</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> ping();</p>
+<div class="description">
+<p>Creates and returns a PING command. </p>
+</div>
+<h3><a id="27358">rename</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> rename(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; newName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool overwrite = true<br />);</p>
+<div class="description">
+<p>Creates and returns a RENAME or RENAMENX when overwrite is false. </p>
+</div>
+<h3><a id="27362">rpop</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> rpop(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list<br />);</p>
+<div class="description">
+<p>Creates and returns a RPOP command. </p>
+</div>
+<h3><a id="27364">rpoplpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> rpoplpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; sourceList,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; destinationList<br />);</p>
+<div class="description">
+<p>Creates and returns a RPOPLPUSH command. </p>
+</div>
+<h3><a id="27367">rpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> rpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a RPUSH or RPUSHX (when create is false) command. </p>
+</div>
+<h3><a id="27371">rpush</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> rpush(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; list,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a RPUSH or RPUSHX (when create is false) command. </p>
+</div>
+<h3><a id="27278">sadd</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sadd(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value<br />);</p>
+<div class="description">
+<p>Creates and returns a SADD command. </p>
+</div>
+<h3><a id="27281">sadd</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sadd(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; values<br />);</p>
+<div class="description">
+<p>Creates and returns a SADD command. </p>
+</div>
+<h3><a id="27284">scard</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> scard(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set<br />);</p>
+<div class="description">
+<p>Creates and returns a SCARD command. </p>
+</div>
+<h3><a id="27286">sdiff</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sdiff(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SDIFF command.Creates and returns </p>
+</div>
+<h3><a id="27289">sdiff</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sdiff(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SDIFF command. </p>
+</div>
+<h3><a id="27292">sdiffstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sdiffstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SDIFFSTORE command. </p>
+</div>
+<h3><a id="27296">sdiffstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sdiffstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SDIFFSTORE command. </p>
+</div>
+<h3><a id="27299">set</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> set(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool overwrite = true,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> &amp; expireTime = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a SET command to set the key with a value. </p>
+</div>
+<h3><a id="27305">set</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> set(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; key,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool overwrite = true,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> &amp; expireTime = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool create = true<br />);</p>
+<div class="description">
+<p>Creates and returns a SET command to set the key with a value. </p>
+</div>
+<h3><a id="27311">sinter</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sinter(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SINTER command. </p>
+</div>
+<h3><a id="27314">sinter</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sinter(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SINTER command. </p>
+</div>
+<h3><a id="27317">sinterstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sinterstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SINTERSTORE command. </p>
+</div>
+<h3><a id="27321">sinterstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sinterstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SINTERSTORE command. </p>
+</div>
+<h3><a id="27324">sismember</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sismember(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; member<br />);</p>
+<div class="description">
+<p>Creates and returns a SISMEMBER command. </p>
+</div>
+<h3><a id="27327">smembers</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> smembers(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set<br />);</p>
+<div class="description">
+<p>Creates and returns a SMEMBERS command. </p>
+</div>
+<h3><a id="27329">smove</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> smove(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; source,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; destination,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; member<br />);</p>
+<div class="description">
+<p>Creates and returns a SMOVE command. </p>
+</div>
+<h3><a id="27333">spop</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> spop(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> count = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a SPOP command. </p>
+</div>
+<h3><a id="27336">srandmember</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> srandmember(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Int64</a> count = 0<br />);</p>
+<div class="description">
+<p>Creates and returns a SRANDMEMBER command. </p>
+</div>
+<h3><a id="27339">srem</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> srem(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; member<br />);</p>
+<div class="description">
+<p>Creates and returns a SREM command. </p>
+</div>
+<h3><a id="27342">srem</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> srem(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; members<br />);</p>
+<div class="description">
+<p>Creates and returns a SREM command. </p>
+</div>
+<h3><a id="27345">sunion</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sunion(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SUNION command. </p>
+</div>
+<h3><a id="27348">sunion</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sunion(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SUNION command. </p>
+</div>
+<h3><a id="27351">sunionstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sunionstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set2<br />);</p>
+<div class="description">
+<p>Creates and returns a SUNIONSTORE command. </p>
+</div>
+<h3><a id="27355">sunionstore</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> sunionstore(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Command.html#27161" title="Poco::Redis::Command::StringVec">StringVec</a> &amp; sets<br />);</p>
+<div class="description">
+<p>Creates and returns a SUNIONSTORE command. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

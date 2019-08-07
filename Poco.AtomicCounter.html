@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::AtomicCounter</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class AtomicCounter</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Core<br />
+<b>Header:</b> Poco/AtomicCounter.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements a simple counter, which provides atomic operations that are safe to use in a multithreaded environment. </p>
+<p>Typical usage of <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> is for implementing reference counting and similar things. </p>
+<p>On some platforms, the implementation of <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> is based on atomic primitives specific to the platform (such as InterlockedIncrement, etc. on Windows), and thus very efficient. On platforms that do not support atomic primitives, operations are guarded by a <a href="Poco.FastMutex.html" title="class Poco::FastMutex">FastMutex</a>. </p>
+<p>The following platforms currently have atomic primitives: </p>
+<ul>
+<li>Windows </li>
+<li>Mac OS X </li>
+<li>GCC 4.1+ (Intel platforms only) </li>
+</ul>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.AtomicCounter.html#8802" title="Poco::AtomicCounter::operator !()">operator&nbsp;!</a>, <a href="Poco.AtomicCounter.html#8796" title="Poco::AtomicCounter::operator ++()">operator&nbsp;++</a>, <a href="Poco.AtomicCounter.html#8799" title="Poco::AtomicCounter::operator --()">operator&nbsp;--</a>, <a href="Poco.AtomicCounter.html#8790" title="Poco::AtomicCounter::operator =()">operator&nbsp;=</a>, <a href="Poco.AtomicCounter.html#8794" title="Poco::AtomicCounter::operator ValueType()">operator&nbsp;ValueType</a>, <a href="Poco.AtomicCounter.html#8795" title="Poco::AtomicCounter::value()">value</a></p>
+<h2>Types</h2>
+<h3><a id="8783">ValueType</a></h3>
+<p class="decl">typedef int <a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a>;</p>
+<div class="description">
+<p>The underlying integer type. </p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="8784">AtomicCounter</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>();</p>
+<div class="description">
+<p>Creates a new <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> and initializes it to zero. </p>
+</div>
+<h3><a id="8785">AtomicCounter</a></h3>
+<p class="decl">explicit <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> initialValue<br />);</p>
+<div class="description">
+<p>Creates a new <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> and initializes it with the given value. </p>
+</div>
+<h3><a id="8787">AtomicCounter</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> &amp; counter<br />);</p>
+<div class="description">
+<p>Creates the counter by copying another one. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="8789">~AtomicCounter</a></h3>
+<p class="decl">~<a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="8802">operator !</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator ! () const;</p>
+<div class="description">
+<p>Returns true if the counter is zero, false otherwise. </p>
+</div>
+<h3><a id="8796">operator ++</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> operator ++ ();</p>
+<div class="description">
+<p>Increments the counter and returns the result. </p>
+</div>
+<h3><a id="8797">operator ++</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> operator ++ (<br />&nbsp;&nbsp;&nbsp;&nbsp;int<br />);</p>
+<div class="description">
+<p>Increments the counter and returns the previous value. </p>
+</div>
+<h3><a id="8799">operator --</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> operator -- ();</p>
+<div class="description">
+<p>Decrements the counter and returns the result. </p>
+</div>
+<h3><a id="8800">operator --</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> operator -- (<br />&nbsp;&nbsp;&nbsp;&nbsp;int<br />);</p>
+<div class="description">
+<p>Decrements the counter and returns the previous value. </p>
+</div>
+<h3><a id="8790">operator =</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> &amp; counter<br />);</p>
+<div class="description">
+<p>Assigns the value of another <a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a>. </p>
+</div>
+<h3><a id="8792">operator =</a></h3>
+<p class="decl"><a href="Poco.AtomicCounter.html" title="class Poco::AtomicCounter">AtomicCounter</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> value<br />);</p>
+<div class="description">
+<p>Assigns a value to the counter. </p>
+</div>
+<h3><a id="8794">operator ValueType</a></h3>
+<p class="decl">operator <a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a>() const;</p>
+<div class="description">
+<p>Returns the value of the counter. </p>
+</div>
+<h3><a id="8795">value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.AtomicCounter.html#8783" title="Poco::AtomicCounter::ValueType">ValueType</a> value() const;</p>
+<div class="description">
+<p>Returns the value of the counter. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

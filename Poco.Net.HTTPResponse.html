@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Net::HTTPResponse</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Net.html" class="namespace">Poco::Net</a></h1>
+<h1 class="symbol">class HTTPResponse</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Net" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Net<br />
+<b>Package:</b> HTTP<br />
+<b>Header:</b> Poco/Net/HTTPResponse.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class encapsulates an HTTP response message. </p>
+<p>In addition to the properties common to all HTTP messages, a HTTP response has status code and a reason phrase. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Net.HTTPMessage.html" title="class Poco::Net::HTTPMessage">HTTPMessage</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Net.HTTPMessage.html" title="class Poco::Net::HTTPMessage">HTTPMessage</a>, <a href="Poco.Net.MessageHeader.html" title="class Poco::Net::MessageHeader">MessageHeader</a>, <a href="Poco.Net.NameValueCollection.html" title="class Poco::Net::NameValueCollection">NameValueCollection</a></p>
+<p><b>Known Derived Classes: </b><a href="Poco.Net.HTTPServerResponse.html" title="class Poco::Net::HTTPServerResponse">HTTPServerResponse</a>, <a href="Poco.Net.HTTPServerResponseImpl.html" title="class Poco::Net::HTTPServerResponseImpl">HTTPServerResponseImpl</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Net.HTTPResponse.html#22183" title="Poco::Net::HTTPResponse::addCookie()">addCookie</a>, <a href="Poco.Net.HTTPResponse.html#22185" title="Poco::Net::HTTPResponse::getCookies()">getCookies</a>, <a href="Poco.Net.HTTPResponse.html#22182" title="Poco::Net::HTTPResponse::getDate()">getDate</a>, <a href="Poco.Net.HTTPResponse.html#22174" title="Poco::Net::HTTPResponse::getReason()">getReason</a>, <a href="Poco.Net.HTTPResponse.html#22191" title="Poco::Net::HTTPResponse::getReasonForStatus()">getReasonForStatus</a>, <a href="Poco.Net.HTTPResponse.html#22169" title="Poco::Net::HTTPResponse::getStatus()">getStatus</a>, <a href="Poco.Net.HTTPResponse.html#22189" title="Poco::Net::HTTPResponse::read()">read</a>, <a href="Poco.Net.HTTPResponse.html#22180" title="Poco::Net::HTTPResponse::setDate()">setDate</a>, <a href="Poco.Net.HTTPResponse.html#22172" title="Poco::Net::HTTPResponse::setReason()">setReason</a>, <a href="Poco.Net.HTTPResponse.html#22167" title="Poco::Net::HTTPResponse::setStatus()">setStatus</a>, <a href="Poco.Net.HTTPResponse.html#22175" title="Poco::Net::HTTPResponse::setStatusAndReason()">setStatusAndReason</a>, <a href="Poco.Net.HTTPResponse.html#22187" title="Poco::Net::HTTPResponse::write()">write</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Net.NameValueCollection.html#23653" title="Poco::Net::NameValueCollection::add()">add</a>, <a href="Poco.Net.NameValueCollection.html#23665" title="Poco::Net::NameValueCollection::begin()">begin</a>, <a href="Poco.Net.NameValueCollection.html#23671" title="Poco::Net::NameValueCollection::clear()">clear</a>, <a href="Poco.Net.MessageHeader.html#23451" title="Poco::Net::MessageHeader::decodeRFC2047()">decodeRFC2047</a>, <a href="Poco.Net.MessageHeader.html#23455" title="Poco::Net::MessageHeader::decodeWord()">decodeWord</a>, <a href="Poco.Net.NameValueCollection.html#23667" title="Poco::Net::NameValueCollection::empty()">empty</a>, <a href="Poco.Net.NameValueCollection.html#23666" title="Poco::Net::NameValueCollection::end()">end</a>, <a href="Poco.Net.NameValueCollection.html#23669" title="Poco::Net::NameValueCollection::erase()">erase</a>, <a href="Poco.Net.NameValueCollection.html#23663" title="Poco::Net::NameValueCollection::find()">find</a>, <a href="Poco.Net.NameValueCollection.html#23656" title="Poco::Net::NameValueCollection::get()">get</a>, <a href="Poco.Net.HTTPMessage.html#21952" title="Poco::Net::HTTPMessage::getChunkedTransferEncoding()">getChunkedTransferEncoding</a>, <a href="Poco.Net.HTTPMessage.html#21942" title="Poco::Net::HTTPMessage::getContentLength()">getContentLength</a>, <a href="Poco.Net.HTTPMessage.html#21945" title="Poco::Net::HTTPMessage::getContentLength64()">getContentLength64</a>, <a href="Poco.Net.HTTPMessage.html#21957" title="Poco::Net::HTTPMessage::getContentType()">getContentType</a>, <a href="Poco.Net.MessageHeader.html#23429" title="Poco::Net::MessageHeader::getFieldLimit()">getFieldLimit</a>, <a href="Poco.Net.HTTPMessage.html#21960" title="Poco::Net::HTTPMessage::getKeepAlive()">getKeepAlive</a>, <a href="Poco.Net.HTTPMessage.html#21949" title="Poco::Net::HTTPMessage::getTransferEncoding()">getTransferEncoding</a>, <a href="Poco.Net.HTTPMessage.html#21939" title="Poco::Net::HTTPMessage::getVersion()">getVersion</a>, <a href="Poco.Net.NameValueCollection.html#23661" title="Poco::Net::NameValueCollection::has()">has</a>, <a href="Poco.Net.HTTPMessage.html#21946" title="Poco::Net::HTTPMessage::hasContentLength()">hasContentLength</a>, <a href="Poco.Net.MessageHeader.html#23432" title="Poco::Net::MessageHeader::hasToken()">hasToken</a>, <a href="Poco.Net.MessageHeader.html#23423" title="Poco::Net::MessageHeader::operator =()">operator&nbsp;=</a>, <a href="Poco.Net.NameValueCollection.html#23648" title="Poco::Net::NameValueCollection::operator []()">operator&nbsp;[]</a>, <a href="Poco.Net.MessageHeader.html#23447" title="Poco::Net::MessageHeader::quote()">quote</a>, <a href="Poco.Net.MessageHeader.html#23427" title="Poco::Net::MessageHeader::read()">read</a>, <a href="Poco.Net.NameValueCollection.html#23650" title="Poco::Net::NameValueCollection::set()">set</a>, <a href="Poco.Net.HTTPMessage.html#21950" title="Poco::Net::HTTPMessage::setChunkedTransferEncoding()">setChunkedTransferEncoding</a>, <a href="Poco.Net.HTTPMessage.html#21940" title="Poco::Net::HTTPMessage::setContentLength()">setContentLength</a>, <a href="Poco.Net.HTTPMessage.html#21943" title="Poco::Net::HTTPMessage::setContentLength64()">setContentLength64</a>, <a href="Poco.Net.HTTPMessage.html#21953" title="Poco::Net::HTTPMessage::setContentType()">setContentType</a>, <a href="Poco.Net.MessageHeader.html#23430" title="Poco::Net::MessageHeader::setFieldLimit()">setFieldLimit</a>, <a href="Poco.Net.HTTPMessage.html#21958" title="Poco::Net::HTTPMessage::setKeepAlive()">setKeepAlive</a>, <a href="Poco.Net.HTTPMessage.html#21947" title="Poco::Net::HTTPMessage::setTransferEncoding()">setTransferEncoding</a>, <a href="Poco.Net.HTTPMessage.html#21937" title="Poco::Net::HTTPMessage::setVersion()">setVersion</a>, <a href="Poco.Net.NameValueCollection.html#23668" title="Poco::Net::NameValueCollection::size()">size</a>, <a href="Poco.Net.MessageHeader.html#23435" title="Poco::Net::MessageHeader::splitElements()">splitElements</a>, <a href="Poco.Net.MessageHeader.html#23439" title="Poco::Net::MessageHeader::splitParameters()">splitParameters</a>, <a href="Poco.Net.NameValueCollection.html#23646" title="Poco::Net::NameValueCollection::swap()">swap</a>, <a href="Poco.Net.MessageHeader.html#23425" title="Poco::Net::MessageHeader::write()">write</a></p>
+<h2>Enumerations</h2>
+<h3><a id="22087">HTTPStatus</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22088">HTTP_CONTINUE</a> = 100</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22089">HTTP_SWITCHING_PROTOCOLS</a> = 101</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22090">HTTP_PROCESSING</a> = 102</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22091">HTTP_OK</a> = 200</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22092">HTTP_CREATED</a> = 201</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22093">HTTP_ACCEPTED</a> = 202</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22094">HTTP_NONAUTHORITATIVE</a> = 203</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22095">HTTP_NO_CONTENT</a> = 204</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22096">HTTP_RESET_CONTENT</a> = 205</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22097">HTTP_PARTIAL_CONTENT</a> = 206</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22098">HTTP_MULTI_STATUS</a> = 207</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22099">HTTP_ALREADY_REPORTED</a> = 208</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22100">HTTP_IM_USED</a> = 226</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22101">HTTP_MULTIPLE_CHOICES</a> = 300</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22102">HTTP_MOVED_PERMANENTLY</a> = 301</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22103">HTTP_FOUND</a> = 302</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22104">HTTP_SEE_OTHER</a> = 303</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22105">HTTP_NOT_MODIFIED</a> = 304</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22106">HTTP_USE_PROXY</a> = 305</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22107">HTTP_USEPROXY</a> = 305</p>
+<div class="description">
+<p>@deprecated </p>
+</div>
+<p class="decl"><a id="22108">HTTP_TEMPORARY_REDIRECT</a> = 307</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22109">HTTP_PERMANENT_REDIRECT</a> = 308</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22110">HTTP_BAD_REQUEST</a> = 400</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22111">HTTP_UNAUTHORIZED</a> = 401</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22112">HTTP_PAYMENT_REQUIRED</a> = 402</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22113">HTTP_FORBIDDEN</a> = 403</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22114">HTTP_NOT_FOUND</a> = 404</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22115">HTTP_METHOD_NOT_ALLOWED</a> = 405</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22116">HTTP_NOT_ACCEPTABLE</a> = 406</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22117">HTTP_PROXY_AUTHENTICATION_REQUIRED</a> = 407</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22118">HTTP_REQUEST_TIMEOUT</a> = 408</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22119">HTTP_CONFLICT</a> = 409</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22120">HTTP_GONE</a> = 410</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22121">HTTP_LENGTH_REQUIRED</a> = 411</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22122">HTTP_PRECONDITION_FAILED</a> = 412</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22123">HTTP_REQUEST_ENTITY_TOO_LARGE</a> = 413</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22124">HTTP_REQUESTENTITYTOOLARGE</a> = 413</p>
+<div class="description">
+<p>@deprecated </p>
+</div>
+<p class="decl"><a id="22125">HTTP_REQUEST_URI_TOO_LONG</a> = 414</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22126">HTTP_REQUESTURITOOLONG</a> = 414</p>
+<div class="description">
+<p>@deprecated </p>
+</div>
+<p class="decl"><a id="22127">HTTP_UNSUPPORTED_MEDIA_TYPE</a> = 415</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22128">HTTP_UNSUPPORTEDMEDIATYPE</a> = 415</p>
+<div class="description">
+<p>@deprecated </p>
+</div>
+<p class="decl"><a id="22129">HTTP_REQUESTED_RANGE_NOT_SATISFIABLE</a> = 416</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22130">HTTP_EXPECTATION_FAILED</a> = 417</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22131">HTTP_IM_A_TEAPOT</a> = 418</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22132">HTTP_ENCHANCE_YOUR_CALM</a> = 420</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22133">HTTP_MISDIRECTED_REQUEST</a> = 421</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22134">HTTP_UNPROCESSABLE_ENTITY</a> = 422</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22135">HTTP_LOCKED</a> = 423</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22136">HTTP_FAILED_DEPENDENCY</a> = 424</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22137">HTTP_UPGRADE_REQUIRED</a> = 426</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22138">HTTP_PRECONDITION_REQUIRED</a> = 428</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22139">HTTP_TOO_MANY_REQUESTS</a> = 429</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22140">HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE</a> = 431</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22141">HTTP_UNAVAILABLE_FOR_LEGAL_REASONS</a> = 451</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22142">HTTP_INTERNAL_SERVER_ERROR</a> = 500</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22143">HTTP_NOT_IMPLEMENTED</a> = 501</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22144">HTTP_BAD_GATEWAY</a> = 502</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22145">HTTP_SERVICE_UNAVAILABLE</a> = 503</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22146">HTTP_GATEWAY_TIMEOUT</a> = 504</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22147">HTTP_VERSION_NOT_SUPPORTED</a> = 505</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22148">HTTP_VARIANT_ALSO_NEGOTIATES</a> = 506</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22149">HTTP_INSUFFICIENT_STORAGE</a> = 507</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22150">HTTP_LOOP_DETECTED</a> = 508</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22151">HTTP_NOT_EXTENDED</a> = 510</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22152">HTTP_NETWORK_AUTHENTICATION_REQUIRED</a> = 511</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="22153">HTTPResponse</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>();</p>
+<div class="description">
+<p>Creates the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> with OK status. </p>
+</div>
+<h3><a id="22161">HTTPResponse</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> with the given status an an appropriate reason phrase. </p>
+</div>
+<h3><a id="22154">HTTPResponse</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; reason<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> with the given status and reason phrase. </p>
+</div>
+<h3><a id="22163">HTTPResponse</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; version,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> with the given version, status an an appropriate reason phrase. </p>
+</div>
+<h3><a id="22157">HTTPResponse</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; version,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; reason<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> with the given version, status and reason phrase. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="22166">~HTTPResponse</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="22183">addCookie</a></h3>
+<p class="decl">void addCookie(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.HTTPCookie.html" title="class Poco::Net::HTTPCookie">HTTPCookie</a> &amp; cookie<br />);</p>
+<div class="description">
+<p>Adds the cookie to the response by adding a Set-Cookie header. </p>
+</div>
+<h3><a id="22185">getCookies</a></h3>
+<p class="decl">void getCookies(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Net.HTTPCookie.html" title="class Poco::Net::HTTPCookie">HTTPCookie</a> &gt; &amp; cookies<br />) const;</p>
+<div class="description">
+<p>Returns a vector with all the cookies set in the response header. </p>
+<p>May throw an exception in case of a malformed Set-Cookie header. </p>
+</div>
+<h3><a id="22182">getDate</a></h3>
+<p class="decl"><a href="Poco.Timestamp.html" title="class Poco::Timestamp">Poco::Timestamp</a> getDate() const;</p>
+<div class="description">
+<p>Returns the value of the Date header. </p>
+</div>
+<h3><a id="22174">getReason</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; getReason() const;</p>
+<div class="description">
+<p>Returns the HTTP reason phrase. </p>
+</div>
+<h3><a id="22191">getReasonForStatus</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string &amp; getReasonForStatus(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status<br />);</p>
+<div class="description">
+<p>Returns an appropriate reason phrase for the given status code. </p>
+</div>
+<h3><a id="22169">getStatus</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> getStatus() const;</p>
+<div class="description">
+<p>Returns the HTTP status code. </p>
+</div>
+<h3><a id="22189">read</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void read(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; istr<br />);</p>
+<div class="description">
+<p>Reads the HTTP response from the given input stream. </p>
+<p>100 Continue responses are ignored. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.MessageHeader.html#23427" title="Poco::Net::MessageHeader::read()">Poco::Net::MessageHeader::read()</a></p></div>
+<h3><a id="22180">setDate</a></h3>
+<p class="decl">void setDate(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Poco::Timestamp</a> &amp; dateTime<br />);</p>
+<div class="description">
+<p>Sets the Date header to the given date/time value. </p>
+</div>
+<h3><a id="22172">setReason</a></h3>
+<p class="decl">void setReason(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; reason<br />);</p>
+<div class="description">
+<p>Sets the HTTP reason phrase. </p>
+</div>
+<h3><a id="22167">setStatus</a></h3>
+<p class="decl">void setStatus(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status<br />);</p>
+<div class="description">
+<p>Sets the HTTP status code. </p>
+<p>Does not change the reason phrase. </p>
+</div>
+<h3><a id="22170">setStatus</a></h3>
+<p class="decl">void setStatus(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; status<br />);</p>
+<div class="description">
+<p>Sets the HTTP status code. </p>
+<p>The string must contain a valid HTTP numerical status code. </p>
+</div>
+<h3><a id="22175">setStatusAndReason</a></h3>
+<p class="decl">void setStatusAndReason(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; reason<br />);</p>
+<div class="description">
+<p>Sets the HTTP status code and reason phrase. </p>
+</div>
+<h3><a id="22178">setStatusAndReason</a></h3>
+<p class="decl">void setStatusAndReason(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPResponse.html#22087" title="enum  Poco::Net::HTTPResponse::HTTPStatus">HTTPStatus</a> status<br />);</p>
+<div class="description">
+<p>Sets the HTTP status code and reason phrase. </p>
+<p>The reason phrase is set according to the status code. </p>
+</div>
+<h3><a id="22187">write</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void write(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream &amp; ostr<br />) const;</p>
+<div class="description">
+<p>Writes the HTTP response to the given output stream. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.MessageHeader.html#23425" title="Poco::Net::MessageHeader::write()">Poco::Net::MessageHeader::write()</a></p></div>
+<h2>Variables</h2>
+<h3><a id="22255">DATE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22255" title="Poco::Net::HTTPResponse::DATE">DATE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22198">HTTP_REASON_ACCEPTED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22198" title="Poco::Net::HTTPResponse::HTTP_REASON_ACCEPTED">HTTP_REASON_ACCEPTED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22204">HTTP_REASON_ALREADY_REPORTED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22204" title="Poco::Net::HTTPResponse::HTTP_REASON_ALREADY_REPORTED">HTTP_REASON_ALREADY_REPORTED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22245">HTTP_REASON_BAD_GATEWAY</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22245" title="Poco::Net::HTTPResponse::HTTP_REASON_BAD_GATEWAY">HTTP_REASON_BAD_GATEWAY</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22214">HTTP_REASON_BAD_REQUEST</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22214" title="Poco::Net::HTTPResponse::HTTP_REASON_BAD_REQUEST">HTTP_REASON_BAD_REQUEST</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22223">HTTP_REASON_CONFLICT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22223" title="Poco::Net::HTTPResponse::HTTP_REASON_CONFLICT">HTTP_REASON_CONFLICT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22193">HTTP_REASON_CONTINUE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22193" title="Poco::Net::HTTPResponse::HTTP_REASON_CONTINUE">HTTP_REASON_CONTINUE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22197">HTTP_REASON_CREATED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22197" title="Poco::Net::HTTPResponse::HTTP_REASON_CREATED">HTTP_REASON_CREATED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22233">HTTP_REASON_ENCHANCE_YOUR_CALM</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22233" title="Poco::Net::HTTPResponse::HTTP_REASON_ENCHANCE_YOUR_CALM">HTTP_REASON_ENCHANCE_YOUR_CALM</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22231">HTTP_REASON_EXPECTATION_FAILED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22231" title="Poco::Net::HTTPResponse::HTTP_REASON_EXPECTATION_FAILED">HTTP_REASON_EXPECTATION_FAILED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22237">HTTP_REASON_FAILED_DEPENDENCY</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22237" title="Poco::Net::HTTPResponse::HTTP_REASON_FAILED_DEPENDENCY">HTTP_REASON_FAILED_DEPENDENCY</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22217">HTTP_REASON_FORBIDDEN</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22217" title="Poco::Net::HTTPResponse::HTTP_REASON_FORBIDDEN">HTTP_REASON_FORBIDDEN</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22208">HTTP_REASON_FOUND</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22208" title="Poco::Net::HTTPResponse::HTTP_REASON_FOUND">HTTP_REASON_FOUND</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22247">HTTP_REASON_GATEWAY_TIMEOUT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22247" title="Poco::Net::HTTPResponse::HTTP_REASON_GATEWAY_TIMEOUT">HTTP_REASON_GATEWAY_TIMEOUT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22224">HTTP_REASON_GONE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22224" title="Poco::Net::HTTPResponse::HTTP_REASON_GONE">HTTP_REASON_GONE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22232">HTTP_REASON_IM_A_TEAPOT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22232" title="Poco::Net::HTTPResponse::HTTP_REASON_IM_A_TEAPOT">HTTP_REASON_IM_A_TEAPOT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22205">HTTP_REASON_IM_USED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22205" title="Poco::Net::HTTPResponse::HTTP_REASON_IM_USED">HTTP_REASON_IM_USED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22250">HTTP_REASON_INSUFFICIENT_STORAGE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22250" title="Poco::Net::HTTPResponse::HTTP_REASON_INSUFFICIENT_STORAGE">HTTP_REASON_INSUFFICIENT_STORAGE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22243">HTTP_REASON_INTERNAL_SERVER_ERROR</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22243" title="Poco::Net::HTTPResponse::HTTP_REASON_INTERNAL_SERVER_ERROR">HTTP_REASON_INTERNAL_SERVER_ERROR</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22225">HTTP_REASON_LENGTH_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22225" title="Poco::Net::HTTPResponse::HTTP_REASON_LENGTH_REQUIRED">HTTP_REASON_LENGTH_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22236">HTTP_REASON_LOCKED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22236" title="Poco::Net::HTTPResponse::HTTP_REASON_LOCKED">HTTP_REASON_LOCKED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22251">HTTP_REASON_LOOP_DETECTED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22251" title="Poco::Net::HTTPResponse::HTTP_REASON_LOOP_DETECTED">HTTP_REASON_LOOP_DETECTED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22219">HTTP_REASON_METHOD_NOT_ALLOWED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22219" title="Poco::Net::HTTPResponse::HTTP_REASON_METHOD_NOT_ALLOWED">HTTP_REASON_METHOD_NOT_ALLOWED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22234">HTTP_REASON_MISDIRECTED_REQUEST</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22234" title="Poco::Net::HTTPResponse::HTTP_REASON_MISDIRECTED_REQUEST">HTTP_REASON_MISDIRECTED_REQUEST</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22207">HTTP_REASON_MOVED_PERMANENTLY</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22207" title="Poco::Net::HTTPResponse::HTTP_REASON_MOVED_PERMANENTLY">HTTP_REASON_MOVED_PERMANENTLY</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22206">HTTP_REASON_MULTIPLE_CHOICES</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22206" title="Poco::Net::HTTPResponse::HTTP_REASON_MULTIPLE_CHOICES">HTTP_REASON_MULTIPLE_CHOICES</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22203">HTTP_REASON_MULTI_STATUS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22203" title="Poco::Net::HTTPResponse::HTTP_REASON_MULTI_STATUS">HTTP_REASON_MULTI_STATUS</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22253">HTTP_REASON_NETWORK_AUTHENTICATION_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22253" title="Poco::Net::HTTPResponse::HTTP_REASON_NETWORK_AUTHENTICATION_REQUIRED">HTTP_REASON_NETWORK_AUTHENTICATION_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22199">HTTP_REASON_NONAUTHORITATIVE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22199" title="Poco::Net::HTTPResponse::HTTP_REASON_NONAUTHORITATIVE">HTTP_REASON_NONAUTHORITATIVE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22220">HTTP_REASON_NOT_ACCEPTABLE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22220" title="Poco::Net::HTTPResponse::HTTP_REASON_NOT_ACCEPTABLE">HTTP_REASON_NOT_ACCEPTABLE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22252">HTTP_REASON_NOT_EXTENDED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22252" title="Poco::Net::HTTPResponse::HTTP_REASON_NOT_EXTENDED">HTTP_REASON_NOT_EXTENDED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22218">HTTP_REASON_NOT_FOUND</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22218" title="Poco::Net::HTTPResponse::HTTP_REASON_NOT_FOUND">HTTP_REASON_NOT_FOUND</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22244">HTTP_REASON_NOT_IMPLEMENTED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22244" title="Poco::Net::HTTPResponse::HTTP_REASON_NOT_IMPLEMENTED">HTTP_REASON_NOT_IMPLEMENTED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22210">HTTP_REASON_NOT_MODIFIED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22210" title="Poco::Net::HTTPResponse::HTTP_REASON_NOT_MODIFIED">HTTP_REASON_NOT_MODIFIED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22200">HTTP_REASON_NO_CONTENT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22200" title="Poco::Net::HTTPResponse::HTTP_REASON_NO_CONTENT">HTTP_REASON_NO_CONTENT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22196">HTTP_REASON_OK</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22196" title="Poco::Net::HTTPResponse::HTTP_REASON_OK">HTTP_REASON_OK</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22202">HTTP_REASON_PARTIAL_CONTENT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22202" title="Poco::Net::HTTPResponse::HTTP_REASON_PARTIAL_CONTENT">HTTP_REASON_PARTIAL_CONTENT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22216">HTTP_REASON_PAYMENT_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22216" title="Poco::Net::HTTPResponse::HTTP_REASON_PAYMENT_REQUIRED">HTTP_REASON_PAYMENT_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22213">HTTP_REASON_PERMANENT_REDIRECT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22213" title="Poco::Net::HTTPResponse::HTTP_REASON_PERMANENT_REDIRECT">HTTP_REASON_PERMANENT_REDIRECT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22226">HTTP_REASON_PRECONDITION_FAILED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22226" title="Poco::Net::HTTPResponse::HTTP_REASON_PRECONDITION_FAILED">HTTP_REASON_PRECONDITION_FAILED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22239">HTTP_REASON_PRECONDITION_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22239" title="Poco::Net::HTTPResponse::HTTP_REASON_PRECONDITION_REQUIRED">HTTP_REASON_PRECONDITION_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22195">HTTP_REASON_PROCESSING</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22195" title="Poco::Net::HTTPResponse::HTTP_REASON_PROCESSING">HTTP_REASON_PROCESSING</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22221">HTTP_REASON_PROXY_AUTHENTICATION_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22221" title="Poco::Net::HTTPResponse::HTTP_REASON_PROXY_AUTHENTICATION_REQUIRED">HTTP_REASON_PROXY_AUTHENTICATION_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22230">HTTP_REASON_REQUESTED_RANGE_NOT_SATISFIABLE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22230" title="Poco::Net::HTTPResponse::HTTP_REASON_REQUESTED_RANGE_NOT_SATISFIABLE">HTTP_REASON_REQUESTED_RANGE_NOT_SATISFIABLE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22227">HTTP_REASON_REQUEST_ENTITY_TOO_LARGE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22227" title="Poco::Net::HTTPResponse::HTTP_REASON_REQUEST_ENTITY_TOO_LARGE">HTTP_REASON_REQUEST_ENTITY_TOO_LARGE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22241">HTTP_REASON_REQUEST_HEADER_FIELDS_TOO_LARGE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22241" title="Poco::Net::HTTPResponse::HTTP_REASON_REQUEST_HEADER_FIELDS_TOO_LARGE">HTTP_REASON_REQUEST_HEADER_FIELDS_TOO_LARGE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22222">HTTP_REASON_REQUEST_TIMEOUT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22222" title="Poco::Net::HTTPResponse::HTTP_REASON_REQUEST_TIMEOUT">HTTP_REASON_REQUEST_TIMEOUT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22228">HTTP_REASON_REQUEST_URI_TOO_LONG</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22228" title="Poco::Net::HTTPResponse::HTTP_REASON_REQUEST_URI_TOO_LONG">HTTP_REASON_REQUEST_URI_TOO_LONG</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22201">HTTP_REASON_RESET_CONTENT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22201" title="Poco::Net::HTTPResponse::HTTP_REASON_RESET_CONTENT">HTTP_REASON_RESET_CONTENT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22209">HTTP_REASON_SEE_OTHER</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22209" title="Poco::Net::HTTPResponse::HTTP_REASON_SEE_OTHER">HTTP_REASON_SEE_OTHER</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22246">HTTP_REASON_SERVICE_UNAVAILABLE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22246" title="Poco::Net::HTTPResponse::HTTP_REASON_SERVICE_UNAVAILABLE">HTTP_REASON_SERVICE_UNAVAILABLE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22194">HTTP_REASON_SWITCHING_PROTOCOLS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22194" title="Poco::Net::HTTPResponse::HTTP_REASON_SWITCHING_PROTOCOLS">HTTP_REASON_SWITCHING_PROTOCOLS</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22212">HTTP_REASON_TEMPORARY_REDIRECT</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22212" title="Poco::Net::HTTPResponse::HTTP_REASON_TEMPORARY_REDIRECT">HTTP_REASON_TEMPORARY_REDIRECT</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22240">HTTP_REASON_TOO_MANY_REQUESTS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22240" title="Poco::Net::HTTPResponse::HTTP_REASON_TOO_MANY_REQUESTS">HTTP_REASON_TOO_MANY_REQUESTS</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22215">HTTP_REASON_UNAUTHORIZED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22215" title="Poco::Net::HTTPResponse::HTTP_REASON_UNAUTHORIZED">HTTP_REASON_UNAUTHORIZED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22242">HTTP_REASON_UNAVAILABLE_FOR_LEGAL_REASONS</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22242" title="Poco::Net::HTTPResponse::HTTP_REASON_UNAVAILABLE_FOR_LEGAL_REASONS">HTTP_REASON_UNAVAILABLE_FOR_LEGAL_REASONS</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22254">HTTP_REASON_UNKNOWN</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22254" title="Poco::Net::HTTPResponse::HTTP_REASON_UNKNOWN">HTTP_REASON_UNKNOWN</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22235">HTTP_REASON_UNPROCESSABLE_ENTITY</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22235" title="Poco::Net::HTTPResponse::HTTP_REASON_UNPROCESSABLE_ENTITY">HTTP_REASON_UNPROCESSABLE_ENTITY</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22229">HTTP_REASON_UNSUPPORTED_MEDIA_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22229" title="Poco::Net::HTTPResponse::HTTP_REASON_UNSUPPORTED_MEDIA_TYPE">HTTP_REASON_UNSUPPORTED_MEDIA_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22238">HTTP_REASON_UPGRADE_REQUIRED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22238" title="Poco::Net::HTTPResponse::HTTP_REASON_UPGRADE_REQUIRED">HTTP_REASON_UPGRADE_REQUIRED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22211">HTTP_REASON_USE_PROXY</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22211" title="Poco::Net::HTTPResponse::HTTP_REASON_USE_PROXY">HTTP_REASON_USE_PROXY</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22249">HTTP_REASON_VARIANT_ALSO_NEGOTIATES</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22249" title="Poco::Net::HTTPResponse::HTTP_REASON_VARIANT_ALSO_NEGOTIATES">HTTP_REASON_VARIANT_ALSO_NEGOTIATES</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22248">HTTP_REASON_VERSION_NOT_SUPPORTED</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22248" title="Poco::Net::HTTPResponse::HTTP_REASON_VERSION_NOT_SUPPORTED">HTTP_REASON_VERSION_NOT_SUPPORTED</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22256">SET_COOKIE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.HTTPResponse.html#22256" title="Poco::Net::HTTPResponse::SET_COOKIE">SET_COOKIE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

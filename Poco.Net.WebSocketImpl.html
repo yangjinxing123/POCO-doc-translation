@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Net::WebSocketImpl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Net.html" class="namespace">Poco::Net</a></h1>
+<h1 class="symbol">class WebSocketImpl</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Net" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Net<br />
+<b>Package:</b> WebSocket<br />
+<b>Header:</b> Poco/Net/WebSocketImpl.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements a <a href="Poco.Net.WebSocket.html" title="class Poco::Net::WebSocket">WebSocket</a>, according to the <a href="Poco.Net.WebSocket.html" title="class Poco::Net::WebSocket">WebSocket</a> protocol described in <a href="https://www.ietf.org/rfc/rfc6455.txt" target="_blank">RFC 6455</a>. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Net.StreamSocketImpl.html" title="class Poco::Net::StreamSocketImpl">StreamSocketImpl</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Net.SocketImpl.html" title="class Poco::Net::SocketImpl">SocketImpl</a>, <a href="Poco.Net.StreamSocketImpl.html" title="class Poco::Net::StreamSocketImpl">StreamSocketImpl</a>, <a href="Poco.RefCountedObject.html" title="class Poco::RefCountedObject">Poco::RefCountedObject</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Net.WebSocketImpl.html#26103" title="Poco::Net::WebSocketImpl::acceptConnection()">acceptConnection</a>, <a href="Poco.Net.WebSocketImpl.html#26146" title="Poco::Net::WebSocketImpl::available()">available</a>, <a href="Poco.Net.WebSocketImpl.html#26112" title="Poco::Net::WebSocketImpl::bind()">bind</a>, <a href="Poco.Net.WebSocketImpl.html#26119" title="Poco::Net::WebSocketImpl::bind6()">bind6</a>, <a href="Poco.Net.WebSocketImpl.html#26130" title="Poco::Net::WebSocketImpl::close()">close</a>, <a href="Poco.Net.WebSocketImpl.html#26105" title="Poco::Net::WebSocketImpl::connect()">connect</a>, <a href="Poco.Net.WebSocketImpl.html#26110" title="Poco::Net::WebSocketImpl::connectNB()">connectNB</a>, <a href="Poco.Net.WebSocketImpl.html#26154" title="Poco::Net::WebSocketImpl::frameFlags()">frameFlags</a>, <a href="Poco.Net.WebSocketImpl.html#26158" title="Poco::Net::WebSocketImpl::getMaxPayloadSize()">getMaxPayloadSize</a>, <a href="Poco.Net.WebSocketImpl.html#26153" title="Poco::Net::WebSocketImpl::getReceiveTimeout()">getReceiveTimeout</a>, <a href="Poco.Net.WebSocketImpl.html#26150" title="Poco::Net::WebSocketImpl::getSendTimeout()">getSendTimeout</a>, <a href="Poco.Net.WebSocketImpl.html#26128" title="Poco::Net::WebSocketImpl::listen()">listen</a>, <a href="Poco.Net.WebSocketImpl.html#26155" title="Poco::Net::WebSocketImpl::mustMaskPayload()">mustMaskPayload</a>, <a href="Poco.Net.WebSocketImpl.html#26096" title="Poco::Net::WebSocketImpl::receiveBytes()">receiveBytes</a>, <a href="Poco.Net.WebSocketImpl.html#26139" title="Poco::Net::WebSocketImpl::receiveFrom()">receiveFrom</a>, <a href="Poco.Net.WebSocketImpl.html#26162" title="Poco::Net::WebSocketImpl::receiveHeader()">receiveHeader</a>, <a href="Poco.Net.WebSocketImpl.html#26170" title="Poco::Net::WebSocketImpl::receiveNBytes()">receiveNBytes</a>, <a href="Poco.Net.WebSocketImpl.html#26165" title="Poco::Net::WebSocketImpl::receivePayload()">receivePayload</a>, <a href="Poco.Net.WebSocketImpl.html#26173" title="Poco::Net::WebSocketImpl::receiveSomeBytes()">receiveSomeBytes</a>, <a href="Poco.Net.WebSocketImpl.html#26147" title="Poco::Net::WebSocketImpl::secure()">secure</a>, <a href="Poco.Net.WebSocketImpl.html#26092" title="Poco::Net::WebSocketImpl::sendBytes()">sendBytes</a>, <a href="Poco.Net.WebSocketImpl.html#26134" title="Poco::Net::WebSocketImpl::sendTo()">sendTo</a>, <a href="Poco.Net.WebSocketImpl.html#26144" title="Poco::Net::WebSocketImpl::sendUrgent()">sendUrgent</a>, <a href="Poco.Net.WebSocketImpl.html#26156" title="Poco::Net::WebSocketImpl::setMaxPayloadSize()">setMaxPayloadSize</a>, <a href="Poco.Net.WebSocketImpl.html#26151" title="Poco::Net::WebSocketImpl::setReceiveTimeout()">setReceiveTimeout</a>, <a href="Poco.Net.WebSocketImpl.html#26148" title="Poco::Net::WebSocketImpl::setSendTimeout()">setSendTimeout</a>, <a href="Poco.Net.WebSocketImpl.html#26133" title="Poco::Net::WebSocketImpl::shutdown()">shutdown</a>, <a href="Poco.Net.WebSocketImpl.html#26131" title="Poco::Net::WebSocketImpl::shutdownReceive()">shutdownReceive</a>, <a href="Poco.Net.WebSocketImpl.html#26132" title="Poco::Net::WebSocketImpl::shutdownSend()">shutdownSend</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Net.SocketImpl.html#25455" title="Poco::Net::SocketImpl::acceptConnection()">acceptConnection</a>, <a href="Poco.Net.SocketImpl.html#25522" title="Poco::Net::SocketImpl::address()">address</a>, <a href="Poco.Net.SocketImpl.html#25506" title="Poco::Net::SocketImpl::available()">available</a>, <a href="Poco.Net.SocketImpl.html#25464" title="Poco::Net::SocketImpl::bind()">bind</a>, <a href="Poco.Net.SocketImpl.html#25471" title="Poco::Net::SocketImpl::bind6()">bind6</a>, <a href="Poco.Net.SocketImpl.html#25482" title="Poco::Net::SocketImpl::close()">close</a>, <a href="Poco.Net.SocketImpl.html#25457" title="Poco::Net::SocketImpl::connect()">connect</a>, <a href="Poco.Net.SocketImpl.html#25462" title="Poco::Net::SocketImpl::connectNB()">connectNB</a>, <a href="Poco.RefCountedObject.html#17086" title="Poco::RefCountedObject::duplicate()">duplicate</a>, <a href="Poco.Net.SocketImpl.html#25629" title="Poco::Net::SocketImpl::error()">error</a>, <a href="Poco.Net.SocketImpl.html#25610" title="Poco::Net::SocketImpl::fcntl()">fcntl</a>, <a href="Poco.Net.SocketImpl.html#25600" title="Poco::Net::SocketImpl::getBlocking()">getBlocking</a>, <a href="Poco.Net.SocketImpl.html#25597" title="Poco::Net::SocketImpl::getBroadcast()">getBroadcast</a>, <a href="Poco.Net.SocketImpl.html#25585" title="Poco::Net::SocketImpl::getKeepAlive()">getKeepAlive</a>, <a href="Poco.Net.SocketImpl.html#25577" title="Poco::Net::SocketImpl::getLinger()">getLinger</a>, <a href="Poco.Net.SocketImpl.html#25582" title="Poco::Net::SocketImpl::getNoDelay()">getNoDelay</a>, <a href="Poco.Net.SocketImpl.html#25594" title="Poco::Net::SocketImpl::getOOBInline()">getOOBInline</a>, <a href="Poco.Net.SocketImpl.html#25549" title="Poco::Net::SocketImpl::getOption()">getOption</a>, <a href="Poco.Net.SocketImpl.html#25569" title="Poco::Net::SocketImpl::getRawOption()">getRawOption</a>, <a href="Poco.Net.SocketImpl.html#25515" title="Poco::Net::SocketImpl::getReceiveBufferSize()">getReceiveBufferSize</a>, <a href="Poco.Net.SocketImpl.html#25521" title="Poco::Net::SocketImpl::getReceiveTimeout()">getReceiveTimeout</a>, <a href="Poco.Net.SocketImpl.html#25588" title="Poco::Net::SocketImpl::getReuseAddress()">getReuseAddress</a>, <a href="Poco.Net.SocketImpl.html#25591" title="Poco::Net::SocketImpl::getReusePort()">getReusePort</a>, <a href="Poco.Net.SocketImpl.html#25512" title="Poco::Net::SocketImpl::getSendBufferSize()">getSendBufferSize</a>, <a href="Poco.Net.SocketImpl.html#25518" title="Poco::Net::SocketImpl::getSendTimeout()">getSendTimeout</a>, <a href="Poco.Net.SocketImpl.html#25620" title="Poco::Net::SocketImpl::init()">init</a>, <a href="Poco.Net.SocketImpl.html#25622" title="Poco::Net::SocketImpl::initSocket()">initSocket</a>, <a href="Poco.Net.SocketImpl.html#25615" title="Poco::Net::SocketImpl::initialized()">initialized</a>, <a href="Poco.Net.SocketImpl.html#25604" title="Poco::Net::SocketImpl::ioctl()">ioctl</a>, <a href="Poco.Net.SocketImpl.html#25628" title="Poco::Net::SocketImpl::lastError()">lastError</a>, <a href="Poco.Net.SocketImpl.html#25480" title="Poco::Net::SocketImpl::listen()">listen</a>, <a href="Poco.Net.SocketImpl.html#25523" title="Poco::Net::SocketImpl::peerAddress()">peerAddress</a>, <a href="Poco.Net.SocketImpl.html#25507" title="Poco::Net::SocketImpl::poll()">poll</a>, <a href="Poco.Net.SocketImpl.html#25490" title="Poco::Net::SocketImpl::receiveBytes()">receiveBytes</a>, <a href="Poco.Net.SocketImpl.html#25499" title="Poco::Net::SocketImpl::receiveFrom()">receiveFrom</a>, <a href="Poco.RefCountedObject.html#17088" title="Poco::RefCountedObject::referenceCount()">referenceCount</a>, <a href="Poco.RefCountedObject.html#17087" title="Poco::RefCountedObject::release()">release</a>, <a href="Poco.Net.SocketImpl.html#25626" title="Poco::Net::SocketImpl::reset()">reset</a>, <a href="Poco.Net.SocketImpl.html#25601" title="Poco::Net::SocketImpl::secure()">secure</a>, <a href="Poco.Net.StreamSocketImpl.html#25829" title="Poco::Net::StreamSocketImpl::sendBytes()">sendBytes</a>, <a href="Poco.Net.SocketImpl.html#25494" title="Poco::Net::SocketImpl::sendTo()">sendTo</a>, <a href="Poco.Net.SocketImpl.html#25504" title="Poco::Net::SocketImpl::sendUrgent()">sendUrgent</a>, <a href="Poco.Net.SocketImpl.html#25598" title="Poco::Net::SocketImpl::setBlocking()">setBlocking</a>, <a href="Poco.Net.SocketImpl.html#25595" title="Poco::Net::SocketImpl::setBroadcast()">setBroadcast</a>, <a href="Poco.Net.SocketImpl.html#25583" title="Poco::Net::SocketImpl::setKeepAlive()">setKeepAlive</a>, <a href="Poco.Net.SocketImpl.html#25574" title="Poco::Net::SocketImpl::setLinger()">setLinger</a>, <a href="Poco.Net.SocketImpl.html#25580" title="Poco::Net::SocketImpl::setNoDelay()">setNoDelay</a>, <a href="Poco.Net.SocketImpl.html#25592" title="Poco::Net::SocketImpl::setOOBInline()">setOOBInline</a>, <a href="Poco.Net.SocketImpl.html#25524" title="Poco::Net::SocketImpl::setOption()">setOption</a>, <a href="Poco.Net.SocketImpl.html#25544" title="Poco::Net::SocketImpl::setRawOption()">setRawOption</a>, <a href="Poco.Net.SocketImpl.html#25513" title="Poco::Net::SocketImpl::setReceiveBufferSize()">setReceiveBufferSize</a>, <a href="Poco.Net.SocketImpl.html#25519" title="Poco::Net::SocketImpl::setReceiveTimeout()">setReceiveTimeout</a>, <a href="Poco.Net.SocketImpl.html#25586" title="Poco::Net::SocketImpl::setReuseAddress()">setReuseAddress</a>, <a href="Poco.Net.SocketImpl.html#25589" title="Poco::Net::SocketImpl::setReusePort()">setReusePort</a>, <a href="Poco.Net.SocketImpl.html#25510" title="Poco::Net::SocketImpl::setSendBufferSize()">setSendBufferSize</a>, <a href="Poco.Net.SocketImpl.html#25516" title="Poco::Net::SocketImpl::setSendTimeout()">setSendTimeout</a>, <a href="Poco.Net.SocketImpl.html#25485" title="Poco::Net::SocketImpl::shutdown()">shutdown</a>, <a href="Poco.Net.SocketImpl.html#25483" title="Poco::Net::SocketImpl::shutdownReceive()">shutdownReceive</a>, <a href="Poco.Net.SocketImpl.html#25484" title="Poco::Net::SocketImpl::shutdownSend()">shutdownSend</a>, <a href="Poco.Net.SocketImpl.html#25602" title="Poco::Net::SocketImpl::socketError()">socketError</a>, <a href="Poco.Net.SocketImpl.html#25603" title="Poco::Net::SocketImpl::sockfd()">sockfd</a></p>
+<h2>Enumerations</h2>
+<h3><i>Anonymous</i> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="26160">FRAME_FLAG_MASK</a> = 0x80</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="26161">MAX_HEADER_LENGTH</a> = 14</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="26088">WebSocketImpl</a></h3>
+<p class="decl"><a href="Poco.Net.WebSocketImpl.html" title="class Poco::Net::WebSocketImpl">WebSocketImpl</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.StreamSocketImpl.html" title="class Poco::Net::StreamSocketImpl">StreamSocketImpl</a> * pStreamSocketImpl,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPSession.html" title="class Poco::Net::HTTPSession">HTTPSession</a> &amp; session,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool mustMaskPayload<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.WebSocketImpl.html" title="class Poco::Net::WebSocketImpl">WebSocketImpl</a>. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="26176">~WebSocketImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Net.WebSocketImpl.html" title="class Poco::Net::WebSocketImpl">WebSocketImpl</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="26103">acceptConnection</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.Net.SocketImpl.html" title="class Poco::Net::SocketImpl">SocketImpl</a> * acceptConnection(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; clientAddr<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25455" title="Poco::Net::SocketImpl::acceptConnection()">Poco::Net::SocketImpl::acceptConnection()</a></p></div>
+<h3><a id="26146">available</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int available();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25506" title="Poco::Net::SocketImpl::available()">Poco::Net::SocketImpl::available()</a></p></div>
+<h3><a id="26112">bind</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void bind(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reuseAddress = false<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25464" title="Poco::Net::SocketImpl::bind()">Poco::Net::SocketImpl::bind()</a></p></div>
+<h3><a id="26115">bind</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void bind(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reuseAddress,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reusePort<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25467" title="Poco::Net::SocketImpl::bind()">Poco::Net::SocketImpl::bind()</a></p></div>
+<h3><a id="26119">bind6</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void bind6(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reuseAddress = false,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool ipV6Only = false<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25471" title="Poco::Net::SocketImpl::bind6()">Poco::Net::SocketImpl::bind6()</a></p></div>
+<h3><a id="26123">bind6</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void bind6(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reuseAddress,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool reusePort,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool ipV6Only<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25475" title="Poco::Net::SocketImpl::bind6()">Poco::Net::SocketImpl::bind6()</a></p></div>
+<h3><a id="26130">close</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void close();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25482" title="Poco::Net::SocketImpl::close()">Poco::Net::SocketImpl::close()</a></p></div>
+<h3><a id="26105">connect</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25457" title="Poco::Net::SocketImpl::connect()">Poco::Net::SocketImpl::connect()</a></p></div>
+<h3><a id="26107">connect</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25459" title="Poco::Net::SocketImpl::connect()">Poco::Net::SocketImpl::connect()</a></p></div>
+<h3><a id="26110">connectNB</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void connectNB(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25462" title="Poco::Net::SocketImpl::connectNB()">Poco::Net::SocketImpl::connectNB()</a></p></div>
+<h3><a id="26154">frameFlags</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int frameFlags() const;</p>
+<div class="description">
+<p>Returns the frame flags of the most recently received frame. </p>
+</div>
+<h3><a id="26158">getMaxPayloadSize</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int getMaxPayloadSize() const;</p>
+<div class="description">
+<p>Returns the maximum payload size for receiveFrame(). </p>
+<p>The default is std::numeric_limits&lt;int&gt;::max(). </p>
+</div>
+<h3><a id="26153">getReceiveTimeout</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> getReceiveTimeout();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25521" title="Poco::Net::SocketImpl::getReceiveTimeout()">Poco::Net::SocketImpl::getReceiveTimeout()</a></p></div>
+<h3><a id="26150">getSendTimeout</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> getSendTimeout();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25518" title="Poco::Net::SocketImpl::getSendTimeout()">Poco::Net::SocketImpl::getSendTimeout()</a></p></div>
+<h3><a id="26128">listen</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void listen(<br />&nbsp;&nbsp;&nbsp;&nbsp;int backlog = 64<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25480" title="Poco::Net::SocketImpl::listen()">Poco::Net::SocketImpl::listen()</a></p></div>
+<h3><a id="26155">mustMaskPayload</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool mustMaskPayload() const;</p>
+<div class="description">
+<p>Returns true if the payload must be masked. </p>
+</div>
+<h3><a id="26096">receiveBytes</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int receiveBytes(<br />&nbsp;&nbsp;&nbsp;&nbsp;void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length,<br />&nbsp;&nbsp;&nbsp;&nbsp;int flags<br />);</p>
+<div class="description">
+<p>Receives a <a href="Poco.Net.WebSocket.html" title="class Poco::Net::WebSocket">WebSocket</a> protocol frame. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25490" title="Poco::Net::SocketImpl::receiveBytes()">Poco::Net::SocketImpl::receiveBytes()</a></p></div>
+<h3><a id="26100">receiveBytes</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int receiveBytes(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Buffer.html" title="class Poco::Buffer">Poco::Buffer</a> &lt; char &gt; &amp; buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int flags<br />);</p>
+<div class="description">
+<p>Receives a <a href="Poco.Net.WebSocket.html" title="class Poco::Net::WebSocket">WebSocket</a> protocol frame. </p>
+</div>
+<h3><a id="26139">receiveFrom</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int receiveFrom(<br />&nbsp;&nbsp;&nbsp;&nbsp;void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;int flags = 0<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25499" title="Poco::Net::SocketImpl::receiveFrom()">Poco::Net::SocketImpl::receiveFrom()</a></p></div>
+<h3><a id="26147">secure</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool secure() const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25601" title="Poco::Net::SocketImpl::secure()">Poco::Net::SocketImpl::secure()</a></p></div>
+<h3><a id="26092">sendBytes</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int sendBytes(<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length,<br />&nbsp;&nbsp;&nbsp;&nbsp;int flags<br />);</p>
+<div class="description">
+<p>Sends a <a href="Poco.Net.WebSocket.html" title="class Poco::Net::WebSocket">WebSocket</a> protocol frame. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.StreamSocketImpl.html#25829" title="Poco::Net::StreamSocketImpl::sendBytes()">Poco::Net::StreamSocketImpl::sendBytes()</a></p></div>
+<h3><a id="26134">sendTo</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int sendTo(<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address,<br />&nbsp;&nbsp;&nbsp;&nbsp;int flags = 0<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25494" title="Poco::Net::SocketImpl::sendTo()">Poco::Net::SocketImpl::sendTo()</a></p></div>
+<h3><a id="26144">sendUrgent</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void sendUrgent(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned char data<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25504" title="Poco::Net::SocketImpl::sendUrgent()">Poco::Net::SocketImpl::sendUrgent()</a></p></div>
+<h3><a id="26156">setMaxPayloadSize</a></h3>
+<p class="decl">void setMaxPayloadSize(<br />&nbsp;&nbsp;&nbsp;&nbsp;int maxPayloadSize<br />);</p>
+<div class="description">
+<p>Sets the maximum payload size for receiveFrame(). </p>
+<p>The default is std::numeric_limits&lt;int&gt;::max(). </p>
+</div>
+<h3><a id="26151">setReceiveTimeout</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void setReceiveTimeout(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25519" title="Poco::Net::SocketImpl::setReceiveTimeout()">Poco::Net::SocketImpl::setReceiveTimeout()</a></p></div>
+<h3><a id="26148">setSendTimeout</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void setSendTimeout(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Poco::Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25516" title="Poco::Net::SocketImpl::setSendTimeout()">Poco::Net::SocketImpl::setSendTimeout()</a></p></div>
+<h3><a id="26133">shutdown</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void shutdown();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25485" title="Poco::Net::SocketImpl::shutdown()">Poco::Net::SocketImpl::shutdown()</a></p></div>
+<h3><a id="26131">shutdownReceive</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void shutdownReceive();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25483" title="Poco::Net::SocketImpl::shutdownReceive()">Poco::Net::SocketImpl::shutdownReceive()</a></p></div>
+<h3><a id="26132">shutdownSend</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void shutdownSend();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.SocketImpl.html#25484" title="Poco::Net::SocketImpl::shutdownSend()">Poco::Net::SocketImpl::shutdownSend()</a></p></div>
+<h3><a id="26162">receiveHeader</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int receiveHeader(<br />&nbsp;&nbsp;&nbsp;&nbsp;char mask[4],<br />&nbsp;&nbsp;&nbsp;&nbsp;bool &amp; useMask<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="26170">receiveNBytes</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int receiveNBytes(<br />&nbsp;&nbsp;&nbsp;&nbsp;void * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int bytes<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="26165">receivePayload</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int receivePayload(<br />&nbsp;&nbsp;&nbsp;&nbsp;char * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int payloadLength,<br />&nbsp;&nbsp;&nbsp;&nbsp;char mask[4],<br />&nbsp;&nbsp;&nbsp;&nbsp;bool useMask<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="26173">receiveSomeBytes</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int receiveSomeBytes(<br />&nbsp;&nbsp;&nbsp;&nbsp;char * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int bytes<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

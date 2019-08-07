@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Redis::Type</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Redis.html" class="namespace">Poco::Redis</a></h1>
+<h1 class="template">template &lt; typename T &gt;</h1>
+<h1 class="symbol">class Type</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Redis" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Redis<br />
+<b>Package:</b> Redis<br />
+<b>Header:</b> Poco/Redis/Type.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Template class for all <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> types. This class will use <a href="Poco.Redis.RedisTypeTraits.html" title="struct Poco::Redis::RedisTypeTraits">RedisTypeTraits</a> structure for calling the type specific code. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Redis.RedisType.html" title="class Poco::Redis::RedisType">RedisType</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Redis.RedisType.html" title="class Poco::Redis::RedisType">RedisType</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Redis.Type.html#27495" title="Poco::Redis::Type::read()">read</a>, <a href="Poco.Redis.Type.html#27497" title="Poco::Redis::Type::toString()">toString</a>, <a href="Poco.Redis.Type.html#27494" title="Poco::Redis::Type::type()">type</a>, <a href="Poco.Redis.Type.html#27498" title="Poco::Redis::Type::value()">value</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Redis.RedisType.html#27483" title="Poco::Redis::RedisType::createRedisType()">createRedisType</a>, <a href="Poco.Redis.RedisType.html#27474" title="Poco::Redis::RedisType::isArray()">isArray</a>, <a href="Poco.Redis.RedisType.html#27475" title="Poco::Redis::RedisType::isBulkString()">isBulkString</a>, <a href="Poco.Redis.RedisType.html#27476" title="Poco::Redis::RedisType::isError()">isError</a>, <a href="Poco.Redis.RedisType.html#27477" title="Poco::Redis::RedisType::isInteger()">isInteger</a>, <a href="Poco.Redis.RedisType.html#27478" title="Poco::Redis::RedisType::isSimpleString()">isSimpleString</a>, <a href="Poco.Redis.RedisType.html#27480" title="Poco::Redis::RedisType::read()">read</a>, <a href="Poco.Redis.RedisType.html#27482" title="Poco::Redis::RedisType::toString()">toString</a>, <a href="Poco.Redis.RedisType.html#27479" title="Poco::Redis::RedisType::type()">type</a></p>
+<h2>Constructors</h2>
+<h3><a id="27488">Type</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>();</p>
+<div class="description">
+<p>Creates the <a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>. </p>
+</div>
+<h3><a id="27489">Type</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const T &amp; t<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a> from another one. </p>
+</div>
+<h3><a id="27491">Type</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a> &amp; copy<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a> by copying another one. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="27493">~Type</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Redis.Type.html" title="class Poco::Redis::Type">Type</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="27495">read</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void read(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Redis.RedisInputStream.html" title="class Poco::Redis::RedisInputStream">RedisInputStream</a> &amp; socket<br />);</p>
+<div class="description">
+<p>Reads the value from the stream (RESP). </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Redis.RedisType.html#27480" title="Poco::Redis::RedisType::read()">Poco::Redis::RedisType::read()</a></p></div>
+<h3><a id="27497">toString</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::string toString() const;</p>
+<div class="description">
+<p>Converts the value to a string based on the RESP protocol. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Redis.RedisType.html#27482" title="Poco::Redis::RedisType::toString()">Poco::Redis::RedisType::toString()</a></p></div>
+<h3><a id="27494">type</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int type() const;</p>
+<div class="description">
+<p>Returns the type of the value </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Redis.RedisType.html#27479" title="Poco::Redis::RedisType::type()">Poco::Redis::RedisType::type()</a></p></div>
+<h3><a id="27498">value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">T &amp; value();</p>
+<div class="description">
+<p>Returns the value </p>
+</div>
+<h3><a id="27499">value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const T &amp; value() const;</p>
+<div class="description">
+<p>Returns a const value </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

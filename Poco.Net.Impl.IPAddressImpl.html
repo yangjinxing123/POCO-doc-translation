@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Net::Impl::IPAddressImpl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Net.Impl.html" class="namespace">Poco::Net::Impl</a></h1>
+<h1 class="symbol">class IPAddressImpl</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Net" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Net<br />
+<b>Package:</b> NetCore<br />
+<b>Header:</b> Poco/Net/IPAddressImpl.h</p>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.RefCountedObject.html" title="class Poco::RefCountedObject">Poco::RefCountedObject</a></p>
+<p><b>All Base Classes: </b><a href="Poco.RefCountedObject.html" title="class Poco::RefCountedObject">Poco::RefCountedObject</a></p>
+<p><b>Known Derived Classes: </b><a href="Poco.Net.Impl.IPv4AddressImpl.html" title="class Poco::Net::Impl::IPv4AddressImpl">IPv4AddressImpl</a>, <a href="Poco.Net.Impl.IPv6AddressImpl.html" title="class Poco::Net::Impl::IPv6AddressImpl">IPv6AddressImpl</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Net.Impl.IPAddressImpl.html#23026" title="Poco::Net::Impl::IPAddressImpl::addr()">addr</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23028" title="Poco::Net::Impl::IPAddressImpl::af()">af</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23023" title="Poco::Net::Impl::IPAddressImpl::clone()">clone</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23027" title="Poco::Net::Impl::IPAddressImpl::family()">family</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23031" title="Poco::Net::Impl::IPAddressImpl::isBroadcast()">isBroadcast</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23043" title="Poco::Net::Impl::IPAddressImpl::isGlobalMC()">isGlobalMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23037" title="Poco::Net::Impl::IPAddressImpl::isIPv4Compatible()">isIPv4Compatible</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23036" title="Poco::Net::Impl::IPAddressImpl::isIPv4Mapped()">isIPv4Mapped</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23034" title="Poco::Net::Impl::IPAddressImpl::isLinkLocal()">isLinkLocal</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23040" title="Poco::Net::Impl::IPAddressImpl::isLinkLocalMC()">isLinkLocalMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23032" title="Poco::Net::Impl::IPAddressImpl::isLoopback()">isLoopback</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23033" title="Poco::Net::Impl::IPAddressImpl::isMulticast()">isMulticast</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23039" title="Poco::Net::Impl::IPAddressImpl::isNodeLocalMC()">isNodeLocalMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23042" title="Poco::Net::Impl::IPAddressImpl::isOrgLocalMC()">isOrgLocalMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23035" title="Poco::Net::Impl::IPAddressImpl::isSiteLocal()">isSiteLocal</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23041" title="Poco::Net::Impl::IPAddressImpl::isSiteLocalMC()">isSiteLocalMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23038" title="Poco::Net::Impl::IPAddressImpl::isWellKnownMC()">isWellKnownMC</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23030" title="Poco::Net::Impl::IPAddressImpl::isWildcard()">isWildcard</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23025" title="Poco::Net::Impl::IPAddressImpl::length()">length</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23044" title="Poco::Net::Impl::IPAddressImpl::mask()">mask</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23047" title="Poco::Net::Impl::IPAddressImpl::prefixLength()">prefixLength</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23029" title="Poco::Net::Impl::IPAddressImpl::scope()">scope</a>, <a href="Poco.Net.Impl.IPAddressImpl.html#23024" title="Poco::Net::Impl::IPAddressImpl::toString()">toString</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.RefCountedObject.html#17086" title="Poco::RefCountedObject::duplicate()">duplicate</a>, <a href="Poco.RefCountedObject.html#17088" title="Poco::RefCountedObject::referenceCount()">referenceCount</a>, <a href="Poco.RefCountedObject.html#17087" title="Poco::RefCountedObject::release()">release</a></p>
+<h2>Types</h2>
+<h3><a id="23021">Family</a></h3>
+<p class="decl">typedef <a href="Poco.Net.AddressFamily.html#25448" title="enum  Poco::Net::AddressFamily::Family">AddressFamily::Family</a> <a href="Poco.Net.Impl.IPAddressImpl.html#23021" title="Poco::Net::Impl::IPAddressImpl::Family">Family</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="23048">IPAddressImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Net.Impl.IPAddressImpl.html" title="class Poco::Net::Impl::IPAddressImpl">IPAddressImpl</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="23022">~IPAddressImpl</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Net.Impl.IPAddressImpl.html" title="class Poco::Net::Impl::IPAddressImpl">IPAddressImpl</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="23026">addr</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual const void * addr() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23028">af</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual int af() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23023">clone</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.Net.Impl.IPAddressImpl.html" title="class Poco::Net::Impl::IPAddressImpl">IPAddressImpl</a> * clone() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23027">family</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.Net.Impl.IPAddressImpl.html#23021" title="Poco::Net::Impl::IPAddressImpl::Family">Family</a> family() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23031">isBroadcast</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isBroadcast() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23043">isGlobalMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isGlobalMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23037">isIPv4Compatible</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isIPv4Compatible() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23036">isIPv4Mapped</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isIPv4Mapped() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23034">isLinkLocal</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isLinkLocal() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23040">isLinkLocalMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isLinkLocalMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23032">isLoopback</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isLoopback() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23033">isMulticast</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isMulticast() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23039">isNodeLocalMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isNodeLocalMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23042">isOrgLocalMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isOrgLocalMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23035">isSiteLocal</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isSiteLocal() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23041">isSiteLocalMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isSiteLocalMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23038">isWellKnownMC</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isWellKnownMC() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23030">isWildcard</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isWildcard() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23025">length</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual socklen_t length() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23044">mask</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void mask(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.Impl.IPAddressImpl.html" title="class Poco::Net::Impl::IPAddressImpl">IPAddressImpl</a> * pMask,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.Impl.IPAddressImpl.html" title="class Poco::Net::Impl::IPAddressImpl">IPAddressImpl</a> * pSet<br />) = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23047">prefixLength</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual unsigned prefixLength() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23029">scope</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> scope() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="23024">toString</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual std::string toString() const = 0;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

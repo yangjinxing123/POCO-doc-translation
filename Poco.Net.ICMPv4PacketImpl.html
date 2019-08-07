@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Net::ICMPv4PacketImpl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Net.html" class="namespace">Poco::Net</a></h1>
+<h1 class="symbol">class ICMPv4PacketImpl</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Net" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Net<br />
+<b>Package:</b> ICMP<br />
+<b>Header:</b> Poco/Net/ICMPv4PacketImpl.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements the ICMPv4 packet. Parts are based on original ICMP code by Mike Muuss U. S. Army Ballistic Research Laboratory December, 1983 </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Net.ICMPPacketImpl.html" title="class Poco::Net::ICMPPacketImpl">ICMPPacketImpl</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Net.ICMPPacketImpl.html" title="class Poco::Net::ICMPPacketImpl">ICMPPacketImpl</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Net.ICMPv4PacketImpl.html#22883" title="Poco::Net::ICMPv4PacketImpl::errorDescription()">errorDescription</a>, <a href="Poco.Net.ICMPv4PacketImpl.html#22876" title="Poco::Net::ICMPv4PacketImpl::packetSize()">packetSize</a>, <a href="Poco.Net.ICMPv4PacketImpl.html#22877" title="Poco::Net::ICMPv4PacketImpl::time()">time</a>, <a href="Poco.Net.ICMPv4PacketImpl.html#22886" title="Poco::Net::ICMPv4PacketImpl::typeDescription()">typeDescription</a>, <a href="Poco.Net.ICMPv4PacketImpl.html#22880" title="Poco::Net::ICMPv4PacketImpl::validReplyID()">validReplyID</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Net.ICMPPacketImpl.html#22766" title="Poco::Net::ICMPPacketImpl::checksum()">checksum</a>, <a href="Poco.Net.ICMPPacketImpl.html#22756" title="Poco::Net::ICMPPacketImpl::errorDescription()">errorDescription</a>, <a href="Poco.Net.ICMPPacketImpl.html#22749" title="Poco::Net::ICMPPacketImpl::getDataSize()">getDataSize</a>, <a href="Poco.Net.ICMPPacketImpl.html#22765" title="Poco::Net::ICMPPacketImpl::initPacket()">initPacket</a>, <a href="Poco.Net.ICMPPacketImpl.html#22745" title="Poco::Net::ICMPPacketImpl::maxPacketSize()">maxPacketSize</a>, <a href="Poco.Net.ICMPPacketImpl.html#22763" title="Poco::Net::ICMPPacketImpl::nextSequence()">nextSequence</a>, <a href="Poco.Net.ICMPPacketImpl.html#22742" title="Poco::Net::ICMPPacketImpl::packet()">packet</a>, <a href="Poco.Net.ICMPPacketImpl.html#22744" title="Poco::Net::ICMPPacketImpl::packetSize()">packetSize</a>, <a href="Poco.Net.ICMPPacketImpl.html#22764" title="Poco::Net::ICMPPacketImpl::resetSequence()">resetSequence</a>, <a href="Poco.Net.ICMPPacketImpl.html#22746" title="Poco::Net::ICMPPacketImpl::sequence()">sequence</a>, <a href="Poco.Net.ICMPPacketImpl.html#22747" title="Poco::Net::ICMPPacketImpl::setDataSize()">setDataSize</a>, <a href="Poco.Net.ICMPPacketImpl.html#22750" title="Poco::Net::ICMPPacketImpl::time()">time</a>, <a href="Poco.Net.ICMPPacketImpl.html#22759" title="Poco::Net::ICMPPacketImpl::typeDescription()">typeDescription</a>, <a href="Poco.Net.ICMPPacketImpl.html#22753" title="Poco::Net::ICMPPacketImpl::validReplyID()">validReplyID</a></p>
+<h2>Nested Classes</h2>
+<h3><a href="Poco.Net.ICMPv4PacketImpl.Header.html" class="class">struct Header</a></h3>
+<p>&nbsp;<a href="Poco.Net.ICMPv4PacketImpl.Header.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Types</h2>
+<h3><a id="22824">sizeof</a></h3>
+<p class="decl">typedef poco_static_assert_test &lt; sizeof (POCO_STATIC_ASSERTION_FAILURE &lt; (bool)(__builtin_offsetof (<a href="Poco.Net.ICMPv4PacketImpl.Header.html" title="struct Poco::Net::ICMPv4PacketImpl::Header">Header</a>, code)== 0x01)&gt;)&gt; poco_static_assert_typedef_51 __attribute__ ((unused));</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22825">sizeof</a></h3>
+<p class="decl">typedef poco_static_assert_test &lt; sizeof (POCO_STATIC_ASSERTION_FAILURE &lt; (bool)(__builtin_offsetof (<a href="Poco.Net.ICMPv4PacketImpl.Header.html" title="struct Poco::Net::ICMPv4PacketImpl::Header">Header</a>, checksum)== 0x02)&gt;)&gt; poco_static_assert_typedef_52 __attribute__ ((unused));</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22826">sizeof</a></h3>
+<p class="decl">typedef poco_static_assert_test &lt; sizeof (POCO_STATIC_ASSERTION_FAILURE &lt; (bool)(__builtin_offsetof (<a href="Poco.Net.ICMPv4PacketImpl.Header.html" title="struct Poco::Net::ICMPv4PacketImpl::Header">Header</a>, id)== 0x04)&gt;)&gt; poco_static_assert_typedef_53 __attribute__ ((unused));</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22827">sizeof</a></h3>
+<p class="decl">typedef poco_static_assert_test &lt; sizeof (POCO_STATIC_ASSERTION_FAILURE &lt; (bool)(__builtin_offsetof (<a href="Poco.Net.ICMPv4PacketImpl.Header.html" title="struct Poco::Net::ICMPv4PacketImpl::Header">Header</a>, seq)== 0x06)&gt;)&gt; poco_static_assert_typedef_54 __attribute__ ((unused));</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Enumerations</h2>
+<h3><a id="22848">DestinationUnreachableCode</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22849">NET_UNREACHABLE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22850">HOST_UNREACHABLE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22851">PROTOCOL_UNREACHABLE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22852">PORT_UNREACHABLE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22853">FRAGMENTATION_NEEDED_AND_DF_SET</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22854">SOURCE_ROUTE_FAILED</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22855">DESTINATION_UNREACHABLE_UNKNOWN</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22856">DESTINATION_UNREACHABLE_LENGTH</a></p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22828">MessageType</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22829">ECHO_REPLY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22830">ICMP_1</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22831">ICMP_2</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22832">DESTINATION_UNREACHABLE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22833">SOURCE_QUENCH</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22834">REDIRECT</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22835">ICMP_6</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22836">ICMP_7</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22837">ECHO_REQUEST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22838">ICMP_9</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22839">ICMP_10</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22840">TIME_EXCEEDED</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22841">PARAMETER_PROBLEM</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22842">TIMESTAMP_REQUEST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22843">TIMESTAMP_REPLY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22844">INFORMATION_REQUEST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22845">INFORMATION_REPLY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22846">MESSAGE_TYPE_UNKNOWN</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22847">MESSAGE_TYPE_LENGTH</a></p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22869">ParameterProblemCode</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22870">POINTER_INDICATES_THE_ERROR</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22871">PARAMETER_PROBLEM_UNKNOWN</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22872">PARAMETER_PROBLEM_LENGTH</a></p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22857">RedirectMessageCode</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22858">REDIRECT_NETWORK</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22859">REDIRECT_HOST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22860">REDIRECT_SERVICE_NETWORK</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22861">REDIRECT_SERVICE_HOST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22862">REDIRECT_MESSAGE_UNKNOWN</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22863">REDIRECT_MESSAGE_LENGTH</a></p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22864">TimeExceededCode</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22865">TIME_TO_LIVE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22866">FRAGMENT_REASSEMBLY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22867">TIME_EXCEEDED_UNKNOWN</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="22868">TIME_EXCEEDED_LENGTH</a></p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="22873">ICMPv4PacketImpl</a></h3>
+<p class="decl"><a href="Poco.Net.ICMPv4PacketImpl.html" title="class Poco::Net::ICMPv4PacketImpl">ICMPv4PacketImpl</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;int dataSize = 48<br />);</p>
+<div class="description">
+<p>Constructor. Creates an <a href="Poco.Net.ICMPv4PacketImpl.html" title="class Poco::Net::ICMPv4PacketImpl">ICMPv4PacketImpl</a>. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="22875">~ICMPv4PacketImpl</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.Net.ICMPv4PacketImpl.html" title="class Poco::Net::ICMPv4PacketImpl">ICMPv4PacketImpl</a>();</p>
+<div class="description">
+<p>Destructor. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="22883">errorDescription</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual std::string errorDescription(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />);</p>
+<div class="description">
+<p>Returns error description string. If supplied buffer contains ICMPv4 echo reply packet, an empty string is returned indicating the absence of error. </p>
+<p><a href="Poco.Buffer.html" title="class Poco::Buffer">Buffer</a> includes IP header, ICMP header and data. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.ICMPPacketImpl.html#22756" title="Poco::Net::ICMPPacketImpl::errorDescription()">Poco::Net::ICMPPacketImpl::errorDescription()</a></p></div>
+<h3><a id="22876">packetSize</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int packetSize() const;</p>
+<div class="description">
+<p>Returns the total length of packet (header + data); </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.ICMPPacketImpl.html#22744" title="Poco::Net::ICMPPacketImpl::packetSize()">Poco::Net::ICMPPacketImpl::packetSize()</a></p></div>
+<h3><a id="22877">time</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">struct timeval time(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> * buffer = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length = 0<br />) const;</p>
+<div class="description">
+<p>Returns current epoch time if either buffer or length are equal to zero. Otherwise, it extracts the time value from the supplied buffer. </p>
+<p><a href="Poco.Buffer.html" title="class Poco::Buffer">Buffer</a> includes IP header, ICMP header and data. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.ICMPPacketImpl.html#22750" title="Poco::Net::ICMPPacketImpl::time()">Poco::Net::ICMPPacketImpl::time()</a></p></div>
+<h3><a id="22886">typeDescription</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual std::string typeDescription(<br />&nbsp;&nbsp;&nbsp;&nbsp;int typeId<br />);</p>
+<div class="description">
+<p>Returns the description of the packet type. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.ICMPPacketImpl.html#22759" title="Poco::Net::ICMPPacketImpl::typeDescription()">Poco::Net::ICMPPacketImpl::typeDescription()</a></p></div>
+<h3><a id="22880">validReplyID</a></h3>
+<p class="decl">bool validReplyID(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />) const;</p>
+<div class="description">
+<p>Returns true if the extracted id is recognized (i.e. equals the process id). </p>
+<p><a href="Poco.Buffer.html" title="class Poco::Buffer">Buffer</a> includes IP header, ICMP header and data. </p>
+</div>
+<h2>Variables</h2>
+<h3><a id="22890">DESTINATION_UNREACHABLE_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22890" title="Poco::Net::ICMPv4PacketImpl::DESTINATION_UNREACHABLE_TYPE">DESTINATION_UNREACHABLE_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22888">MAX_PACKET_SIZE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22888" title="Poco::Net::ICMPv4PacketImpl::MAX_PACKET_SIZE">MAX_PACKET_SIZE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22889">MESSAGE_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::string <a href="Poco.Net.ICMPv4PacketImpl.html#22889" title="Poco::Net::ICMPv4PacketImpl::MESSAGE_TYPE">MESSAGE_TYPE</a>[<a href="Poco.Net.ICMPv4PacketImpl.html#22847" title="Poco::Net::ICMPv4PacketImpl::MESSAGE_TYPE_LENGTH">MESSAGE_TYPE_LENGTH</a>];</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22894">PARAMETER_PROBLEM_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22894" title="Poco::Net::ICMPv4PacketImpl::PARAMETER_PROBLEM_TYPE">PARAMETER_PROBLEM_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22892">REDIRECT_MESSAGE_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22892" title="Poco::Net::ICMPv4PacketImpl::REDIRECT_MESSAGE_TYPE">REDIRECT_MESSAGE_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22891">SOURCE_QUENCH_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22891" title="Poco::Net::ICMPv4PacketImpl::SOURCE_QUENCH_TYPE">SOURCE_QUENCH_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="22893">TIME_EXCEEDED_TYPE</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> <a href="Poco.Net.ICMPv4PacketImpl.html#22893" title="Poco::Net::ICMPv4PacketImpl::TIME_EXCEEDED_TYPE">TIME_EXCEEDED_TYPE</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

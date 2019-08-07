@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::DateTime</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class DateTime</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> DateTime<br />
+<b>Header:</b> Poco/DateTime.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class represents an instant in time, expressed in years, months, days, hours, minutes, seconds and milliseconds based on the Gregorian calendar. The class is mainly useful for conversions between UTC, Julian day and Gregorian calendar dates. </p>
+<p>The date and time stored in a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> is always in UTC (Coordinated Universal Time) and thus independent of the  timezone in effect on the system. </p>
+<p>Conversion calculations are based on algorithms collected and described by Peter Baum at <a href="http://vsg.cape.com/~pbaum/date/date0.htm" target="_blank">http://vsg.cape.com/~pbaum/date/date0.htm</a> </p>
+<p>Internally, this class stores a date/time in two forms (UTC and broken down) for performance reasons. Only use  this class for conversions between date/time representations. Use the <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a> class for everything else. </p>
+<p>Notes: </p>
+<ul>
+<li>Zero is a valid year (in accordance with ISO 8601 and astronomical year numbering) </li>
+<li>Year zero (0) is a leap year </li>
+<li>Negative years (years preceding 1 BC) are not supported </li>
+</ul>
+<p>For more information, please see: </p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Gregorian_Calendar" target="_blank">http://en.wikipedia.org/wiki/Gregorian_Calendar</a> </li>
+<li><a href="http://en.wikipedia.org/wiki/Julian_day" target="_blank">http://en.wikipedia.org/wiki/Julian_day</a> </li>
+<li><a href="http://en.wikipedia.org/wiki/UTC" target="_blank">http://en.wikipedia.org/wiki/UTC</a> </li>
+<li><a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">http://en.wikipedia.org/wiki/ISO_8601</a> </li>
+</ul>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.DateTime.html#9829" title="Poco::DateTime::assign()">assign</a>, <a href="Poco.DateTime.html#9913" title="Poco::DateTime::computeDaytime()">computeDaytime</a>, <a href="Poco.DateTime.html#9911" title="Poco::DateTime::computeGregorian()">computeGregorian</a>, <a href="Poco.DateTime.html#9844" title="Poco::DateTime::day()">day</a>, <a href="Poco.DateTime.html#9845" title="Poco::DateTime::dayOfWeek()">dayOfWeek</a>, <a href="Poco.DateTime.html#9846" title="Poco::DateTime::dayOfYear()">dayOfYear</a>, <a href="Poco.DateTime.html#9886" title="Poco::DateTime::daysOfMonth()">daysOfMonth</a>, <a href="Poco.DateTime.html#9847" title="Poco::DateTime::hour()">hour</a>, <a href="Poco.DateTime.html#9848" title="Poco::DateTime::hourAMPM()">hourAMPM</a>, <a href="Poco.DateTime.html#9849" title="Poco::DateTime::isAM()">isAM</a>, <a href="Poco.DateTime.html#9884" title="Poco::DateTime::isLeapYear()">isLeapYear</a>, <a href="Poco.DateTime.html#9850" title="Poco::DateTime::isPM()">isPM</a>, <a href="Poco.DateTime.html#9889" title="Poco::DateTime::isValid()">isValid</a>, <a href="Poco.DateTime.html#9855" title="Poco::DateTime::julianDay()">julianDay</a>, <a href="Poco.DateTime.html#9882" title="Poco::DateTime::makeLocal()">makeLocal</a>, <a href="Poco.DateTime.html#9880" title="Poco::DateTime::makeUTC()">makeUTC</a>, <a href="Poco.DateTime.html#9854" title="Poco::DateTime::microsecond()">microsecond</a>, <a href="Poco.DateTime.html#9853" title="Poco::DateTime::millisecond()">millisecond</a>, <a href="Poco.DateTime.html#9851" title="Poco::DateTime::minute()">minute</a>, <a href="Poco.DateTime.html#9841" title="Poco::DateTime::month()">month</a>, <a href="Poco.DateTime.html#9860" title="Poco::DateTime::operator !=()">operator&nbsp;!=</a>, <a href="Poco.DateTime.html#9870" title="Poco::DateTime::operator +()">operator&nbsp;+</a>, <a href="Poco.DateTime.html#9876" title="Poco::DateTime::operator +=()">operator&nbsp;+=</a>, <a href="Poco.DateTime.html#9872" title="Poco::DateTime::operator -()">operator&nbsp;-</a>, <a href="Poco.DateTime.html#9878" title="Poco::DateTime::operator -=()">operator&nbsp;-=</a>, <a href="Poco.DateTime.html#9862" title="Poco::DateTime::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.DateTime.html#9864" title="Poco::DateTime::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.DateTime.html#9823" title="Poco::DateTime::operator =()">operator&nbsp;=</a>, <a href="Poco.DateTime.html#9858" title="Poco::DateTime::operator ==()">operator&nbsp;==</a>, <a href="Poco.DateTime.html#9866" title="Poco::DateTime::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.DateTime.html#9868" title="Poco::DateTime::operator >=()">operator&nbsp;&gt;=</a>, <a href="Poco.DateTime.html#9852" title="Poco::DateTime::second()">second</a>, <a href="Poco.DateTime.html#9838" title="Poco::DateTime::swap()">swap</a>, <a href="Poco.DateTime.html#9856" title="Poco::DateTime::timestamp()">timestamp</a>, <a href="Poco.DateTime.html#9898" title="Poco::DateTime::toJulianDay()">toJulianDay</a>, <a href="Poco.DateTime.html#9909" title="Poco::DateTime::toUtcTime()">toUtcTime</a>, <a href="Poco.DateTime.html#9857" title="Poco::DateTime::utcTime()">utcTime</a>, <a href="Poco.DateTime.html#9842" title="Poco::DateTime::week()">week</a>, <a href="Poco.DateTime.html#9840" title="Poco::DateTime::year()">year</a></p>
+<h2>Enumerations</h2>
+<h3><a id="9795">DaysOfWeek</a></h3>
+<div class="description">
+<p>Symbolic names for week day numbers (0 to 6). </p>
+</div>
+<p class="decl"><a id="9796">SUNDAY</a> = 0</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9797">MONDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9798">TUESDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9799">WEDNESDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9800">THURSDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9801">FRIDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9802">SATURDAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9782">Months</a></h3>
+<div class="description">
+<p>Symbolic names for month numbers (1 to 12). </p>
+</div>
+<p class="decl"><a id="9783">JANUARY</a> = 1</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9784">FEBRUARY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9785">MARCH</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9786">APRIL</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9787">MAY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9788">JUNE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9789">JULY</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9790">AUGUST</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9791">SEPTEMBER</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9792">OCTOBER</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9793">NOVEMBER</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="9794">DECEMBER</a></p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="9803">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>();</p>
+<div class="description">
+<p>Creates a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> for the current date and time. </p>
+</div>
+<h3><a id="9804">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a> &amp; timestamp<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> for the date and time given in a <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a>. </p>
+</div>
+<h3><a id="9815">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;double julianDay<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> for the given Julian day. </p>
+</div>
+<h3><a id="9820">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />);</p>
+<div class="description">
+<p>Copy constructor. Creates the <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> from another one. </p>
+</div>
+<h3><a id="9817">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Timestamp.html#18748" title="Poco::Timestamp::UtcTimeVal">Timestamp::UtcTimeVal</a> utcTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Timestamp.html#18749" title="Poco::Timestamp::TimeDiff">Timestamp::TimeDiff</a> diff<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> from an UtcTimeVal and a TimeDiff. </p>
+<p>Mainly used internally by <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> and friends. </p>
+</div>
+<h3><a id="9806">DateTime</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year,<br />&nbsp;&nbsp;&nbsp;&nbsp;int month,<br />&nbsp;&nbsp;&nbsp;&nbsp;int day,<br />&nbsp;&nbsp;&nbsp;&nbsp;int hour = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int minute = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int second = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int millisecond = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int microsecond = 0<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> for the given Gregorian date and time. </p>
+<ul>
+<li>year is from 0 to 9999. </li>
+<li>month is from 1 to 12. </li>
+<li>day is from 1 to 31. </li>
+<li>hour is from 0 to 23. </li>
+<li>minute is from 0 to 59. </li>
+<li>second is from 0 to 60 (allowing leap seconds). </li>
+<li>millisecond is from 0 to 999. </li>
+<li>microsecond is from 0 to 999. </li>
+</ul>
+</div>
+<h2>Destructor</h2>
+<h3><a id="9822">~DateTime</a></h3>
+<p class="decl">~<a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="9829">assign</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year,<br />&nbsp;&nbsp;&nbsp;&nbsp;int month,<br />&nbsp;&nbsp;&nbsp;&nbsp;int day,<br />&nbsp;&nbsp;&nbsp;&nbsp;int hour = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int minute = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int second = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int millisecond = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int microseconds = 0<br />);</p>
+<div class="description">
+<p>Assigns a Gregorian date and time. </p>
+<ul>
+<li>year is from 0 to 9999. </li>
+<li>month is from 1 to 12. </li>
+<li>day is from 1 to 31. </li>
+<li>hour is from 0 to 23. </li>
+<li>minute is from 0 to 59. </li>
+<li>second is from 0 to 60 (allowing leap seconds). </li>
+<li>millisecond is from 0 to 999. </li>
+<li>microsecond is from 0 to 999. </li>
+</ul>
+</div>
+<h3><a id="9844">day</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int day() const;</p>
+<div class="description">
+<p>Returns the day witin the month (1 to 31). </p>
+</div>
+<h3><a id="9845">dayOfWeek</a></h3>
+<p class="decl">int dayOfWeek() const;</p>
+<div class="description">
+<p>Returns the weekday (0 to 6, where 0 = Sunday, 1 = Monday, ..., 6 = Saturday). </p>
+</div>
+<h3><a id="9846">dayOfYear</a></h3>
+<p class="decl">int dayOfYear() const;</p>
+<div class="description">
+<p>Returns the number of the day in the year. January 1 is 1, February 1 is 32, etc. </p>
+</div>
+<h3><a id="9886">daysOfMonth</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static int daysOfMonth(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year,<br />&nbsp;&nbsp;&nbsp;&nbsp;int month<br />);</p>
+<div class="description">
+<p>Returns the number of days in the given month and year. Month is from 1 to 12. </p>
+</div>
+<h3><a id="9847">hour</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int hour() const;</p>
+<div class="description">
+<p>Returns the hour (0 to 23). </p>
+</div>
+<h3><a id="9848">hourAMPM</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int hourAMPM() const;</p>
+<div class="description">
+<p>Returns the hour (0 to 12). </p>
+</div>
+<h3><a id="9849">isAM</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isAM() const;</p>
+<div class="description">
+<p>Returns true if hour &lt; 12; </p>
+</div>
+<h3><a id="9884">isLeapYear</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static bool isLeapYear(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year<br />);</p>
+<div class="description">
+<p>Returns true if the given year is a leap year; false otherwise. </p>
+</div>
+<h3><a id="9850">isPM</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isPM() const;</p>
+<div class="description">
+<p>Returns true if hour &gt;= 12. </p>
+</div>
+<h3><a id="9889">isValid</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static bool isValid(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year,<br />&nbsp;&nbsp;&nbsp;&nbsp;int month,<br />&nbsp;&nbsp;&nbsp;&nbsp;int day,<br />&nbsp;&nbsp;&nbsp;&nbsp;int hour = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int minute = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int second = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int millisecond = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int microsecond = 0<br />);</p>
+<div class="description">
+<p>Checks if the given date and time is valid (all arguments are within a proper range). </p>
+<p>Returns true if all arguments are valid, false otherwise. </p>
+</div>
+<h3><a id="9855">julianDay</a></h3>
+<p class="decl">double julianDay() const;</p>
+<div class="description">
+<p>Returns the julian day for the date and time. </p>
+</div>
+<h3><a id="9882">makeLocal</a></h3>
+<p class="decl">void makeLocal(<br />&nbsp;&nbsp;&nbsp;&nbsp;int tzd<br />);</p>
+<div class="description">
+<p>Converts a UTC time into a local time, by applying the given time zone differential. </p>
+</div>
+<h3><a id="9880">makeUTC</a></h3>
+<p class="decl">void makeUTC(<br />&nbsp;&nbsp;&nbsp;&nbsp;int tzd<br />);</p>
+<div class="description">
+<p>Converts a local time into UTC, by applying the given time zone differential. </p>
+</div>
+<h3><a id="9854">microsecond</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int microsecond() const;</p>
+<div class="description">
+<p>Returns the microsecond (0 to 999) </p>
+</div>
+<h3><a id="9853">millisecond</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int millisecond() const;</p>
+<div class="description">
+<p>Returns the millisecond (0 to 999) </p>
+</div>
+<h3><a id="9851">minute</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int minute() const;</p>
+<div class="description">
+<p>Returns the minute (0 to 59). </p>
+</div>
+<h3><a id="9841">month</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int month() const;</p>
+<div class="description">
+<p>Returns the month (1 to 12). </p>
+</div>
+<h3><a id="9860">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9870">operator +</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; span<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9876">operator +=</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; span<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9872">operator -</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; span<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9874">operator -</a></h3>
+<p class="decl"><a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9878">operator -=</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; span<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9862">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9864">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9823">operator =</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />);</p>
+<div class="description">
+<p>Assigns another <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>. </p>
+</div>
+<h3><a id="9825">operator =</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a> &amp; timestamp<br />);</p>
+<div class="description">
+<p>Assigns a <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a>. </p>
+</div>
+<h3><a id="9827">operator =</a></h3>
+<p class="decl"><a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;double julianDay<br />);</p>
+<div class="description">
+<p>Assigns a Julian day. </p>
+</div>
+<h3><a id="9858">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9866">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9868">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9852">second</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int second() const;</p>
+<div class="description">
+<p>Returns the second (0 to 59). </p>
+</div>
+<h3><a id="9838">swap</a></h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; dateTime<br />);</p>
+<div class="description">
+<p>Swaps the <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> with another one. </p>
+</div>
+<h3><a id="9856">timestamp</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a> timestamp() const;</p>
+<div class="description">
+<p>Returns the date and time expressed as a <a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a>. </p>
+</div>
+<h3><a id="9857">utcTime</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Timestamp.html#18748" title="Poco::Timestamp::UtcTimeVal">Timestamp::UtcTimeVal</a> utcTime() const;</p>
+<div class="description">
+<p>Returns the date and time expressed in UTC-based time. UTC base time is midnight, October 15, 1582. Resolution is 100 nanoseconds. </p>
+</div>
+<h3><a id="9842">week</a></h3>
+<p class="decl">int week(<br />&nbsp;&nbsp;&nbsp;&nbsp;int firstDayOfWeek = MONDAY<br />) const;</p>
+<div class="description">
+<p>Returns the week number within the year. FirstDayOfWeek should be either <a href="Poco.DateTime.html#9796" title="Poco::DateTime::SUNDAY">SUNDAY</a> (0) or <a href="Poco.DateTime.html#9797" title="Poco::DateTime::MONDAY">MONDAY</a> (1). The returned week number will be from 0 to 53. Week number 1 is the week  containing January 4. This is in accordance to ISO 8601. </p>
+<p>The following example assumes that firstDayOfWeek is <a href="Poco.DateTime.html#9797" title="Poco::DateTime::MONDAY">MONDAY</a>. For 2005, which started on a Saturday, week 1 will be the week starting on Monday, January 3. January 1 and 2 will fall within week 0 (or the last week of the previous year). </p>
+<p>For 2007, which starts on a Monday, week 1 will be the week startung on Monday, January 1. There will be no week 0 in 2007. </p>
+</div>
+<h3><a id="9840">year</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">int year() const;</p>
+<div class="description">
+<p>Returns the year. </p>
+</div>
+<h3><a id="9913">computeDaytime</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void computeDaytime();</p>
+<div class="description">
+<p>Extracts the daytime (hours, minutes, seconds, etc.) from the stored utcTime. </p>
+</div>
+<h3><a id="9911">computeGregorian</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">void computeGregorian(<br />&nbsp;&nbsp;&nbsp;&nbsp;double julianDay<br />);</p>
+<div class="description">
+<p>Computes the Gregorian date for the given Julian day. See &lt;<a href="http://vsg.cape.com/~pbaum/date/injdimp.htm" target="_blank">http://vsg.cape.com/~pbaum/date/injdimp.htm</a>&gt;, section 3.3.1 for the algorithm. </p>
+</div>
+<h3><a id="9898">toJulianDay</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static double toJulianDay(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Timestamp.html#18748" title="Poco::Timestamp::UtcTimeVal">Timestamp::UtcTimeVal</a> utcTime<br />);</p>
+<div class="description">
+<p>Computes the Julian day for an UTC time. </p>
+</div>
+<h3><a id="9900">toJulianDay</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static double toJulianDay(<br />&nbsp;&nbsp;&nbsp;&nbsp;int year,<br />&nbsp;&nbsp;&nbsp;&nbsp;int month,<br />&nbsp;&nbsp;&nbsp;&nbsp;int day,<br />&nbsp;&nbsp;&nbsp;&nbsp;int hour = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int minute = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int second = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int millisecond = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;int microsecond = 0<br />);</p>
+<div class="description">
+<p>Computes the Julian day for a gregorian calendar date and time. See &lt;<a href="http://vsg.cape.com/~pbaum/date/jdimp.htm" target="_blank">http://vsg.cape.com/~pbaum/date/jdimp.htm</a>&gt;, section 2.3.1 for the algorithm. </p>
+</div>
+<h3><a id="9909">toUtcTime</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Timestamp.html#18748" title="Poco::Timestamp::UtcTimeVal">Timestamp::UtcTimeVal</a> toUtcTime(<br />&nbsp;&nbsp;&nbsp;&nbsp;double julianDay<br />);</p>
+<div class="description">
+<p>Computes the UTC time for a Julian day. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

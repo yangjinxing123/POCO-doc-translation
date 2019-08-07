@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Util::Units::Value</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Util.Units.html" class="namespace">Poco::Util::Units</a></h1>
+<h1 class="template">template &lt; typename V, typename U &gt;</h1>
+<h1 class="symbol">class Value</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Util" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Util<br />
+<b>Package:</b> Units<br />
+<b>Header:</b> Poco/Util/Units.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>A <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> with a unit. </p>
+<ul>
+<li>V is the type you are storing </li>
+<li>U is the unit of the <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> </li>
+</ul>
+<p>This class is usually not used directly; client code should use the typedef'd  instantiations defined in the <a href="Poco.Util.Units.Values.html" title="namespace Poco::Util::Units::Values">Values</a> and <a href="Poco.Util.Units.Constants.html" title="namespace Poco::Util::Units::Constants">Constants</a> namespace. </p>
+<p>Example: </p>
+<p></p>
+<pre>using namespace Poco::Util::Units::Values;
+
+std::cout &lt;&lt; &quot;One mile is &quot; &lt;&lt; km(mile(1)) &lt;&lt; std::endl;
+    // Output: One mile is 1.60934 km
+
+std::cout &lt;&lt; &quot;Flow rate is &quot; &lt;&lt; m3(mile(1)*inch(80)*foot(9))/s(minute(5));
+    // Output: Flow rate is 29.9026 (m)^3.(s)^-1
+
+hours h;
+h = cm(3);   // Compile-time error: incompatible units
+h = 4;       // Compile-time error: 4 of what?
+h = days(4); // Ok: h is 96 hours
+</pre>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Util.Units.Value.html#28692" title="Poco::Util::Units::Value::get()">get</a>, <a href="Poco.Util.Units.Value.html#28718" title="Poco::Util::Units::Value::operator !=()">operator&nbsp;!=</a>, <a href="Poco.Util.Units.Value.html#28704" title="Poco::Util::Units::Value::operator *()">operator&nbsp;*</a>, <a href="Poco.Util.Units.Value.html#28708" title="Poco::Util::Units::Value::operator *=()">operator&nbsp;*=</a>, <a href="Poco.Util.Units.Value.html#28695" title="Poco::Util::Units::Value::operator +()">operator&nbsp;+</a>, <a href="Poco.Util.Units.Value.html#28728" title="Poco::Util::Units::Value::operator ++()">operator&nbsp;++</a>, <a href="Poco.Util.Units.Value.html#28697" title="Poco::Util::Units::Value::operator +=()">operator&nbsp;+=</a>, <a href="Poco.Util.Units.Value.html#28701" title="Poco::Util::Units::Value::operator -()">operator&nbsp;-</a>, <a href="Poco.Util.Units.Value.html#28731" title="Poco::Util::Units::Value::operator --()">operator&nbsp;--</a>, <a href="Poco.Util.Units.Value.html#28699" title="Poco::Util::Units::Value::operator -=()">operator&nbsp;-=</a>, <a href="Poco.Util.Units.Value.html#28710" title="Poco::Util::Units::Value::operator /()">operator&nbsp;/</a>, <a href="Poco.Util.Units.Value.html#28714" title="Poco::Util::Units::Value::operator /=()">operator&nbsp;/=</a>, <a href="Poco.Util.Units.Value.html#28720" title="Poco::Util::Units::Value::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.Util.Units.Value.html#28722" title="Poco::Util::Units::Value::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.Util.Units.Value.html#28693" title="Poco::Util::Units::Value::operator =()">operator&nbsp;=</a>, <a href="Poco.Util.Units.Value.html#28716" title="Poco::Util::Units::Value::operator ==()">operator&nbsp;==</a>, <a href="Poco.Util.Units.Value.html#28724" title="Poco::Util::Units::Value::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.Util.Units.Value.html#28726" title="Poco::Util::Units::Value::operator >=()">operator&nbsp;&gt;=</a></p>
+<h2>Types</h2>
+<h3><a id="28686">Unit</a></h3>
+<p class="decl">typedef U <a href="Poco.Util.Units.Value.html#28686" title="Poco::Util::Units::Value::Unit">Unit</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28685">ValueType</a></h3>
+<p class="decl">typedef V <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="28687">Value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28688">Value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">explicit <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; v<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28690">Value</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; v<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="28692">get</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; get() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28718">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28704">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; V, Compose &lt; U, OU &gt; &gt; operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28706">operator *</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator * (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; v<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28708">operator *=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator *= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; v<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28695">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28728">operator ++</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator ++ ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28729">operator ++</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator ++ (<br />&nbsp;&nbsp;&nbsp;&nbsp;int<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28697">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28701">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28703">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator - () const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28731">operator --</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator -- ();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28732">operator --</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator -- (<br />&nbsp;&nbsp;&nbsp;&nbsp;int<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28699">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28710">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; V, Compose &lt; U, Power &lt; OU, - 1 &gt; &gt; &gt; operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28712">operator /</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> operator / (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; v<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28714">operator /=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator /= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html#28685" title="Poco::Util::Units::Value::ValueType">ValueType</a> &amp; v<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28720">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28722">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28693">operator =</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28716">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28724">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28726">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename OV, typename OU &gt; bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; OV, OU &gt; &amp; other<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

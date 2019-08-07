@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Crypto::KeyPair</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Crypto.html" class="namespace">Poco::Crypto</a></h1>
+<h1 class="symbol">class KeyPair</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Crypto" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Crypto<br />
+<b>Package:</b> CryptoCore<br />
+<b>Header:</b> Poco/Crypto/KeyPair.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This is a parent class for classes storing a key pair, consisting of private and public key. Storage of the private key is optional. </p>
+<p>If a private key is available, the <a href="Poco.Crypto.KeyPair.html" title="class Poco::Crypto::KeyPair">KeyPair</a> can be used for decrypting data (encrypted with the public key) or computing secure digital signatures. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Known Derived Classes: </b><a href="Poco.Crypto.ECKey.html" title="class Poco::Crypto::ECKey">ECKey</a>, <a href="Poco.Crypto.RSAKey.html" title="class Poco::Crypto::RSAKey">RSAKey</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Crypto.KeyPair.html#495" title="Poco::Crypto::KeyPair::impl()">impl</a>, <a href="Poco.Crypto.KeyPair.html#496" title="Poco::Crypto::KeyPair::name()">name</a>, <a href="Poco.Crypto.KeyPair.html#487" title="Poco::Crypto::KeyPair::save()">save</a>, <a href="Poco.Crypto.KeyPair.html#486" title="Poco::Crypto::KeyPair::size()">size</a>, <a href="Poco.Crypto.KeyPair.html#497" title="Poco::Crypto::KeyPair::type()">type</a></p>
+<h2>Enumerations</h2>
+<h3><a id="480">Type</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="481">KT_RSA</a> = KeyPairImpl::KT_RSA_IMPL</p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="482">KT_EC</a> = KeyPairImpl::KT_EC_IMPL</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="483">KeyPair</a></h3>
+<p class="decl">explicit <a href="Poco.Crypto.KeyPair.html" title="class Poco::Crypto::KeyPair">KeyPair</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Crypto.KeyPairImpl.html#503" title="Poco::Crypto::KeyPairImpl::Ptr">KeyPairImpl::Ptr</a> pKeyPairImpl = 0<br />);</p>
+<div class="description">
+<p>Extracts the <a href="#655" title="RSA">RSA</a> public key from the given certificate. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="485">~KeyPair</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Crypto.KeyPair.html" title="class Poco::Crypto::KeyPair">KeyPair</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Crypto.KeyPair.html" title="class Poco::Crypto::KeyPair">KeyPair</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="495">impl</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Crypto.KeyPairImpl.html#503" title="Poco::Crypto::KeyPairImpl::Ptr">KeyPairImpl::Ptr</a> impl() const;</p>
+<div class="description">
+<p>Returns the impl object. </p>
+</div>
+<h3><a id="496">name</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; name() const;</p>
+<div class="description">
+<p>Returns key pair name </p>
+</div>
+<h3><a id="487">save</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; publicKeyPairFile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPairFile = "",<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPairPassphrase = ""<br />) const;</p>
+<div class="description">
+<p>Exports the public and private keys to the given files.  </p>
+<p>If an empty filename is specified, the corresponding key is not exported. </p>
+</div>
+<h3><a id="491">save</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void save(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream * pPublicKeyPairStream,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream * pPrivateKeyPairStream = 0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; privateKeyPairPassphrase = ""<br />) const;</p>
+<div class="description">
+<p>Exports the public and private key to the given streams. </p>
+<p>If a null pointer is passed for a stream, the corresponding key is not exported. </p>
+</div>
+<h3><a id="486">size</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual int size() const;</p>
+<div class="description">
+<p>Returns the <a href="#655" title="RSA">RSA</a> modulus size. </p>
+</div>
+<h3><a id="497">type</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Crypto.KeyPair.html#480" title="enum  Poco::Crypto::KeyPair::Type">Type</a> type() const;</p>
+<div class="description">
+<p>Returns key pair type </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Redis::Client</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Redis.html" class="namespace">Poco::Redis</a></h1>
+<h1 class="symbol">class Client</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Redis" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Redis<br />
+<b>Package:</b> Redis<br />
+<b>Header:</b> Poco/Redis/Client.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Represents a connection to a <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+<p>A command is always made from an <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> and a reply can be a signed 64 bit integer, a simple string, a bulk string, an array or an error. The first element of the command array is the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> command. A simple string is a string that cannot contain a CR or LF character. A bulk string is implemented as a typedef for <a href="Poco.Nullable.html" title="class Poco::Nullable">Poco::Nullable</a>&lt;std::string&gt;. This is because a bulk string can represent a Null value. </p>
+<p></p>
+<pre>BulkString bs = client.execute&lt;BulkString&gt;(...);
+if ( bs.isNull() )
+{
+   // We have a Null value
+}
+else
+{
+   // We have a string value
+}
+</pre>
+<p>To create <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> commands, the factory methods of the <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> class can be used or the <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> class can be used directly. </p>
+<p></p>
+<pre>Command llen = Command::llen(&quot;list&quot;);
+</pre>
+<p>is the same as: </p>
+<p></p>
+<pre>Array command;
+command.add(&quot;LLEN&quot;).add(&quot;list&quot;);
+</pre>
+<p>or: </p>
+<p></p>
+<pre>Array command;
+command &lt;&lt; &quot;LLEN&quot; &lt;&lt; &quot;list&quot;;
+</pre>
+<p>or even: </p>
+<p></p>
+<pre>Command command(&quot;LLEN&quot;);
+command &lt;&lt; &quot;list&quot;;
+</pre>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Redis.Client.html#27114" title="Poco::Redis::Client::address()">address</a>, <a href="Poco.Redis.Client.html#27115" title="Poco::Redis::Client::connect()">connect</a>, <a href="Poco.Redis.Client.html#27132" title="Poco::Redis::Client::disconnect()">disconnect</a>, <a href="Poco.Redis.Client.html#27134" title="Poco::Redis::Client::execute()">execute</a>, <a href="Poco.Redis.Client.html#27136" title="Poco::Redis::Client::flush()">flush</a>, <a href="Poco.Redis.Client.html#27133" title="Poco::Redis::Client::isConnected()">isConnected</a>, <a href="Poco.Redis.Client.html#27139" title="Poco::Redis::Client::readReply()">readReply</a>, <a href="Poco.Redis.Client.html#27137" title="Poco::Redis::Client::sendCommand()">sendCommand</a>, <a href="Poco.Redis.Client.html#27142" title="Poco::Redis::Client::sendCommands()">sendCommands</a>, <a href="Poco.Redis.Client.html#27144" title="Poco::Redis::Client::setReceiveTimeout()">setReceiveTimeout</a></p>
+<h2>Types</h2>
+<h3><a id="27104">Ptr</a></h3>
+<p class="decl">typedef <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; <a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a> &gt; <a href="Poco.Redis.Client.html#27104" title="Poco::Redis::Client::Ptr">Ptr</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="27105">Client</a></h3>
+<p class="decl"><a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>();</p>
+<div class="description">
+<p>Creates an unconnected <a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>. Use this when you want to connect later on. </p>
+</div>
+<h3><a id="27106">Client</a></h3>
+<p class="decl"><a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hostAndPort<br />);</p>
+<div class="description">
+<p>Constructor which connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> host/port. The host and port must be separated with a colon. </p>
+</div>
+<h3><a id="27111">Client</a></h3>
+<p class="decl"><a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">Net::SocketAddress</a> &amp; addrs<br />);</p>
+<div class="description">
+<p>Constructor which connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> host/port. </p>
+</div>
+<h3><a id="27108">Client</a></h3>
+<p class="decl"><a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;int port<br />);</p>
+<div class="description">
+<p>Constructor which connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> host/port. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="27113">~Client</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="27114">address</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">Net::SocketAddress</a> address() const;</p>
+<div class="description">
+<p>Returns the address of the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> connection. </p>
+</div>
+<h3><a id="27115">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hostAndPort<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. The host and port must be separated with a colon. </p>
+</div>
+<h3><a id="27117">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;int port<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27120">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">Net::SocketAddress</a> &amp; addrs<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27122">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; hostAndPort,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. The host and port must be separated with a colon. </p>
+</div>
+<h3><a id="27125">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;int port,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27129">connect</a></h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">Net::SocketAddress</a> &amp; addrs,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p>Connects to the given <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27132">disconnect</a></h3>
+<p class="decl">void disconnect();</p>
+<div class="description">
+<p>Disconnects from the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27134">execute</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename T &gt; T execute(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> &amp; command<br />);</p>
+<div class="description">
+<p>Sends the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> <a href="Poco.Redis.Command.html" title="class Poco::Redis::Command">Command</a> to the server. It gets the reply and tries to convert it to the given template type. </p>
+<p>A specialization exists for type void, which doesn't read the reply. If the server sends a reply, it is your responsibility to read it. Use this for pipelining. </p>
+<p>A <a href="Poco.BadCastException.html" title="class Poco::BadCastException">Poco::BadCastException</a> will be thrown when the reply couldn't be converted. Supported types are <a href="Poco.html#18964" title="Poco::Int64">Int64</a>, std::string, <a href="Poco.Redis.html#27486" title="Poco::Redis::BulkString">BulkString</a>, <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> and void. When the reply is an <a href="Poco.Redis.Error.html" title="class Poco::Redis::Error">Error</a>, it will throw a <a href="Poco.Redis.RedisException.html" title="class Poco::Redis::RedisException">RedisException</a>. </p>
+</div>
+<h3><a id="27136">flush</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void flush();</p>
+<div class="description">
+<p>Flush the output buffer to <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a>. Use this when commands are stored in the buffer to send them all at once to <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a>. </p>
+</div>
+<h3><a id="27133">isConnected</a></h3>
+<p class="decl">bool isConnected() const;</p>
+<div class="description">
+<p>Returns true if and only if the <a href="Poco.Redis.Client.html" title="class Poco::Redis::Client">Client</a> is connected to a <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27139">readReply</a></h3>
+<p class="decl"><a href="Poco.Redis.RedisType.html#27471" title="Poco::Redis::RedisType::Ptr">RedisType::Ptr</a> readReply();</p>
+<div class="description">
+<p>Read a reply from the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server. </p>
+</div>
+<h3><a id="27140">readReply</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename T &gt; void readReply(<br />&nbsp;&nbsp;&nbsp;&nbsp;T &amp; result<br />);</p>
+<div class="description">
+<p>Read a reply from the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server and tries to convert that reply to the template type. When the reply is a <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> error, it will throw a <a href="Poco.Redis.RedisException.html" title="class Poco::Redis::RedisException">RedisException</a>. A <a href="Poco.BadCastException.html" title="class Poco::BadCastException">BadCastException</a> will be thrown, when the reply is not of the given type. </p>
+</div>
+<h3><a id="27137">sendCommand</a></h3>
+<p class="decl"><a href="Poco.Redis.RedisType.html#27471" title="Poco::Redis::RedisType::Ptr">RedisType::Ptr</a> sendCommand(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> &amp; command<br />);</p>
+<div class="description">
+<p>Sends a <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> command to the server and returns the reply. Use this when the type of the reply isn't known. </p>
+</div>
+<h3><a id="27142">sendCommands</a></h3>
+<p class="decl"><a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> sendCommands(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::vector &lt; <a href="Poco.Redis.Array.html" title="class Poco::Redis::Array">Array</a> &gt; &amp; commands<br />);</p>
+<div class="description">
+<p>Sends all commands (pipelining) to the <a href="Poco.Redis.html" title="namespace Poco::Redis">Redis</a> server before getting all replies. </p>
+</div>
+<h3><a id="27144">setReceiveTimeout</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setReceiveTimeout(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Timespan.html" title="class Poco::Timespan">Timespan</a> &amp; timeout<br />);</p>
+<div class="description">
+<p>Sets a receive timeout. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

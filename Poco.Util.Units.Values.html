@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Namespace Poco::Util::Units::Values</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Util.Units.html" class="namespace">Poco::Util::Units</a></h1>
+<h1 class="symbol">namespace Values</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<h2>Overview</h2>
+<p><b>Classes:</b> 
+<a href="Poco.Util.Units.Values.atto.html" title="struct Poco::Util::Units::Values::atto">atto</a>, <a href="Poco.Util.Units.Values.centi.html" title="struct Poco::Util::Units::Values::centi">centi</a>, <a href="Poco.Util.Units.Values.deca.html" title="struct Poco::Util::Units::Values::deca">deca</a>, <a href="Poco.Util.Units.Values.deci.html" title="struct Poco::Util::Units::Values::deci">deci</a>, <a href="Poco.Util.Units.Values.exa.html" title="struct Poco::Util::Units::Values::exa">exa</a>, <a href="Poco.Util.Units.Values.femto.html" title="struct Poco::Util::Units::Values::femto">femto</a>, <a href="Poco.Util.Units.Values.giga.html" title="struct Poco::Util::Units::Values::giga">giga</a>, <a href="Poco.Util.Units.Values.hecto.html" title="struct Poco::Util::Units::Values::hecto">hecto</a>, <a href="Poco.Util.Units.Values.kilo.html" title="struct Poco::Util::Units::Values::kilo">kilo</a>, <a href="Poco.Util.Units.Values.mega.html" title="struct Poco::Util::Units::Values::mega">mega</a>, <a href="Poco.Util.Units.Values.micro.html" title="struct Poco::Util::Units::Values::micro">micro</a>, <a href="Poco.Util.Units.Values.milli.html" title="struct Poco::Util::Units::Values::milli">milli</a>, <a href="Poco.Util.Units.Values.nano.html" title="struct Poco::Util::Units::Values::nano">nano</a>, <a href="Poco.Util.Units.Values.peta.html" title="struct Poco::Util::Units::Values::peta">peta</a>, <a href="Poco.Util.Units.Values.pico.html" title="struct Poco::Util::Units::Values::pico">pico</a>, <a href="Poco.Util.Units.Values.tera.html" title="struct Poco::Util::Units::Values::tera">tera</a>, <a href="Poco.Util.Units.Values.yocto.html" title="struct Poco::Util::Units::Values::yocto">yocto</a>, <a href="Poco.Util.Units.Values.yotta.html" title="struct Poco::Util::Units::Values::yotta">yotta</a>, <a href="Poco.Util.Units.Values.zepto.html" title="struct Poco::Util::Units::Values::zepto">zepto</a>, <a href="Poco.Util.Units.Values.zetta.html" title="struct Poco::Util::Units::Values::zetta">zetta</a></p>
+<p><b>Types:</b> 
+<a href="Poco.Util.Units.Values.html#28933" title="Poco::Util::Units::Values::A">A</a>, <a href="Poco.Util.Units.Values.html#28953" title="Poco::Util::Units::Values::Bq">Bq</a>, <a href="Poco.Util.Units.Values.html#28943" title="Poco::Util::Units::Values::C">C</a>, <a href="Poco.Util.Units.Values.html#28966" title="Poco::Util::Units::Values::Celsius">Celsius</a>, <a href="Poco.Util.Units.Values.html#28945" title="Poco::Util::Units::Values::F">F</a>, <a href="Poco.Util.Units.Values.html#28967" title="Poco::Util::Units::Values::Fahrenheit">Fahrenheit</a>, <a href="Poco.Util.Units.Values.html#28954" title="Poco::Util::Units::Values::Gy">Gy</a>, <a href="Poco.Util.Units.Values.html#28950" title="Poco::Util::Units::Values::H">H</a>, <a href="Poco.Util.Units.Values.html#28938" title="Poco::Util::Units::Values::Hz">Hz</a>, <a href="Poco.Util.Units.Values.html#28941" title="Poco::Util::Units::Values::J">J</a>, <a href="Poco.Util.Units.Values.html#28932" title="Poco::Util::Units::Values::K">K</a>, <a href="Poco.Util.Units.Values.html#28939" title="Poco::Util::Units::Values::N">N</a>, <a href="Poco.Util.Units.Values.html#28946" title="Poco::Util::Units::Values::Ohm">Ohm</a>, <a href="Poco.Util.Units.Values.html#28940" title="Poco::Util::Units::Values::Pa">Pa</a>, <a href="Poco.Util.Units.Values.html#28947" title="Poco::Util::Units::Values::S">S</a>, <a href="Poco.Util.Units.Values.html#28955" title="Poco::Util::Units::Values::Sv">Sv</a>, <a href="Poco.Util.Units.Values.html#28949" title="Poco::Util::Units::Values::T">T</a>, <a href="Poco.Util.Units.Values.html#28928" title="Poco::Util::Units::Values::Unit">Unit</a>, <a href="Poco.Util.Units.Values.html#28944" title="Poco::Util::Units::Values::V">V</a>, <a href="Poco.Util.Units.Values.html#28942" title="Poco::Util::Units::Values::W">W</a>, <a href="Poco.Util.Units.Values.html#28948" title="Poco::Util::Units::Values::Wb">Wb</a>, <a href="Poco.Util.Units.Values.html#28986" title="Poco::Util::Units::Values::acre">acre</a>, <a href="Poco.Util.Units.Values.html#28984" title="Poco::Util::Units::Values::are">are</a>, <a href="Poco.Util.Units.Values.html#29008" title="Poco::Util::Units::Values::bakers_dozen">bakers_dozen</a>, <a href="Poco.Util.Units.Values.html#28935" title="Poco::Util::Units::Values::cd">cd</a>, <a href="Poco.Util.Units.Values.html#28974" title="Poco::Util::Units::Values::century">century</a>, <a href="Poco.Util.Units.Values.html#28989" title="Poco::Util::Units::Values::cl">cl</a>, <a href="Poco.Util.Units.Values.html#28957" title="Poco::Util::Units::Values::cm">cm</a>, <a href="Poco.Util.Units.Values.html#28987" title="Poco::Util::Units::Values::cm3">cm3</a>, <a href="Poco.Util.Units.Values.html#28970" title="Poco::Util::Units::Values::day">day</a>, <a href="Poco.Util.Units.Values.html#28998" title="Poco::Util::Units::Values::degree">degree</a>, <a href="Poco.Util.Units.Values.html#29000" title="Poco::Util::Units::Values::degree_minute">degree_minute</a>, <a href="Poco.Util.Units.Values.html#29001" title="Poco::Util::Units::Values::degree_second">degree_second</a>, <a href="Poco.Util.Units.Values.html#28991" title="Poco::Util::Units::Values::dl">dl</a>, <a href="Poco.Util.Units.Values.html#29007" title="Poco::Util::Units::Values::dozen">dozen</a>, <a href="Poco.Util.Units.Values.html#28977" title="Poco::Util::Units::Values::foot">foot</a>, <a href="Poco.Util.Units.Values.html#28960" title="Poco::Util::Units::Values::g">g</a>, <a href="Poco.Util.Units.Values.html#28999" title="Poco::Util::Units::Values::grad">grad</a>, <a href="Poco.Util.Units.Values.html#28983" title="Poco::Util::Units::Values::hectare">hectare</a>, <a href="Poco.Util.Units.Values.html#28969" title="Poco::Util::Units::Values::hour">hour</a>, <a href="Poco.Util.Units.Values.html#28976" title="Poco::Util::Units::Values::inch">inch</a>, <a href="Poco.Util.Units.Values.html#28985" title="Poco::Util::Units::Values::inch2">inch2</a>, <a href="Poco.Util.Units.Values.html#29002" title="Poco::Util::Units::Values::kPa">kPa</a>, <a href="Poco.Util.Units.Values.html#28956" title="Poco::Util::Units::Values::kat">kat</a>, <a href="Poco.Util.Units.Values.html#28930" title="Poco::Util::Units::Values::kg">kg</a>, <a href="Poco.Util.Units.Values.html#28959" title="Poco::Util::Units::Values::km">km</a>, <a href="Poco.Util.Units.Values.html#28996" title="Poco::Util::Units::Values::knot">knot</a>, <a href="Poco.Util.Units.Values.html#28994" title="Poco::Util::Units::Values::kph">kph</a>, <a href="Poco.Util.Units.Values.html#28963" title="Poco::Util::Units::Values::lb">lb</a>, <a href="Poco.Util.Units.Values.html#28990" title="Poco::Util::Units::Values::liter">liter</a>, <a href="Poco.Util.Units.Values.html#28951" title="Poco::Util::Units::Values::lm">lm</a>, <a href="Poco.Util.Units.Values.html#28952" title="Poco::Util::Units::Values::lx">lx</a>, <a href="Poco.Util.Units.Values.html#28929" title="Poco::Util::Units::Values::m">m</a>, <a href="Poco.Util.Units.Values.html#28981" title="Poco::Util::Units::Values::m2">m2</a>, <a href="Poco.Util.Units.Values.html#28992" title="Poco::Util::Units::Values::m3">m3</a>, <a href="Poco.Util.Units.Values.html#28997" title="Poco::Util::Units::Values::mach">mach</a>, <a href="Poco.Util.Units.Values.html#28995" title="Poco::Util::Units::Values::meters_per_second">meters_per_second</a>, <a href="Poco.Util.Units.Values.html#28961" title="Poco::Util::Units::Values::mg">mg</a>, <a href="Poco.Util.Units.Values.html#28979" title="Poco::Util::Units::Values::mile">mile</a>, <a href="Poco.Util.Units.Values.html#28975" title="Poco::Util::Units::Values::millennium">millennium</a>, <a href="Poco.Util.Units.Values.html#29004" title="Poco::Util::Units::Values::millibar">millibar</a>, <a href="Poco.Util.Units.Values.html#28968" title="Poco::Util::Units::Values::minute">minute</a>, <a href="Poco.Util.Units.Values.html#28988" title="Poco::Util::Units::Values::ml">ml</a>, <a href="Poco.Util.Units.Values.html#28958" title="Poco::Util::Units::Values::mm">mm</a>, <a href="Poco.Util.Units.Values.html#28982" title="Poco::Util::Units::Values::mm2">mm2</a>, <a href="Poco.Util.Units.Values.html#28934" title="Poco::Util::Units::Values::mol">mol</a>, <a href="Poco.Util.Units.Values.html#28972" title="Poco::Util::Units::Values::month">month</a>, <a href="Poco.Util.Units.Values.html#28993" title="Poco::Util::Units::Values::mph">mph</a>, <a href="Poco.Util.Units.Values.html#28962" title="Poco::Util::Units::Values::ms">ms</a>, <a href="Poco.Util.Units.Values.html#28980" title="Poco::Util::Units::Values::nautical_mile">nautical_mile</a>, <a href="Poco.Util.Units.Values.html#28964" title="Poco::Util::Units::Values::oz">oz</a>, <a href="Poco.Util.Units.Values.html#29005" title="Poco::Util::Units::Values::percent">percent</a>, <a href="Poco.Util.Units.Values.html#29003" title="Poco::Util::Units::Values::psi">psi</a>, <a href="Poco.Util.Units.Values.html#28936" title="Poco::Util::Units::Values::rad">rad</a>, <a href="Poco.Util.Units.Values.html#29006" title="Poco::Util::Units::Values::rpm">rpm</a>, <a href="Poco.Util.Units.Values.html#28931" title="Poco::Util::Units::Values::s">s</a>, <a href="Poco.Util.Units.Values.html#28937" title="Poco::Util::Units::Values::sr">sr</a>, <a href="Poco.Util.Units.Values.html#28965" title="Poco::Util::Units::Values::tonne">tonne</a>, <a href="Poco.Util.Units.Values.html#28971" title="Poco::Util::Units::Values::week">week</a>, <a href="Poco.Util.Units.Values.html#28978" title="Poco::Util::Units::Values::yard">yard</a>, <a href="Poco.Util.Units.Values.html#28973" title="Poco::Util::Units::Values::year">year</a></p>
+<p><b>Functions:</b> 
+<a href="Poco.Util.Units.Values.html#29012" title="Poco::Util::Units::Values::operator <<()">operator&nbsp;&lt;&lt;</a></p>
+<h2>Classes</h2>
+<h3><a href="Poco.Util.Units.Values.atto.html" class="class">struct atto</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.atto.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.centi.html" class="class">struct centi</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.centi.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.deca.html" class="class">struct deca</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.deca.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.deci.html" class="class">struct deci</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.deci.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.exa.html" class="class">struct exa</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.exa.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.femto.html" class="class">struct femto</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.femto.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.giga.html" class="class">struct giga</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.giga.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.hecto.html" class="class">struct hecto</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.hecto.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.kilo.html" class="class">struct kilo</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.kilo.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.mega.html" class="class">struct mega</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.mega.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.micro.html" class="class">struct micro</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.micro.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.milli.html" class="class">struct milli</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.milli.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.nano.html" class="class">struct nano</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.nano.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.peta.html" class="class">struct peta</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.peta.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.pico.html" class="class">struct pico</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.pico.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.tera.html" class="class">struct tera</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.tera.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.yocto.html" class="class">struct yocto</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.yocto.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.yotta.html" class="class">struct yotta</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.yotta.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.zepto.html" class="class">struct zepto</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.zepto.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h3><a href="Poco.Util.Units.Values.zetta.html" class="class">struct zetta</a></h3>
+<p>&nbsp;<a href="Poco.Util.Units.Values.zetta.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Types</h2>
+<h3><a id="28933">A</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::<a href="Poco.Util.Units.Values.html#28933" title="Poco::Util::Units::Values::A">A</a> &gt; <a href="Poco.Util.Units.Values.html#28933" title="Poco::Util::Units::Values::A">A</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28953">Bq</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28799" title="Poco::Util::Units::Units::Bq">Units::Bq</a> &gt; <a href="Poco.Util.Units.Values.html#28953" title="Poco::Util::Units::Values::Bq">Bq</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28943">C</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28789" title="Poco::Util::Units::Units::C">Units::C</a> &gt; <a href="Poco.Util.Units.Values.html#28943" title="Poco::Util::Units::Values::C">C</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28966">Celsius</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28885" title="Poco::Util::Units::Units::Celsius">Units::Celsius</a> &gt; <a href="Poco.Util.Units.Values.html#28966" title="Poco::Util::Units::Values::Celsius">Celsius</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28945">F</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28791" title="Poco::Util::Units::Units::F">Units::F</a> &gt; <a href="Poco.Util.Units.Values.html#28945" title="Poco::Util::Units::Values::F">F</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28967">Fahrenheit</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28886" title="Poco::Util::Units::Units::Fahrenheit">Units::Fahrenheit</a> &gt; <a href="Poco.Util.Units.Values.html#28967" title="Poco::Util::Units::Values::Fahrenheit">Fahrenheit</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28954">Gy</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28800" title="Poco::Util::Units::Units::Gy">Units::Gy</a> &gt; <a href="Poco.Util.Units.Values.html#28954" title="Poco::Util::Units::Values::Gy">Gy</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28950">H</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28796" title="Poco::Util::Units::Units::H">Units::H</a> &gt; <a href="Poco.Util.Units.Values.html#28950" title="Poco::Util::Units::Values::H">H</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28938">Hz</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28784" title="Poco::Util::Units::Units::Hz">Units::Hz</a> &gt; <a href="Poco.Util.Units.Values.html#28938" title="Poco::Util::Units::Values::Hz">Hz</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28941">J</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28787" title="Poco::Util::Units::Units::J">Units::J</a> &gt; <a href="Poco.Util.Units.Values.html#28941" title="Poco::Util::Units::Values::J">J</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28932">K</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::<a href="Poco.Util.Units.Values.html#28932" title="Poco::Util::Units::Values::K">K</a> &gt; <a href="Poco.Util.Units.Values.html#28932" title="Poco::Util::Units::Values::K">K</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28939">N</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28785" title="Poco::Util::Units::Units::N">Units::N</a> &gt; <a href="Poco.Util.Units.Values.html#28939" title="Poco::Util::Units::Values::N">N</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28946">Ohm</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28792" title="Poco::Util::Units::Units::Ohm">Units::Ohm</a> &gt; <a href="Poco.Util.Units.Values.html#28946" title="Poco::Util::Units::Values::Ohm">Ohm</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28940">Pa</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28786" title="Poco::Util::Units::Units::Pa">Units::Pa</a> &gt; <a href="Poco.Util.Units.Values.html#28940" title="Poco::Util::Units::Values::Pa">Pa</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28947">S</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28793" title="Poco::Util::Units::Units::S">Units::S</a> &gt; <a href="Poco.Util.Units.Values.html#28947" title="Poco::Util::Units::Values::S">S</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28955">Sv</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28801" title="Poco::Util::Units::Units::Sv">Units::Sv</a> &gt; <a href="Poco.Util.Units.Values.html#28955" title="Poco::Util::Units::Values::Sv">Sv</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28949">T</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28795" title="Poco::Util::Units::Units::T">Units::T</a> &gt; <a href="Poco.Util.Units.Values.html#28949" title="Poco::Util::Units::Values::T">T</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28928">Unit</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28781" title="Poco::Util::Units::Units::Unit">Units::Unit</a> &gt; <a href="Poco.Util.Units.Values.html#28928" title="Poco::Util::Units::Values::Unit">Unit</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28944">V</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28790" title="Poco::Util::Units::Units::V">Units::V</a> &gt; <a href="Poco.Util.Units.Values.html#28944" title="Poco::Util::Units::Values::V">V</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28942">W</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28788" title="Poco::Util::Units::Units::W">Units::W</a> &gt; <a href="Poco.Util.Units.Values.html#28942" title="Poco::Util::Units::Values::W">W</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28948">Wb</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28794" title="Poco::Util::Units::Units::Wb">Units::Wb</a> &gt; <a href="Poco.Util.Units.Values.html#28948" title="Poco::Util::Units::Values::Wb">Wb</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28986">acre</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28904" title="Poco::Util::Units::Units::acre">Units::acre</a> &gt; acre;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28984">are</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28902" title="Poco::Util::Units::Units::are">Units::are</a> &gt; are;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29008">bakers_dozen</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28926" title="Poco::Util::Units::Units::bakers_dozen">Units::bakers_dozen</a> &gt; bakers_dozen;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28935">cd</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::cd &gt; cd;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28974">century</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28892" title="Poco::Util::Units::Units::century">Units::century</a> &gt; century;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28989">cl</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28909" title="Poco::Util::Units::Units::cl">Units::cl</a> &gt; cl;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28957">cm</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28843" title="Poco::Util::Units::Units::cm">Units::cm</a> &gt; cm;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28987">cm3</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28905" title="Poco::Util::Units::Units::cm3">Units::cm3</a> &gt; cm3;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28970">day</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28889" title="Poco::Util::Units::Units::day">Units::day</a> &gt; day;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28998">degree</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28916" title="Poco::Util::Units::Units::degree">Units::degree</a> &gt; degree;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29000">degree_minute</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28918" title="Poco::Util::Units::Units::degree_minute">Units::degree_minute</a> &gt; degree_minute;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29001">degree_second</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28919" title="Poco::Util::Units::Units::degree_second">Units::degree_second</a> &gt; degree_second;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28991">dl</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28908" title="Poco::Util::Units::Units::dl">Units::dl</a> &gt; dl;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29007">dozen</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28925" title="Poco::Util::Units::Units::dozen">Units::dozen</a> &gt; dozen;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28977">foot</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28895" title="Poco::Util::Units::Units::foot">Units::foot</a> &gt; foot;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28960">g</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28846" title="Poco::Util::Units::Units::g">Units::g</a> &gt; g;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28999">grad</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28917" title="Poco::Util::Units::Units::grad">Units::grad</a> &gt; grad;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28983">hectare</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28901" title="Poco::Util::Units::Units::hectare">Units::hectare</a> &gt; hectare;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28969">hour</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28888" title="Poco::Util::Units::Units::hour">Units::hour</a> &gt; hour;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28976">inch</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28894" title="Poco::Util::Units::Units::inch">Units::inch</a> &gt; inch;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28985">inch2</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28903" title="Poco::Util::Units::Units::inch2">Units::inch2</a> &gt; inch2;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29002">kPa</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28920" title="Poco::Util::Units::Units::kPa">Units::kPa</a> &gt; kPa;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28956">kat</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28802" title="Poco::Util::Units::Units::kat">Units::kat</a> &gt; kat;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28930">kg</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::kg &gt; kg;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28959">km</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28845" title="Poco::Util::Units::Units::km">Units::km</a> &gt; km;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28996">knot</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28914" title="Poco::Util::Units::Units::knot">Units::knot</a> &gt; knot;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28994">kph</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28912" title="Poco::Util::Units::Units::kph">Units::kph</a> &gt; kph;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28963">lb</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28882" title="Poco::Util::Units::Units::lb">Units::lb</a> &gt; lb;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28990">liter</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28907" title="Poco::Util::Units::Units::liter">Units::liter</a> &gt; liter;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28951">lm</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28797" title="Poco::Util::Units::Units::lm">Units::lm</a> &gt; lm;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28952">lx</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28798" title="Poco::Util::Units::Units::lx">Units::lx</a> &gt; lx;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28929">m</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::m &gt; m;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28981">m2</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28899" title="Poco::Util::Units::Units::m2">Units::m2</a> &gt; m2;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28992">m3</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28910" title="Poco::Util::Units::Units::m3">Units::m3</a> &gt; m3;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28997">mach</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28915" title="Poco::Util::Units::Units::mach">Units::mach</a> &gt; mach;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28995">meters_per_second</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28913" title="Poco::Util::Units::Units::meters_per_second">Units::meters_per_second</a> &gt; meters_per_second;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28961">mg</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28847" title="Poco::Util::Units::Units::mg">Units::mg</a> &gt; mg;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28979">mile</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28897" title="Poco::Util::Units::Units::mile">Units::mile</a> &gt; mile;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28975">millennium</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28893" title="Poco::Util::Units::Units::millennium">Units::millennium</a> &gt; millennium;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29004">millibar</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28922" title="Poco::Util::Units::Units::millibar">Units::millibar</a> &gt; millibar;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28968">minute</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28887" title="Poco::Util::Units::Units::minute">Units::minute</a> &gt; minute;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28988">ml</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28906" title="Poco::Util::Units::Units::ml">Units::ml</a> &gt; ml;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28958">mm</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28844" title="Poco::Util::Units::Units::mm">Units::mm</a> &gt; mm;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28982">mm2</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28900" title="Poco::Util::Units::Units::mm2">Units::mm2</a> &gt; mm2;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28934">mol</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::mol &gt; mol;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28972">month</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::month &gt; month;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28993">mph</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28911" title="Poco::Util::Units::Units::mph">Units::mph</a> &gt; mph;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28962">ms</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28848" title="Poco::Util::Units::Units::ms">Units::ms</a> &gt; ms;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28980">nautical_mile</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28898" title="Poco::Util::Units::Units::nautical_mile">Units::nautical_mile</a> &gt; nautical_mile;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28964">oz</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28883" title="Poco::Util::Units::Units::oz">Units::oz</a> &gt; oz;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29005">percent</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28924" title="Poco::Util::Units::Units::percent">Units::percent</a> &gt; percent;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29003">psi</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28921" title="Poco::Util::Units::Units::psi">Units::psi</a> &gt; psi;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28936">rad</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28782" title="Poco::Util::Units::Units::rad">Units::rad</a> &gt; rad;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29006">rpm</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28923" title="Poco::Util::Units::Units::rpm">Units::rpm</a> &gt; rpm;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28931">s</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, Units::s &gt; s;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28937">sr</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28783" title="Poco::Util::Units::Units::sr">Units::sr</a> &gt; sr;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28965">tonne</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28884" title="Poco::Util::Units::Units::tonne">Units::tonne</a> &gt; tonne;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28971">week</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28890" title="Poco::Util::Units::Units::week">Units::week</a> &gt; week;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28978">yard</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28896" title="Poco::Util::Units::Units::yard">Units::yard</a> &gt; yard;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="28973">year</a></h3>
+<p class="decl">typedef <a href="Poco.Util.Units.Value.html" title="class Poco::Util::Units::Value">Value</a> &lt; double, <a href="Poco.Util.Units.Units.html#28891" title="Poco::Util::Units::Units::year">Units::year</a> &gt; year;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Functions</h2>
+<h3><a id="29012">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const deca &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29018">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const hecto &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29024">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const kilo &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29030">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const mega &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29036">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const giga &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29042">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const tera &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29048">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const peta &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29054">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const exa &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29060">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const zetta &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29066">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const yotta &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29072">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const deci &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29078">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const centi &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29084">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const milli &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29090">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const micro &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29096">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const nano &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29102">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const pico &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29108">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const femto &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29114">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const atto &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29120">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const zepto &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="29126">operator &lt;&lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">template &lt; typename Str &gt; Str &amp; operator &lt;&lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;Str &amp; os,<br />&nbsp;&nbsp;&nbsp;&nbsp;const yocto &amp; val<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

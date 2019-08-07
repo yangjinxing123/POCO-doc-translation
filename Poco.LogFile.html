@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::LogFile</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class LogFile</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Logging<br />
+<b>Header:</b> Poco/LogFile.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class is used by <a href="Poco.FileChannel.html" title="class Poco::FileChannel">FileChannel</a> to work with a log file. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b>LogFileImpl</p>
+<p><b>All Base Classes: </b>LogFileImpl</p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.LogFile.html#14227" title="Poco::LogFile::creationDate()">creationDate</a>, <a href="Poco.LogFile.html#14228" title="Poco::LogFile::path()">path</a>, <a href="Poco.LogFile.html#14226" title="Poco::LogFile::size()">size</a>, <a href="Poco.LogFile.html#14223" title="Poco::LogFile::write()">write</a></p>
+<h2>Constructors</h2>
+<h3><a id="14220">LogFile</a></h3>
+<p class="decl"><a href="Poco.LogFile.html" title="class Poco::LogFile">LogFile</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; path<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.LogFile.html" title="class Poco::LogFile">LogFile</a>. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="14222">~LogFile</a></h3>
+<p class="decl">~<a href="Poco.LogFile.html" title="class Poco::LogFile">LogFile</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.LogFile.html" title="class Poco::LogFile">LogFile</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="14227">creationDate</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Timestamp.html" title="class Poco::Timestamp">Timestamp</a> creationDate() const;</p>
+<div class="description">
+<p>Returns the date and time the log file was created. </p>
+</div>
+<h3><a id="14228">path</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const std::string &amp; path() const;</p>
+<div class="description">
+<p>Returns the path given in the constructor. </p>
+</div>
+<h3><a id="14226">size</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.html#18965" title="Poco::UInt64">UInt64</a> size() const;</p>
+<div class="description">
+<p>Returns the current size in bytes of the log file. </p>
+</div>
+<h3><a id="14223">write</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void write(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; text,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool flush = true<br />);</p>
+<div class="description">
+<p>Writes the given text to the log file. If flush is true, the text will be immediately flushed to the file. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::BasicBufferedBidirectionalStreamBuf</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="template">template &lt; typename ch, typename tr, typename ba = BufferAllocator &lt; ch &gt; &gt;</h1>
+<h1 class="symbol">class BasicBufferedBidirectionalStreamBuf</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Streams<br />
+<b>Header:</b> Poco/BufferedBidirectionalStreamBuf.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This is an implementation of a buffered bidirectional  streambuf that greatly simplifies the implementation of custom streambufs of various kinds. Derived classes only have to override the methods <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9317" title="Poco::BasicBufferedBidirectionalStreamBuf::readFromDevice()">readFromDevice</a>() or <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9320" title="Poco::BasicBufferedBidirectionalStreamBuf::writeToDevice()">writeToDevice</a>(). </p>
+<p>In contrast to BasicBufferedStreambuf, this class supports simultaneous read and write access, so in addition to istream and ostream this streambuf can also be used for implementing an iostream. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b>std::basic_streambuf&nbsp;&lt;&nbsp;ch,&nbsp;tr&nbsp;&gt;</p>
+<p><b>All Base Classes: </b>std::basic_streambuf&nbsp;&lt;&nbsp;ch,&nbsp;tr&nbsp;&gt;</p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9315" title="Poco::BasicBufferedBidirectionalStreamBuf::getMode()">getMode</a>, <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9309" title="Poco::BasicBufferedBidirectionalStreamBuf::overflow()">overflow</a>, <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9316" title="Poco::BasicBufferedBidirectionalStreamBuf::resetBuffers()">resetBuffers</a>, <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9313" title="Poco::BasicBufferedBidirectionalStreamBuf::setMode()">setMode</a>, <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9312" title="Poco::BasicBufferedBidirectionalStreamBuf::sync()">sync</a>, <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9311" title="Poco::BasicBufferedBidirectionalStreamBuf::underflow()">underflow</a></p>
+<h2>Types</h2>
+<h3><a id="9300">Allocator</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef ba <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9300" title="Poco::BasicBufferedBidirectionalStreamBuf::Allocator">Allocator</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9296">Base</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef std::basic_streambuf &lt; ch, tr &gt; <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9296" title="Poco::BasicBufferedBidirectionalStreamBuf::Base">Base</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9297">IOS</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef std::basic_ios &lt; ch, tr &gt; <a href="Poco.BasicBufferedBidirectionalStreamBuf.html#9297" title="Poco::BasicBufferedBidirectionalStreamBuf::IOS">IOS</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9299">char_traits</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef tr char_traits;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9298">char_type</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef ch char_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9301">int_type</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef typename Base::int_type int_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9303">off_type</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef typename Base::off_type off_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9304">openmode</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef typename IOS::openmode openmode;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9302">pos_type</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">typedef typename Base::pos_type pos_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="9305">BasicBufferedBidirectionalStreamBuf</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.BasicBufferedBidirectionalStreamBuf.html" title="class Poco::BasicBufferedBidirectionalStreamBuf">BasicBufferedBidirectionalStreamBuf</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::streamsize bufferSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;openmode mode<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="9308">~BasicBufferedBidirectionalStreamBuf</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.BasicBufferedBidirectionalStreamBuf.html" title="class Poco::BasicBufferedBidirectionalStreamBuf">BasicBufferedBidirectionalStreamBuf</a>();</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="9309">overflow</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual int_type overflow(<br />&nbsp;&nbsp;&nbsp;&nbsp;int_type c<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9312">sync</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual int sync();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9311">underflow</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">virtual int_type underflow();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9315">getMode</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">openmode getMode() const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9316">resetBuffers</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void resetBuffers();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9313">setMode</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setMode(<br />&nbsp;&nbsp;&nbsp;&nbsp;openmode mode<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::DoubleByteEncoding</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class DoubleByteEncoding</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Encodings" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Encodings<br />
+<b>Package:</b> Encodings<br />
+<b>Header:</b> Poco/DoubleByteEncoding.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This abstract class is a base class for various double-byte character set (DBCS) encodings. </p>
+<p>Double-byte encodings are variants of multi-byte encodings where (<a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a>) each code point is represented by one or two bytes. <a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code points are restricted to the Basic Multilingual Plane. </p>
+<p>Subclasses must provide encoding names, a static CharacterMap, as well as static <a href="Poco.DoubleByteEncoding.Mapping.html" title="struct Poco::DoubleByteEncoding::Mapping">Mapping</a> and reverse <a href="Poco.DoubleByteEncoding.Mapping.html" title="struct Poco::DoubleByteEncoding::Mapping">Mapping</a> tables, and provide these to the <a href="Poco.DoubleByteEncoding.html" title="class Poco::DoubleByteEncoding">DoubleByteEncoding</a> constructor. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.TextEncoding.html" title="class Poco::TextEncoding">TextEncoding</a></p>
+<p><b>All Base Classes: </b><a href="Poco.TextEncoding.html" title="class Poco::TextEncoding">TextEncoding</a></p>
+<p><b>Known Derived Classes: </b><a href="Poco.Windows1255Encoding.html" title="class Poco::Windows1255Encoding">Windows1255Encoding</a>, <a href="Poco.Windows936Encoding.html" title="class Poco::Windows936Encoding">Windows936Encoding</a>, <a href="Poco.Windows1257Encoding.html" title="class Poco::Windows1257Encoding">Windows1257Encoding</a>, <a href="Poco.Windows1253Encoding.html" title="class Poco::Windows1253Encoding">Windows1253Encoding</a>, <a href="Poco.Windows950Encoding.html" title="class Poco::Windows950Encoding">Windows950Encoding</a>, <a href="Poco.Windows949Encoding.html" title="class Poco::Windows949Encoding">Windows949Encoding</a>, <a href="Poco.Windows1256Encoding.html" title="class Poco::Windows1256Encoding">Windows1256Encoding</a>, <a href="Poco.Windows1258Encoding.html" title="class Poco::Windows1258Encoding">Windows1258Encoding</a>, <a href="Poco.Windows874Encoding.html" title="class Poco::Windows874Encoding">Windows874Encoding</a>, <a href="Poco.Windows932Encoding.html" title="class Poco::Windows932Encoding">Windows932Encoding</a>, <a href="Poco.Windows1254Encoding.html" title="class Poco::Windows1254Encoding">Windows1254Encoding</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.DoubleByteEncoding.html#8052" title="Poco::DoubleByteEncoding::canonicalName()">canonicalName</a>, <a href="Poco.DoubleByteEncoding.html#8055" title="Poco::DoubleByteEncoding::characterMap()">characterMap</a>, <a href="Poco.DoubleByteEncoding.html#8056" title="Poco::DoubleByteEncoding::convert()">convert</a>, <a href="Poco.DoubleByteEncoding.html#8053" title="Poco::DoubleByteEncoding::isA()">isA</a>, <a href="Poco.DoubleByteEncoding.html#8076" title="Poco::DoubleByteEncoding::map()">map</a>, <a href="Poco.DoubleByteEncoding.html#8062" title="Poco::DoubleByteEncoding::queryConvert()">queryConvert</a>, <a href="Poco.DoubleByteEncoding.html#8078" title="Poco::DoubleByteEncoding::reverseMap()">reverseMap</a>, <a href="Poco.DoubleByteEncoding.html#8065" title="Poco::DoubleByteEncoding::sequenceLength()">sequenceLength</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.TextEncoding.html#18340" title="Poco::TextEncoding::add()">add</a>, <a href="Poco.TextEncoding.html#18336" title="Poco::TextEncoding::byName()">byName</a>, <a href="Poco.TextEncoding.html#18320" title="Poco::TextEncoding::canonicalName()">canonicalName</a>, <a href="Poco.TextEncoding.html#18323" title="Poco::TextEncoding::characterMap()">characterMap</a>, <a href="Poco.TextEncoding.html#18324" title="Poco::TextEncoding::convert()">convert</a>, <a href="Poco.TextEncoding.html#18338" title="Poco::TextEncoding::find()">find</a>, <a href="Poco.TextEncoding.html#18347" title="Poco::TextEncoding::global()">global</a>, <a href="Poco.TextEncoding.html#18321" title="Poco::TextEncoding::isA()">isA</a>, <a href="Poco.TextEncoding.html#18351" title="Poco::TextEncoding::manager()">manager</a>, <a href="Poco.TextEncoding.html#18326" title="Poco::TextEncoding::queryConvert()">queryConvert</a>, <a href="Poco.TextEncoding.html#18345" title="Poco::TextEncoding::remove()">remove</a>, <a href="Poco.TextEncoding.html#18329" title="Poco::TextEncoding::sequenceLength()">sequenceLength</a></p>
+<h2>Nested Classes</h2>
+<h3><a href="Poco.DoubleByteEncoding.Mapping.html" class="class">struct Mapping</a></h3>
+<p>&nbsp;<a href="Poco.DoubleByteEncoding.Mapping.html"><img src="images/arrow.png" alt="more..." /> </a></p>
+<h2>Constructors</h2>
+<h3><a id="8068">DoubleByteEncoding</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.DoubleByteEncoding.html" title="class Poco::DoubleByteEncoding">DoubleByteEncoding</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const char * * names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.TextEncoding.html#18318" title="Poco::TextEncoding::CharacterMap">TextEncoding::CharacterMap</a> &amp; charMap,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DoubleByteEncoding.Mapping.html" title="struct Poco::DoubleByteEncoding::Mapping">Mapping</a> mappingTable[],<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t mappingTableSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.DoubleByteEncoding.Mapping.html" title="struct Poco::DoubleByteEncoding::Mapping">Mapping</a> reverseMappingTable[],<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t reverseMappingTableSize<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.DoubleByteEncoding.html" title="class Poco::DoubleByteEncoding">DoubleByteEncoding</a> using the given mapping and reverse-mapping tables. </p>
+<p>names must be a static array declared in the derived class, containing the names of this encoding, declared as: </p>
+<p></p>
+<pre>const char* MyEncoding::_names[] =
+{
+    &quot;myencoding&quot;,
+    &quot;MyEncoding&quot;,
+    NULL
+};
+</pre>
+<p>The first entry in names must be the canonical name. </p>
+<p>charMap must be a static CharacterMap giving information about double-byte character sequences. </p>
+<p>For each mappingTable item, from must be a value in range 0x0100 to representing the first character in the sequence and the lower byte representing the second character in the sequence. </p>
+<p>For each reverseMappingTable item, from must be <a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code point from the Basic Multilingual Plane, and to is a one-byte or two-byte sequence. As with mappingTable, a one-byte sequence is in range 0x00 to 0xFF, and a two-byte sequence is in range 0x0100 to 0xFFFF. </p>
+<p><a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code points are restricted to the Basic Multilingual Plane (code points 0x0000 to 0xFFFF). </p>
+<p>Items in both tables must be sorted by from, in ascending order. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="8075">~DoubleByteEncoding</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.DoubleByteEncoding.html" title="class Poco::DoubleByteEncoding">DoubleByteEncoding</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.DoubleByteEncoding.html" title="class Poco::DoubleByteEncoding">DoubleByteEncoding</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="8052">canonicalName</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">const char * canonicalName() const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18320" title="Poco::TextEncoding::canonicalName()">Poco::TextEncoding::canonicalName()</a></p></div>
+<h3><a id="8055">characterMap</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">const CharacterMap &amp; characterMap() const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18323" title="Poco::TextEncoding::characterMap()">Poco::TextEncoding::characterMap()</a></p></div>
+<h3><a id="8056">convert</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int convert(<br />&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char * bytes<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18324" title="Poco::TextEncoding::convert()">Poco::TextEncoding::convert()</a></p></div>
+<h3><a id="8058">convert</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int convert(<br />&nbsp;&nbsp;&nbsp;&nbsp;int ch,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned char * bytes,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18332" title="Poco::TextEncoding::convert()">Poco::TextEncoding::convert()</a></p></div>
+<h3><a id="8053">isA</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">bool isA(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; encodingName<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18321" title="Poco::TextEncoding::isA()">Poco::TextEncoding::isA()</a></p></div>
+<h3><a id="8062">queryConvert</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int queryConvert(<br />&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char * bytes,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18326" title="Poco::TextEncoding::queryConvert()">Poco::TextEncoding::queryConvert()</a></p></div>
+<h3><a id="8065">sequenceLength</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int sequenceLength(<br />&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char * bytes,<br />&nbsp;&nbsp;&nbsp;&nbsp;int length<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.TextEncoding.html#18329" title="Poco::TextEncoding::sequenceLength()">Poco::TextEncoding::sequenceLength()</a></p></div>
+<h3><a id="8076">map</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int map(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> encoded<br />) const;</p>
+<div class="description">
+<p>Maps a double-byte encoded character to its <a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code point. </p>
+<p>Returns the <a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code point, or -1 if the encoded character is bad and cannot be mapped. </p>
+</div>
+<h3><a id="8078">reverseMap</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl">int reverseMap(<br />&nbsp;&nbsp;&nbsp;&nbsp;int cp<br />) const;</p>
+<div class="description">
+<p>Maps a <a href="Poco.Unicode.html" title="class Poco::Unicode">Unicode</a> code point to its double-byte representation. </p>
+<p>Returns -1 if the code point cannot be mapped, otherwise a value in range 0 to 0xFF for single-byte mappings, or 0x0100 to 0xFFFF for double-byte mappings. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

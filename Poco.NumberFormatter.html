@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::NumberFormatter</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class NumberFormatter</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Core<br />
+<b>Header:</b> Poco/NumberFormatter.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>The <a href="Poco.NumberFormatter.html" title="class Poco::NumberFormatter">NumberFormatter</a> class provides static methods for formatting numeric values into strings. </p>
+<p>There are two kind of static member functions: </p>
+<ul>
+<li>format* functions return a std::string containing the formatted value. </li>
+<li>append* functions append the formatted value to an existing string. </li>
+</ul>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.NumberFormatter.html#15955" title="Poco::NumberFormatter::append()">append</a>, <a href="Poco.NumberFormatter.html#15962" title="Poco::NumberFormatter::append0()">append0</a>, <a href="Poco.NumberFormatter.html#15966" title="Poco::NumberFormatter::appendHex()">appendHex</a>, <a href="Poco.NumberFormatter.html#15842" title="Poco::NumberFormatter::format()">format</a>, <a href="Poco.NumberFormatter.html#15847" title="Poco::NumberFormatter::format0()">format0</a>, <a href="Poco.NumberFormatter.html#15850" title="Poco::NumberFormatter::formatHex()">formatHex</a></p>
+<h2>Enumerations</h2>
+<h3><a id="15836">BoolFormat</a></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="15837">FMT_TRUE_FALSE</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="15838">FMT_YES_NO</a></p>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="15839">FMT_ON_OFF</a></p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="15955">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int value<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation. </p>
+</div>
+<h3><a id="15958">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15973">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in decimal notation. </p>
+</div>
+<h3><a id="15976">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long int in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15991">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long value<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation. </p>
+</div>
+<h3><a id="15994">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="16009">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation. </p>
+</div>
+<h3><a id="16012">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="16027">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation. </p>
+</div>
+<h3><a id="16030">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="16045">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation. </p>
+</div>
+<h3><a id="16048">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="16063">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;float value<br />);</p>
+<div class="description">
+<p>Formats a float value in decimal floating-point notation, according to std::printf's %g format with a precision of 8 fractional digits. </p>
+</div>
+<h3><a id="16066">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;float value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %f format with the given precision. </p>
+</div>
+<h3><a id="16070">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;float value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, right justified in a field of the specified width, with the number of fractional digits given in precision. </p>
+</div>
+<h3><a id="16075">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;double value<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %g format with a precision of 16 fractional digits. </p>
+</div>
+<h3><a id="16078">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;double value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %f format with the given precision. </p>
+</div>
+<h3><a id="16082">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;double value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, right justified in a field of the specified width, with the number of fractional digits given in precision. </p>
+</div>
+<h3><a id="16087">append</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * ptr<br />);</p>
+<div class="description">
+<p>Formats a pointer in an eight (32-bit architectures) or sixteen (64-bit architectures) characters wide field in hexadecimal notation. </p>
+</div>
+<h3><a id="15962">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15980">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15998">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="16016">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="16034">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="16052">append0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void append0(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15966">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int value<br />);</p>
+<div class="description">
+<p>Formats an int value in hexadecimal notation. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15969">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a int value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15984">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in hexadecimal notation. </p>
+</div>
+<h3><a id="15987">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a int value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="16002">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation. The value is treated as unsigned. </p>
+</div>
+<h3><a id="16005">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. The value is treated as unsigned. </p>
+</div>
+<h3><a id="16020">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation. </p>
+</div>
+<h3><a id="16023">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="16038">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation. The value is treated as unsigned. </p>
+</div>
+<h3><a id="16041">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. The value is treated as unsigned. </p>
+</div>
+<h3><a id="16056">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation. </p>
+</div>
+<h3><a id="16059">appendHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static void appendHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; str,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15842">format</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;int value<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation. </p>
+</div>
+<h3><a id="15844">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15857">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in decimal notation. </p>
+</div>
+<h3><a id="15859">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long int in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15872">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;long value<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation. </p>
+</div>
+<h3><a id="15874">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15887">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation. </p>
+</div>
+<h3><a id="15889">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15902">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation. </p>
+</div>
+<h3><a id="15904">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15917">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation. </p>
+</div>
+<h3><a id="15919">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation, right justified in a field having at least the specified width. </p>
+</div>
+<h3><a id="15932">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;float value<br />);</p>
+<div class="description">
+<p>Formats a float value in decimal floating-point notation, according to std::printf's %g format with a precision of 8 fractional digits. </p>
+</div>
+<h3><a id="15934">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;float value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %f format with the given precision. </p>
+</div>
+<h3><a id="15937">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;float value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, right justified in a field of the specified width, with the number of fractional digits given in precision. </p>
+</div>
+<h3><a id="15941">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;double value<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %g format with a precision of 16 fractional digits. </p>
+</div>
+<h3><a id="15943">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;double value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, according to std::printf's %f format with the given precision. </p>
+</div>
+<h3><a id="15946">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;double value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;int precision<br />);</p>
+<div class="description">
+<p>Formats a double value in decimal floating-point notation, right justified in a field of the specified width, with the number of fractional digits given in precision. </p>
+</div>
+<h3><a id="15950">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;const void * ptr<br />);</p>
+<div class="description">
+<p>Formats a pointer in an eight (32-bit architectures) or sixteen (64-bit architectures) characters wide field in hexadecimal notation. </p>
+</div>
+<h3><a id="15952">format</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format(<br />&nbsp;&nbsp;&nbsp;&nbsp;bool value,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.NumberFormatter.html#15836" title="enum  Poco::NumberFormatter::BoolFormat">BoolFormat</a> format = FMT_TRUE_FALSE<br />);</p>
+<div class="description">
+<p>Formats a bool value in decimal/text notation, according to format parameter. </p>
+</div>
+<h3><a id="15847">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15862">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15877">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a long value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15892">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15907">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15922">format0</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string format0(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width<br />);</p>
+<div class="description">
+<p>Formats an unsigned 64-bit integer value in decimal notation, right justified and zero-padded in a field having at least the specified width. </p>
+</div>
+<h3><a id="15850">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an int value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15853">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;int value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a int value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15865">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an unsigned int value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. </p>
+</div>
+<h3><a id="15868">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a int value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. </p>
+</div>
+<h3><a id="15880">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15883">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15895">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. </p>
+</div>
+<h3><a id="15898">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats an unsigned long value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. </p>
+</div>
+<h3><a id="15910">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. The value is treated as unsigned. </p>
+</div>
+<h3><a id="15913">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. The value is treated as unsigned. If prefix is true, &quot;0x&quot; prefix is prepended to the resulting string. </p>
+</div>
+<h3><a id="15925">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation. If prefix is true, &quot;0x&quot; prefix is prepended to the  resulting string. </p>
+</div>
+<h3><a id="15928">formatHex</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static std::string formatHex(<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned long long value,<br />&nbsp;&nbsp;&nbsp;&nbsp;int width,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool prefix = false<br />);</p>
+<div class="description">
+<p>Formats a 64-bit integer value in hexadecimal notation, right justified and zero-padded in a field having at least the specified width. If prefix is true, &quot;0x&quot; prefix is prepended to the resulting string. </p>
+</div>
+<h2>Variables</h2>
+<h3><a id="15841">NF_MAX_FLT_STRING_LEN</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const unsigned <a href="Poco.NumberFormatter.html#15841" title="Poco::NumberFormatter::NF_MAX_FLT_STRING_LEN">NF_MAX_FLT_STRING_LEN</a> = 780;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="15840">NF_MAX_INT_STRING_LEN</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const unsigned <a href="Poco.NumberFormatter.html#15840" title="Poco::NumberFormatter::NF_MAX_INT_STRING_LEN">NF_MAX_INT_STRING_LEN</a> = 32;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

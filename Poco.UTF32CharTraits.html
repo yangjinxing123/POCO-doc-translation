@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Struct Poco::UTF32CharTraits</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">struct UTF32CharTraits</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> Text<br />
+<b>Header:</b> Poco/UTFString.h</p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.UTF32CharTraits.html#19392" title="Poco::UTF32CharTraits::assign()">assign</a>, <a href="Poco.UTF32CharTraits.html#19401" title="Poco::UTF32CharTraits::compare()">compare</a>, <a href="Poco.UTF32CharTraits.html#19415" title="Poco::UTF32CharTraits::copy()">copy</a>, <a href="Poco.UTF32CharTraits.html#19432" title="Poco::UTF32CharTraits::eof()">eof</a>, <a href="Poco.UTF32CharTraits.html#19395" title="Poco::UTF32CharTraits::eq()">eq</a>, <a href="Poco.UTF32CharTraits.html#19429" title="Poco::UTF32CharTraits::eq_int_type()">eq_int_type</a>, <a href="Poco.UTF32CharTraits.html#19407" title="Poco::UTF32CharTraits::find()">find</a>, <a href="Poco.UTF32CharTraits.html#19405" title="Poco::UTF32CharTraits::length()">length</a>, <a href="Poco.UTF32CharTraits.html#19398" title="Poco::UTF32CharTraits::lt()">lt</a>, <a href="Poco.UTF32CharTraits.html#19411" title="Poco::UTF32CharTraits::move()">move</a>, <a href="Poco.UTF32CharTraits.html#19423" title="Poco::UTF32CharTraits::not_eof()">not_eof</a>, <a href="Poco.UTF32CharTraits.html#19425" title="Poco::UTF32CharTraits::to_char_type()">to_char_type</a>, <a href="Poco.UTF32CharTraits.html#19427" title="Poco::UTF32CharTraits::to_int_type()">to_int_type</a></p>
+<h2>Types</h2>
+<h3><a id="19387">char_type</a></h3>
+<p class="decl">typedef <a href="Poco.html#18961" title="Poco::UInt32">UInt32</a> char_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19388">int_type</a></h3>
+<p class="decl">typedef int int_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19389">off_type</a></h3>
+<p class="decl">typedef std::streamoff off_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19390">pos_type</a></h3>
+<p class="decl">typedef u32streampos pos_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19391">state_type</a></h3>
+<p class="decl">typedef std::mbstate_t state_type;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19386">u32streampos</a></h3>
+<p class="decl">typedef std::fpos &lt; std::mbstate_t &gt; u32streampos;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="19392">assign</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static void assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type &amp; c1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type &amp; c2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19419">assign</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static char_type * assign(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type * s,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t n,<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type a<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19401">compare</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static int compare(<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s2,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t n<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19415">copy</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static char_type * copy(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type * s1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s2,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t n<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19432">eof</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static int_type eof();</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19395">eq</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static bool eq(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type c1,<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type c2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19429">eq_int_type</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static bool eq_int_type(<br />&nbsp;&nbsp;&nbsp;&nbsp;int_type c1,<br />&nbsp;&nbsp;&nbsp;&nbsp;int_type c2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19407">find</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static const char_type * find(<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t n,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type &amp; a<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19405">length</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static std::size_t length(<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19398">lt</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static bool lt(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type c1,<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type c2<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19411">move</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static char_type * move(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type * s1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char_type * s2,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t n<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19423">not_eof</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static int_type not_eof(<br />&nbsp;&nbsp;&nbsp;&nbsp;int_type c<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19425">to_char_type</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static char_type to_char_type(<br />&nbsp;&nbsp;&nbsp;&nbsp;int_type c<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="19427">to_int_type</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static int_type to_int_type(<br />&nbsp;&nbsp;&nbsp;&nbsp;char_type c<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

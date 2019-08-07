@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Data::ODBC::TypeInfo</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Data.ODBC.html" class="namespace">Poco::Data::ODBC</a></h1>
+<h1 class="symbol">class TypeInfo</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Data/ODBC" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Data/ODBC<br />
+<b>Package:</b> ODBC<br />
+<b>Header:</b> Poco/Data/ODBC/TypeInfo.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Datatypes mapping utility class. </p>
+<p>This class provides mapping between C and SQL datatypes as well as datatypes supported by the underlying database. In order for database types to be available, a valid conection handle must be supplied at either object construction time, or at a later point in time, through call to fillTypeInfo member function. </p>
+<p>Class also provides a convenient debugging function that prints tabulated data to an output stream. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Data.ODBC.TypeInfo.html#3145" title="Poco::Data::ODBC::TypeInfo::cDataType()">cDataType</a>, <a href="Poco.Data.ODBC.TypeInfo.html#3149" title="Poco::Data::ODBC::TypeInfo::fillTypeInfo()">fillTypeInfo</a>, <a href="Poco.Data.ODBC.TypeInfo.html#3151" title="Poco::Data::ODBC::TypeInfo::getInfo()">getInfo</a>, <a href="Poco.Data.ODBC.TypeInfo.html#3158" title="Poco::Data::ODBC::TypeInfo::print()">print</a>, <a href="Poco.Data.ODBC.TypeInfo.html#3147" title="Poco::Data::ODBC::TypeInfo::sqlDataType()">sqlDataType</a>, <a href="Poco.Data.ODBC.TypeInfo.html#3154" title="Poco::Data::ODBC::TypeInfo::tryGetInfo()">tryGetInfo</a></p>
+<h2>Types</h2>
+<h3><a id="3138">DataTypeMap</a></h3>
+<p class="decl">typedef std::map &lt; int, int &gt; <a href="Poco.Data.ODBC.TypeInfo.html#3138" title="Poco::Data::ODBC::TypeInfo::DataTypeMap">DataTypeMap</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="3140">TypeInfoTup</a></h3>
+<p class="decl">typedef <a href="Poco.NamedTuple.html" title="struct Poco::NamedTuple">Poco::NamedTuple</a> &lt; std::string, SQLSMALLINT, SQLINTEGER, std::string, std::string, std::string, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, std::string, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, SQLSMALLINT, SQLINTEGER, SQLSMALLINT &gt; <a href="Poco.Data.ODBC.TypeInfo.html#3140" title="Poco::Data::ODBC::TypeInfo::TypeInfoTup">TypeInfoTup</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="3141">TypeInfoVec</a></h3>
+<p class="decl">typedef std::vector &lt; <a href="Poco.Data.ODBC.TypeInfo.html#3140" title="Poco::Data::ODBC::TypeInfo::TypeInfoTup">TypeInfoTup</a> &gt; <a href="Poco.Data.ODBC.TypeInfo.html#3141" title="Poco::Data::ODBC::TypeInfo::TypeInfoVec">TypeInfoVec</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="3139">ValueType</a></h3>
+<p class="decl">typedef DataTypeMap::value_type <a href="Poco.Data.ODBC.TypeInfo.html#3139" title="Poco::Data::ODBC::TypeInfo::ValueType">ValueType</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="3142">TypeInfo</a></h3>
+<p class="decl">explicit <a href="Poco.Data.ODBC.TypeInfo.html" title="class Poco::Data::ODBC::TypeInfo">TypeInfo</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;SQLHDBC * pHDBC = 0<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Data.ODBC.TypeInfo.html" title="class Poco::Data::ODBC::TypeInfo">TypeInfo</a>. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="3144">~TypeInfo</a></h3>
+<p class="decl">~<a href="Poco.Data.ODBC.TypeInfo.html" title="class Poco::Data::ODBC::TypeInfo">TypeInfo</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Data.ODBC.TypeInfo.html" title="class Poco::Data::ODBC::TypeInfo">TypeInfo</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="3145">cDataType</a></h3>
+<p class="decl">int cDataType(<br />&nbsp;&nbsp;&nbsp;&nbsp;int sqlDataType<br />) const;</p>
+<div class="description">
+<p>Returns C data type corresponding to supplied SQL data type. </p>
+</div>
+<h3><a id="3149">fillTypeInfo</a></h3>
+<p class="decl">void fillTypeInfo(<br />&nbsp;&nbsp;&nbsp;&nbsp;SQLHDBC pHDBC<br />);</p>
+<div class="description">
+<p>Fills the data type info structure for the database. </p>
+</div>
+<h3><a id="3151">getInfo</a></h3>
+<p class="decl"><a href="Poco.html#11169" title="Poco::DynamicAny">DynamicAny</a> getInfo(<br />&nbsp;&nbsp;&nbsp;&nbsp;SQLSMALLINT type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; param<br />) const;</p>
+<div class="description">
+<p>Returns information about specified data type as specified by parameter 'type'. The requested information is specified by parameter 'param'. Will fail with a <a href="Poco.NotFoundException.html" title="class Poco::NotFoundException">Poco::NotFoundException</a> thrown if the param is not found </p>
+</div>
+<h3><a id="3158">print</a></h3>
+<p class="decl">void print(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::ostream &amp; ostr<br />);</p>
+<div class="description">
+<p>Prints all the types (as reported by the underlying database) to the supplied output stream. </p>
+</div>
+<h3><a id="3147">sqlDataType</a></h3>
+<p class="decl">int sqlDataType(<br />&nbsp;&nbsp;&nbsp;&nbsp;int cDataType<br />) const;</p>
+<div class="description">
+<p>Returns SQL data type corresponding to supplied C data type. </p>
+</div>
+<h3><a id="3154">tryGetInfo</a></h3>
+<p class="decl">bool tryGetInfo(<br />&nbsp;&nbsp;&nbsp;&nbsp;SQLSMALLINT type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; param,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#11169" title="Poco::DynamicAny">DynamicAny</a> &amp; result<br />) const;</p>
+<div class="description">
+<p>Returns information about specified data type as specified by parameter 'type' in param result. The requested information is specified by parameter 'param'. Will return false if the param is not found. The value of result will be not changed in this case. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

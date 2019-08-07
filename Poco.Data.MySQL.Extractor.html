@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Data::MySQL::Extractor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Data.MySQL.html" class="namespace">Poco::Data::MySQL</a></h1>
+<h1 class="symbol">class Extractor</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Data/MySQL" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Data/MySQL<br />
+<b>Package:</b> MySQL<br />
+<b>Header:</b> Poco/Data/MySQL/Extractor.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>Extracts and converts data values from the result row returned by <a href="Poco.Data.MySQL.html" title="namespace Poco::Data::MySQL">MySQL</a>. If NULL is received, the incoming val value is not changed and false is returned </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Data.AbstractExtractor.html" title="class Poco::Data::AbstractExtractor">Poco::Data::AbstractExtractor</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Data.AbstractExtractor.html" title="class Poco::Data::AbstractExtractor">Poco::Data::AbstractExtractor</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Data.MySQL.Extractor.html#1110" title="Poco::Data::MySQL::Extractor::extract()">extract</a>, <a href="Poco.Data.MySQL.Extractor.html#1170" title="Poco::Data::MySQL::Extractor::isNull()">isNull</a>, <a href="Poco.Data.MySQL.Extractor.html#1173" title="Poco::Data::MySQL::Extractor::reset()">reset</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Data.AbstractExtractor.html#5209" title="Poco::Data::AbstractExtractor::extract()">extract</a>, <a href="Poco.Data.AbstractExtractor.html#5461" title="Poco::Data::AbstractExtractor::isNull()">isNull</a>, <a href="Poco.Data.AbstractExtractor.html#5464" title="Poco::Data::AbstractExtractor::reset()">reset</a></p>
+<h2>Types</h2>
+<h3><a id="1105">Ptr</a></h3>
+<p class="decl">typedef <a href="Poco.SharedPtr.html" title="class Poco::SharedPtr">SharedPtr</a> &lt; <a href="Poco.Data.MySQL.Extractor.html" title="class Poco::Data::MySQL::Extractor">Extractor</a> &gt; <a href="Poco.Data.MySQL.Extractor.html#1105" title="Poco::Data::MySQL::Extractor::Ptr">Ptr</a>;</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="1106">Extractor</a></h3>
+<p class="decl"><a href="Poco.Data.MySQL.Extractor.html" title="class Poco::Data::MySQL::Extractor">Extractor</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.MySQL.StatementExecutor.html" title="class Poco::Data::MySQL::StatementExecutor">StatementExecutor</a> &amp; st,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.MySQL.ResultMetadata.html" title="class Poco::Data::MySQL::ResultMetadata">ResultMetadata</a> &amp; md<br />);</p>
+<div class="description">
+<p>Creates the <a href="Poco.Data.MySQL.Extractor.html" title="class Poco::Data::MySQL::Extractor">Extractor</a>. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="1109">~Extractor</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.Data.MySQL.Extractor.html" title="class Poco::Data::MySQL::Extractor">Extractor</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Data.MySQL.Extractor.html" title="class Poco::Data::MySQL::Extractor">Extractor</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="1110">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18956" title="Poco::Int8">Int8</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5209" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1113">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18957" title="Poco::UInt8">UInt8</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5221" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1116">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18958" title="Poco::Int16">Int16</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5233" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1119">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18959" title="Poco::UInt16">UInt16</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5245" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1122">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18960" title="Poco::Int32">Int32</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5257" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1125">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18961" title="Poco::UInt32">UInt32</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5269" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1128">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18964" title="Poco::Int64">Int64</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5281" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1131">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18965" title="Poco::UInt64">UInt64</a>. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5293" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1134">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a boolean. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5305" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1137">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;float &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a float. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5317" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1140">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;double &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a double. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5329" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1143">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;char &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a single character. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5341" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1146">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::string &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a string. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5353" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1149">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.html#6523" title="Poco::Data::BLOB">Poco::Data::BLOB</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a>. </p>
+</div>
+<h3><a id="1152">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.html#6524" title="Poco::Data::CLOB">Poco::Data::CLOB</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a>. </p>
+</div>
+<h3><a id="1155">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a>. Returns false if null was received. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5401" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1158">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a>. Returns false if null was received. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5413" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1161">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a>. Returns false if null was received. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5425" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1164">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Any.html" title="class Poco::Any">Any</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.Any.html" title="class Poco::Any">Any</a>. Returns false if null was received. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5437" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1167">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a>. Returns false if null was received. </p>
+</div>
+<h3><a id="1174">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18956" title="Poco::Int8">Int8</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5212" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1177">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18956" title="Poco::Int8">Int8</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5215" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1180">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18956" title="Poco::Int8">Poco::Int8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18956" title="Poco::Int8">Int8</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5218" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1183">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18957" title="Poco::UInt8">UInt8</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5224" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1186">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18957" title="Poco::UInt8">UInt8</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5227" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1189">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18957" title="Poco::UInt8">Poco::UInt8</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18957" title="Poco::UInt8">UInt8</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5230" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1192">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18958" title="Poco::Int16">Int16</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5236" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1195">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18958" title="Poco::Int16">Int16</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5239" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1198">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18958" title="Poco::Int16">Poco::Int16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18958" title="Poco::Int16">Int16</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5242" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1201">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18959" title="Poco::UInt16">UInt16</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5248" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1204">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18959" title="Poco::UInt16">UInt16</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5251" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1207">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18959" title="Poco::UInt16">UInt16</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5254" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1210">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18960" title="Poco::Int32">Int32</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5260" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1213">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18960" title="Poco::Int32">Int32</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5263" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1216">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18960" title="Poco::Int32">Poco::Int32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18960" title="Poco::Int32">Int32</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5266" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1219">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18961" title="Poco::UInt32">UInt32</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5272" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1222">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18961" title="Poco::UInt32">UInt32</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5275" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1225">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18961" title="Poco::UInt32">Poco::UInt32</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18961" title="Poco::UInt32">UInt32</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5278" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1228">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18964" title="Poco::Int64">Int64</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5284" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1231">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18964" title="Poco::Int64">Int64</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5287" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1234">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18964" title="Poco::Int64">Poco::Int64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18964" title="Poco::Int64">Int64</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5290" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1237">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18965" title="Poco::UInt64">UInt64</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5296" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1240">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18965" title="Poco::UInt64">UInt64</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5299" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1243">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.html#18965" title="Poco::UInt64">Poco::UInt64</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.html#18965" title="Poco::UInt64">UInt64</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5302" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1246">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; bool &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a boolean vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5308" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1249">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; bool &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a boolean deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5311" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1252">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; bool &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a boolean list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5314" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1255">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; float &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a float vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5320" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1258">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; float &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a float deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5323" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1261">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; float &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a float list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5326" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1264">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; double &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a double vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5332" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1267">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; double &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a double deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5335" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1270">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; double &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a double list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5338" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1273">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; char &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a character vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5344" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1276">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; char &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a character deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5347" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1279">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; char &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a character list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5350" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1282">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; std::string &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a string vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5356" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1285">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; std::string &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a string deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5359" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1288">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; std::string &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a string list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5362" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1291">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5383" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1294">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5386" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1297">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6523" title="Poco::Data::BLOB">BLOB</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5389" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1300">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5392" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1303">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5395" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1306">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.html#6524" title="Poco::Data::CLOB">CLOB</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5398" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1309">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5404" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1312">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5407" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1315">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.DateTime.html" title="class Poco::DateTime">DateTime</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5410" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1318">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5416" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1321">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5419" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1324">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Date.html" title="class Poco::Data::Date">Date</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5422" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1327">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5428" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1330">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5431" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1333">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Data.Time.html" title="class Poco::Data::Time">Time</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5434" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1336">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Any.html" title="class Poco::Any">Any</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.Any.html" title="class Poco::Any">Any</a> vector. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5440" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1339">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Any.html" title="class Poco::Any">Any</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.Any.html" title="class Poco::Any">Any</a> deque. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5443" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1342">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Any.html" title="class Poco::Any">Any</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts an <a href="Poco.Any.html" title="class Poco::Any">Any</a> list. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5446" title="Poco::Data::AbstractExtractor::extract()">Poco::Data::AbstractExtractor::extract()</a></p></div>
+<h3><a id="1345">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::vector &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> vector. </p>
+</div>
+<h3><a id="1348">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::deque &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> deque. </p>
+</div>
+<h3><a id="1351">extract</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool extract(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::list &lt; <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> &gt; &amp; val<br />);</p>
+<div class="description">
+<p>Extracts a <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> list. </p>
+</div>
+<h3><a id="1170">isNull</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual bool isNull(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t col,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t row<br />);</p>
+<div class="description">
+<p>Returns true if the value at [col,row] position is null. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5461" title="Poco::Data::AbstractExtractor::isNull()">Poco::Data::AbstractExtractor::isNull()</a></p></div>
+<h3><a id="1173">reset</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual void reset();</p>
+<div class="description">
+<p>Resets any information internally cached by the extractor. ///////// ///////// </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Data.AbstractExtractor.html#5464" title="Poco::Data::AbstractExtractor::reset()">Poco::Data::AbstractExtractor::reset()</a></p></div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

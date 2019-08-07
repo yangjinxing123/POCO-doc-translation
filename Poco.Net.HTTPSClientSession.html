@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Net::HTTPSClientSession</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.Net.html" class="namespace">Poco::Net</a></h1>
+<h1 class="symbol">class HTTPSClientSession</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-NetSSL_OpenSSL" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> NetSSL_OpenSSL<br />
+<b>Package:</b> HTTPSClient<br />
+<b>Header:</b> Poco/Net/HTTPSClientSession.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>This class implements the client-side of a HTTPS session. </p>
+<p>To send a HTTPS request to a HTTPS server, first instantiate a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> object and specify the server's host name and port number. </p>
+<p>Then create a <a href="Poco.Net.HTTPRequest.html" title="class Poco::Net::HTTPRequest">HTTPRequest</a> object, fill it accordingly, and pass it as argument to the sendRequest() method. </p>
+<p>sendRequest() will return an output stream that can be used to send the request body, if there is any. </p>
+<p>After you are done sending the request body, create a <a href="Poco.Net.HTTPResponse.html" title="class Poco::Net::HTTPResponse">HTTPResponse</a> object and pass it to receiveResponse(). </p>
+<p>This will return an input stream that can be used to read the response body. </p>
+<p>See <a href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank">RFC 2616</a> &lt;<a href="http://www.faqs.org/rfcs/rfc2616.html" target="_blank">http://www.faqs.org/rfcs/rfc2616.html</a>&gt; for more information about the HTTP protocol. </p>
+<p>Note that sending requests that neither contain a content length field in the header nor are using chunked transfer encoding will result in a SSL protocol violation, as the framework shuts down the socket after sending the message body. No orderly SSL shutdown will be performed in this case. </p>
+<p>If session caching has been enabled for the <a href="Poco.Net.Context.html" title="class Poco::Net::Context">Context</a> object passed to the <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>, the <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> class will attempt to reuse a previously obtained <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> object in case of a reconnect. </p>
+</div>
+<h2>Inheritance</h2>
+<p><b>Direct Base Classes: </b><a href="Poco.Net.HTTPClientSession.html" title="class Poco::Net::HTTPClientSession">HTTPClientSession</a></p>
+<p><b>All Base Classes: </b><a href="Poco.Net.HTTPClientSession.html" title="class Poco::Net::HTTPClientSession">HTTPClientSession</a>, <a href="Poco.Net.HTTPSession.html" title="class Poco::Net::HTTPSession">HTTPSession</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Net.HTTPSClientSession.html#26354" title="Poco::Net::HTTPSClientSession::abort()">abort</a>, <a href="Poco.Net.HTTPSClientSession.html#26355" title="Poco::Net::HTTPSClientSession::connect()">connect</a>, <a href="Poco.Net.HTTPSClientSession.html#26358" title="Poco::Net::HTTPSClientSession::proxyAuthenticate()">proxyAuthenticate</a>, <a href="Poco.Net.HTTPSClientSession.html#26357" title="Poco::Net::HTTPSClientSession::proxyRequestPrefix()">proxyRequestPrefix</a>, <a href="Poco.Net.HTTPSClientSession.html#26360" title="Poco::Net::HTTPSClientSession::read()">read</a>, <a href="Poco.Net.HTTPSClientSession.html#26351" title="Poco::Net::HTTPSClientSession::secure()">secure</a>, <a href="Poco.Net.HTTPSClientSession.html#26352" title="Poco::Net::HTTPSClientSession::serverCertificate()">serverCertificate</a>, <a href="Poco.Net.HTTPSClientSession.html#26353" title="Poco::Net::HTTPSClientSession::sslSession()">sslSession</a></p>
+<p><b>Inherited Functions: </b><a href="Poco.Net.HTTPSession.html#22432" title="Poco::Net::HTTPSession::abort()">abort</a>, <a href="Poco.Net.HTTPSession.html#22434" title="Poco::Net::HTTPSession::attachSessionData()">attachSessionData</a>, <a href="Poco.Net.HTTPSession.html#22465" title="Poco::Net::HTTPSession::attachSocket()">attachSocket</a>, <a href="Poco.Net.HTTPSession.html#22461" title="Poco::Net::HTTPSession::buffered()">buffered</a>, <a href="Poco.Net.HTTPClientSession.html#21620" title="Poco::Net::HTTPClientSession::bypassProxy()">bypassProxy</a>, <a href="Poco.Net.HTTPSession.html#22470" title="Poco::Net::HTTPSession::clearException()">clearException</a>, <a href="Poco.Net.HTTPSession.html#22467" title="Poco::Net::HTTPSession::close()">close</a>, <a href="Poco.Net.HTTPSession.html#22463" title="Poco::Net::HTTPSession::connect()">connect</a>, <a href="Poco.Net.HTTPSession.html#22431" title="Poco::Net::HTTPSession::connected()">connected</a>, <a href="Poco.Net.HTTPSession.html#22439" title="Poco::Net::HTTPSession::detachSocket()">detachSocket</a>, <a href="Poco.Net.HTTPSession.html#22441" title="Poco::Net::HTTPSession::drainBuffer()">drainBuffer</a>, <a href="Poco.Net.HTTPClientSession.html#21617" title="Poco::Net::HTTPClientSession::flushRequest()">flushRequest</a>, <a href="Poco.Net.HTTPSession.html#22450" title="Poco::Net::HTTPSession::get()">get</a>, <a href="Poco.Net.HTTPClientSession.html#21607" title="Poco::Net::HTTPClientSession::getGlobalProxyConfig()">getGlobalProxyConfig</a>, <a href="Poco.Net.HTTPClientSession.html#21580" title="Poco::Net::HTTPClientSession::getHost()">getHost</a>, <a href="Poco.Net.HTTPSession.html#22423" title="Poco::Net::HTTPSession::getKeepAlive()">getKeepAlive</a>, <a href="Poco.Net.HTTPClientSession.html#21610" title="Poco::Net::HTTPClientSession::getKeepAliveTimeout()">getKeepAliveTimeout</a>, <a href="Poco.Net.HTTPClientSession.html#21583" title="Poco::Net::HTTPClientSession::getPort()">getPort</a>, <a href="Poco.Net.HTTPClientSession.html#21604" title="Poco::Net::HTTPClientSession::getProxyConfig()">getProxyConfig</a>, <a href="Poco.Net.HTTPClientSession.html#21591" title="Poco::Net::HTTPClientSession::getProxyHost()">getProxyHost</a>, <a href="Poco.Net.HTTPClientSession.html#21601" title="Poco::Net::HTTPClientSession::getProxyPassword()">getProxyPassword</a>, <a href="Poco.Net.HTTPClientSession.html#21592" title="Poco::Net::HTTPClientSession::getProxyPort()">getProxyPort</a>, <a href="Poco.Net.HTTPClientSession.html#21598" title="Poco::Net::HTTPClientSession::getProxyUsername()">getProxyUsername</a>, <a href="Poco.Net.HTTPSession.html#22430" title="Poco::Net::HTTPSession::getTimeout()">getTimeout</a>, <a href="Poco.Net.HTTPClientSession.html#21628" title="Poco::Net::HTTPClientSession::mustReconnect()">mustReconnect</a>, <a href="Poco.Net.HTTPSession.html#22433" title="Poco::Net::HTTPSession::networkException()">networkException</a>, <a href="Poco.Net.HTTPSession.html#22451" title="Poco::Net::HTTPSession::peek()">peek</a>, <a href="Poco.Net.HTTPClientSession.html#21615" title="Poco::Net::HTTPClientSession::peekResponse()">peekResponse</a>, <a href="Poco.Net.HTTPClientSession.html#21629" title="Poco::Net::HTTPClientSession::proxyAuthenticate()">proxyAuthenticate</a>, <a href="Poco.Net.HTTPClientSession.html#21631" title="Poco::Net::HTTPClientSession::proxyAuthenticateImpl()">proxyAuthenticateImpl</a>, <a href="Poco.Net.HTTPClientSession.html#21633" title="Poco::Net::HTTPClientSession::proxyConnect()">proxyConnect</a>, <a href="Poco.Net.HTTPClientSession.html#21627" title="Poco::Net::HTTPClientSession::proxyRequestPrefix()">proxyRequestPrefix</a>, <a href="Poco.Net.HTTPClientSession.html#21634" title="Poco::Net::HTTPClientSession::proxyTunnel()">proxyTunnel</a>, <a href="Poco.Net.HTTPSession.html#22452" title="Poco::Net::HTTPSession::read()">read</a>, <a href="Poco.Net.HTTPSession.html#22458" title="Poco::Net::HTTPSession::receive()">receive</a>, <a href="Poco.Net.HTTPClientSession.html#21613" title="Poco::Net::HTTPClientSession::receiveResponse()">receiveResponse</a>, <a href="Poco.Net.HTTPClientSession.html#21623" title="Poco::Net::HTTPClientSession::reconnect()">reconnect</a>, <a href="Poco.Net.HTTPSession.html#22462" title="Poco::Net::HTTPSession::refill()">refill</a>, <a href="Poco.Net.HTTPClientSession.html#21618" title="Poco::Net::HTTPClientSession::reset()">reset</a>, <a href="Poco.Net.HTTPClientSession.html#21619" title="Poco::Net::HTTPClientSession::secure()">secure</a>, <a href="Poco.Net.HTTPClientSession.html#21611" title="Poco::Net::HTTPClientSession::sendRequest()">sendRequest</a>, <a href="Poco.Net.HTTPSession.html#22436" title="Poco::Net::HTTPSession::sessionData()">sessionData</a>, <a href="Poco.Net.HTTPSession.html#22468" title="Poco::Net::HTTPSession::setException()">setException</a>, <a href="Poco.Net.HTTPClientSession.html#21605" title="Poco::Net::HTTPClientSession::setGlobalProxyConfig()">setGlobalProxyConfig</a>, <a href="Poco.Net.HTTPClientSession.html#21578" title="Poco::Net::HTTPClientSession::setHost()">setHost</a>, <a href="Poco.Net.HTTPSession.html#22421" title="Poco::Net::HTTPSession::setKeepAlive()">setKeepAlive</a>, <a href="Poco.Net.HTTPClientSession.html#21608" title="Poco::Net::HTTPClientSession::setKeepAliveTimeout()">setKeepAliveTimeout</a>, <a href="Poco.Net.HTTPClientSession.html#21581" title="Poco::Net::HTTPClientSession::setPort()">setPort</a>, <a href="Poco.Net.HTTPClientSession.html#21584" title="Poco::Net::HTTPClientSession::setProxy()">setProxy</a>, <a href="Poco.Net.HTTPClientSession.html#21602" title="Poco::Net::HTTPClientSession::setProxyConfig()">setProxyConfig</a>, <a href="Poco.Net.HTTPClientSession.html#21593" title="Poco::Net::HTTPClientSession::setProxyCredentials()">setProxyCredentials</a>, <a href="Poco.Net.HTTPClientSession.html#21587" title="Poco::Net::HTTPClientSession::setProxyHost()">setProxyHost</a>, <a href="Poco.Net.HTTPClientSession.html#21599" title="Poco::Net::HTTPClientSession::setProxyPassword()">setProxyPassword</a>, <a href="Poco.Net.HTTPClientSession.html#21589" title="Poco::Net::HTTPClientSession::setProxyPort()">setProxyPort</a>, <a href="Poco.Net.HTTPClientSession.html#21596" title="Poco::Net::HTTPClientSession::setProxyUsername()">setProxyUsername</a>, <a href="Poco.Net.HTTPSession.html#22424" title="Poco::Net::HTTPSession::setTimeout()">setTimeout</a>, <a href="Poco.Net.HTTPSession.html#22440" title="Poco::Net::HTTPSession::socket()">socket</a>, <a href="Poco.Net.HTTPSession.html#22455" title="Poco::Net::HTTPSession::write()">write</a></p>
+<h2>Enumerations</h2>
+<h3><i>Anonymous</i></h3>
+<div class="description">
+<p></p>
+</div>
+<p class="decl"><a id="26326">HTTPS_PORT</a> = 443</p>
+<div class="description">
+<p></p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="26327">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>();</p>
+<div class="description">
+<p>Creates an unconnected <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>. </p>
+</div>
+<h3><a id="26328">HTTPSClientSession</a></h3>
+<p class="decl">explicit <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SecureStreamSocket.html" title="class Poco::Net::SecureStreamSocket">SecureStreamSocket</a> &amp; socket<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> using the given socket. The socket must not be connected. The session takes ownership of the socket. </p>
+</div>
+<h3><a id="26336">HTTPSClientSession</a></h3>
+<p class="decl">explicit <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Context.html#26229" title="Poco::Net::Context::Ptr">Context::Ptr</a> pContext<br />);</p>
+<div class="description">
+<p>Creates an unconnected <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>, using the give SSL context. </p>
+</div>
+<h3><a id="26330">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SecureStreamSocket.html" title="class Poco::Net::SecureStreamSocket">SecureStreamSocket</a> &amp; socket,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Session.html#26990" title="Poco::Net::Session::Ptr">Session::Ptr</a> pSession<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> using the given socket. The socket must not be connected. The session takes ownership of the socket. </p>
+<p>The given <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> is reused, if possible (client session caching is enabled for the given <a href="Poco.Net.Context.html" title="class Poco::Net::Context">Context</a>, and the server agrees to reuse the session). </p>
+</div>
+<h3><a id="26333">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> port = HTTPS_PORT<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> using the given host and port. </p>
+</div>
+<h3><a id="26338">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Context.html#26229" title="Poco::Net::Context::Ptr">Context::Ptr</a> pContext,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Session.html#26990" title="Poco::Net::Session::Ptr">Session::Ptr</a> pSession<br />);</p>
+<div class="description">
+<p>Creates an unconnected <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>, using the give SSL context. </p>
+<p>The given <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> is reused, if possible (client session caching is enabled for the given <a href="Poco.Net.Context.html" title="class Poco::Net::Context">Context</a>, and the server agrees to reuse the session). </p>
+</div>
+<h3><a id="26341">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> port,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Context.html#26229" title="Poco::Net::Context::Ptr">Context::Ptr</a> pContext<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> using the given host and port, using the given SSL context. </p>
+</div>
+<h3><a id="26345">HTTPSClientSession</a></h3>
+<p class="decl"><a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; host,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.html#18959" title="Poco::UInt16">Poco::UInt16</a> port,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Context.html#26229" title="Poco::Net::Context::Ptr">Context::Ptr</a> pContext,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.Session.html#26990" title="Poco::Net::Session::Ptr">Session::Ptr</a> pSession<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> using the given host and port, using the given SSL context. </p>
+<p>The given <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> is reused, if possible (client session caching is enabled for the given <a href="Poco.Net.Context.html" title="class Poco::Net::Context">Context</a>, and the server agrees to reuse the session). </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="26350">~HTTPSClientSession</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">~<a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a> and closes the underlying socket. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="26354">abort</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void abort();</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPSession.html#22432" title="Poco::Net::HTTPSession::abort()">Poco::Net::HTTPSession::abort()</a></p></div>
+<h3><a id="26351">secure</a> <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">bool secure() const;</p>
+<div class="description">
+<p>Return true if and only if the session uses SSL or TLS, or false otherwise. </p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPClientSession.html#21619" title="Poco::Net::HTTPClientSession::secure()">Poco::Net::HTTPClientSession::secure()</a></p></div>
+<h3><a id="26352">serverCertificate</a></h3>
+<p class="decl"><a href="Poco.Net.X509Certificate.html" title="class Poco::Net::X509Certificate">X509Certificate</a> serverCertificate();</p>
+<div class="description">
+<p>Returns the server's certificate. </p>
+<p>The certificate is available after the first request has been sent. </p>
+</div>
+<h3><a id="26353">sslSession</a></h3>
+<p class="decl"><a href="Poco.Net.Session.html#26990" title="Poco::Net::Session::Ptr">Session::Ptr</a> sslSession();</p>
+<div class="description">
+<p>Returns the SSL <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> object for the current  connection, if session caching has been enabled for the <a href="Poco.Net.HTTPSClientSession.html" title="class Poco::Net::HTTPSClientSession">HTTPSClientSession</a>'s <a href="Poco.Net.Context.html" title="class Poco::Net::Context">Context</a>. A null pointer is  returned otherwise. </p>
+<p>The <a href="Poco.Net.Session.html" title="class Poco::Net::Session">Session</a> object can be obtained after the first request has been sent. </p>
+</div>
+<h3><a id="26355">connect</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void connect(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Net.SocketAddress.html" title="class Poco::Net::SocketAddress">SocketAddress</a> &amp; address<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPSession.html#22463" title="Poco::Net::HTTPSession::connect()">Poco::Net::HTTPSession::connect()</a></p></div>
+<h3><a id="26358">proxyAuthenticate</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">void proxyAuthenticate(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Net.HTTPRequest.html" title="class Poco::Net::HTTPRequest">HTTPRequest</a> &amp; request<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPClientSession.html#21629" title="Poco::Net::HTTPClientSession::proxyAuthenticate()">Poco::Net::HTTPClientSession::proxyAuthenticate()</a></p></div>
+<h3><a id="26357">proxyRequestPrefix</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">std::string proxyRequestPrefix() const;</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPClientSession.html#21627" title="Poco::Net::HTTPClientSession::proxyRequestPrefix()">Poco::Net::HTTPClientSession::proxyRequestPrefix()</a></p></div>
+<h3><a id="26360">read</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">int read(<br />&nbsp;&nbsp;&nbsp;&nbsp;char * buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::streamsize length<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<div class="description"><p><b>See also:</b> <a href="Poco.Net.HTTPSession.html#22452" title="Poco::Net::HTTPSession::read()">Poco::Net::HTTPSession::read()</a></p></div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

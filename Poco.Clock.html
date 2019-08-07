@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::Clock</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.html" class="namespace">Poco</a></h1>
+<h1 class="symbol">class Clock</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-Foundation" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> Foundation<br />
+<b>Package:</b> DateTime<br />
+<b>Header:</b> Poco/Clock.h</p>
+<h2>Description</h2>
+<div class="description">
+<p>A <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> stores a monotonic* clock value with (theoretical) microseconds resolution. Clocks can be compared with each other and simple arithmetics are supported. </p>
+<p>[*] Note that <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> values are only monotonic if the operating system provides a monotonic clock. The <a href="Poco.Clock.html#9635" title="Poco::Clock::monotonic()">monotonic</a>() function can be used to check whether the system's clock is monotonic. </p>
+<p>Monotonic <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> is available on Windows, Linux, OS X  and on POSIX platforms supporting clock_gettime() with CLOCK_MONOTONIC.	   </p>
+<p><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> values are relative to a system-dependent epoch time (usually the system's startup time) and have no relation to the time of day. </p>
+</div>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.Clock.html#9634" title="Poco::Clock::accuracy()">accuracy</a>, <a href="Poco.Clock.html#9630" title="Poco::Clock::elapsed()">elapsed</a>, <a href="Poco.Clock.html#9631" title="Poco::Clock::isElapsed()">isElapsed</a>, <a href="Poco.Clock.html#9628" title="Poco::Clock::microseconds()">microseconds</a>, <a href="Poco.Clock.html#9635" title="Poco::Clock::monotonic()">monotonic</a>, <a href="Poco.Clock.html#9608" title="Poco::Clock::operator !=()">operator&nbsp;!=</a>, <a href="Poco.Clock.html#9618" title="Poco::Clock::operator +()">operator&nbsp;+</a>, <a href="Poco.Clock.html#9624" title="Poco::Clock::operator +=()">operator&nbsp;+=</a>, <a href="Poco.Clock.html#9620" title="Poco::Clock::operator -()">operator&nbsp;-</a>, <a href="Poco.Clock.html#9626" title="Poco::Clock::operator -=()">operator&nbsp;-=</a>, <a href="Poco.Clock.html#9614" title="Poco::Clock::operator <()">operator&nbsp;&lt;</a>, <a href="Poco.Clock.html#9616" title="Poco::Clock::operator <=()">operator&nbsp;&lt;=</a>, <a href="Poco.Clock.html#9599" title="Poco::Clock::operator =()">operator&nbsp;=</a>, <a href="Poco.Clock.html#9606" title="Poco::Clock::operator ==()">operator&nbsp;==</a>, <a href="Poco.Clock.html#9610" title="Poco::Clock::operator >()">operator&nbsp;&gt;</a>, <a href="Poco.Clock.html#9612" title="Poco::Clock::operator >=()">operator&nbsp;&gt;=</a>, <a href="Poco.Clock.html#9629" title="Poco::Clock::raw()">raw</a>, <a href="Poco.Clock.html#9633" title="Poco::Clock::resolution()">resolution</a>, <a href="Poco.Clock.html#9603" title="Poco::Clock::swap()">swap</a>, <a href="Poco.Clock.html#9605" title="Poco::Clock::update()">update</a></p>
+<h2>Types</h2>
+<h3><a id="9590">ClockDiff</a></h3>
+<p class="decl">typedef <a href="Poco.html#18964" title="Poco::Int64">Int64</a> <a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a>;</p>
+<div class="description">
+<p>Difference between two <a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> values in microseconds. </p>
+</div>
+<h3><a id="9589">ClockVal</a></h3>
+<p class="decl">typedef <a href="Poco.html#18964" title="Poco::Int64">Int64</a> <a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a>;</p>
+<div class="description">
+<p>Monotonic clock value in microsecond resolution. </p>
+</div>
+<h2>Constructors</h2>
+<h3><a id="9593">Clock</a></h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>();</p>
+<div class="description">
+<p>Creates a <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> with the current system clock value. </p>
+</div>
+<h3><a id="9594">Clock</a></h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> tv<br />);</p>
+<div class="description">
+<p>Creates a <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> from the given clock value. </p>
+</div>
+<h3><a id="9596">Clock</a></h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; other<br />);</p>
+<div class="description">
+<p>Copy constructor. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="9598">~Clock</a></h3>
+<p class="decl">~<a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>();</p>
+<div class="description">
+<p>Destroys the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="9634">accuracy</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> accuracy();</p>
+<div class="description">
+<p>Returns the system's clock accuracy in microseconds. </p>
+</div>
+<h3><a id="9630">elapsed</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> elapsed() const;</p>
+<div class="description">
+<p>Returns the time elapsed since the time denoted by the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> instance. Equivalent to <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a>() - *this. </p>
+</div>
+<h3><a id="9631">isElapsed</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool isElapsed(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> interval<br />) const;</p>
+<div class="description">
+<p>Returns true if and only if the given interval has passed since the time denoted by the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> instance. </p>
+</div>
+<h3><a id="9628">microseconds</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> microseconds() const;</p>
+<div class="description">
+<p>Returns the clock value expressed in microseconds since the system-specific epoch time (usually system startup). </p>
+</div>
+<h3><a id="9635">monotonic</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static bool monotonic();</p>
+<div class="description">
+<p>Returns true if and only if the system's clock is monotonic. </p>
+</div>
+<h3><a id="9608">operator !=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator != (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9618">operator +</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> operator + (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> d<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9624">operator +=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; operator += (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> d<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9620">operator -</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> d<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9622">operator -</a></h3>
+<p class="decl"><a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> operator - (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9626">operator -=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; operator -= (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> d<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9614">operator &lt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9616">operator &lt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &lt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9599">operator =</a></h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; other<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9601">operator =</a></h3>
+<p class="decl"><a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; operator = (<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> tv<br />);</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9606">operator ==</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator == (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9610">operator &gt;</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt; (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9612">operator &gt;=</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool operator &gt;= (<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; ts<br />) const;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="9629">raw</a> <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> raw() const;</p>
+<div class="description">
+<p>Returns the clock value expressed in microseconds since the system-specific epoch time (usually system startup). </p>
+<p>Same as <a href="Poco.Clock.html#9628" title="Poco::Clock::microseconds()">microseconds</a>(). </p>
+</div>
+<h3><a id="9633">resolution</a> <img src="images/static.png" alt="static" title="static" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">static <a href="Poco.Clock.html#9590" title="Poco::Clock::ClockDiff">ClockDiff</a> resolution();</p>
+<div class="description">
+<p>Returns the resolution in units per second. Since the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> clas has microsecond resolution, the returned value is always 1000000. </p>
+</div>
+<h3><a id="9603">swap</a></h3>
+<p class="decl">void swap(<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> &amp; clock<br />);</p>
+<div class="description">
+<p>Swaps the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> with another one. </p>
+</div>
+<h3><a id="9605">update</a></h3>
+<p class="decl">void update();</p>
+<div class="description">
+<p>Updates the <a href="Poco.Clock.html" title="class Poco::Clock">Clock</a> with the current system clock. </p>
+</div>
+<h2>Variables</h2>
+<h3><a id="9592">CLOCKVAL_MAX</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> <a href="Poco.Clock.html#9592" title="Poco::Clock::CLOCKVAL_MAX">CLOCKVAL_MAX</a>;</p>
+<div class="description">
+<p>Maximum clock value. </p>
+</div>
+<h3><a id="9591">CLOCKVAL_MIN</a> <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const <a href="Poco.Clock.html#9589" title="Poco::Clock::ClockVal">ClockVal</a> <a href="Poco.Clock.html#9591" title="Poco::Clock::CLOCKVAL_MIN">CLOCKVAL_MIN</a>;</p>
+<div class="description">
+<p>Minimum clock value. </p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Poco::JSON::ParserImpl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Applied Informatics Software Engineering GmbH and Contributors"/>
+<meta name="generator" content="PocoDoc"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="js/CollapsibleLists.compressed.js"></script>
+</head>
+<body>
+<div class="header">
+<h1 class="namespace"><a href="Poco.JSON.html" class="namespace">Poco::JSON</a></h1>
+<h1 class="symbol">class ParserImpl</h1>
+</div>
+<div class="body">
+<div id="navigation">
+<iframe src="navigation.html?expand=library-JSON" onload="iFrameResize(this);" scrolling="no"></iframe>
+</div>
+<div id="content">
+<p>
+<b>Library:</b> JSON<br />
+<b>Package:</b> JSON<br />
+<b>Header:</b> Poco/JSON/ParserImpl.h</p>
+<h2>Inheritance</h2>
+<p><b>Known Derived Classes: </b><a href="Poco.JSON.Parser.html" title="class Poco::JSON::Parser">Parser</a></p>
+<h2>Member Summary</h2>
+<p><b>Member Functions: </b><a href="Poco.JSON.ParserImpl.html#20344" title="Poco::JSON::ParserImpl::asVarImpl()">asVarImpl</a>, <a href="Poco.JSON.ParserImpl.html#20330" title="Poco::JSON::ParserImpl::getAllowCommentsImpl()">getAllowCommentsImpl</a>, <a href="Poco.JSON.ParserImpl.html#20333" title="Poco::JSON::ParserImpl::getAllowNullByteImpl()">getAllowNullByteImpl</a>, <a href="Poco.JSON.ParserImpl.html#20336" title="Poco::JSON::ParserImpl::getDepthImpl()">getDepthImpl</a>, <a href="Poco.JSON.ParserImpl.html#20343" title="Poco::JSON::ParserImpl::getHandlerImpl()">getHandlerImpl</a>, <a href="Poco.JSON.ParserImpl.html#20337" title="Poco::JSON::ParserImpl::parseImpl()">parseImpl</a>, <a href="Poco.JSON.ParserImpl.html#20327" title="Poco::JSON::ParserImpl::resetImpl()">resetImpl</a>, <a href="Poco.JSON.ParserImpl.html#20345" title="Poco::JSON::ParserImpl::resultImpl()">resultImpl</a>, <a href="Poco.JSON.ParserImpl.html#20328" title="Poco::JSON::ParserImpl::setAllowCommentsImpl()">setAllowCommentsImpl</a>, <a href="Poco.JSON.ParserImpl.html#20331" title="Poco::JSON::ParserImpl::setAllowNullByteImpl()">setAllowNullByteImpl</a>, <a href="Poco.JSON.ParserImpl.html#20334" title="Poco::JSON::ParserImpl::setDepthImpl()">setDepthImpl</a>, <a href="Poco.JSON.ParserImpl.html#20341" title="Poco::JSON::ParserImpl::setHandlerImpl()">setHandlerImpl</a></p>
+<h2>Constructors</h2>
+<h3><a id="20323">ParserImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a>(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; pHandler = new ParseHandler,<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t bufSize = JSON_PARSE_BUFFER_SIZE<br />);</p>
+<div class="description">
+<p>Creates <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> <a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a>, using the given <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a> and buffer size. </p>
+</div>
+<h2>Destructor</h2>
+<h3><a id="20326">~ParserImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/virtual.png" alt="virtual" title="virtual" class="icon" /> </h3>
+<p class="decl">virtual ~<a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a>();</p>
+<div class="description">
+<p>Destroys <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> <a href="Poco.JSON.ParserImpl.html" title="class Poco::JSON::ParserImpl">ParserImpl</a>. </p>
+</div>
+<h2>Member Functions</h2>
+<h3><a id="20344">asVarImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> asVarImpl() const;</p>
+<div class="description">
+<p>Returns the result of parsing; </p>
+</div>
+<h3><a id="20330">getAllowCommentsImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool getAllowCommentsImpl() const;</p>
+<div class="description">
+<p>Returns true if comments are allowed, false otherwise. </p>
+<p>By default, comments are not allowed. </p>
+</div>
+<h3><a id="20333">getAllowNullByteImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">bool getAllowNullByteImpl() const;</p>
+<div class="description">
+<p>Returns true if null byte is allowed, false otherwise. </p>
+<p>By default, null bytes are allowed. </p>
+</div>
+<h3><a id="20336">getDepthImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">std::size_t getDepthImpl() const;</p>
+<div class="description">
+<p>Returns the allowed <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> depth. </p>
+</div>
+<h3><a id="20343">getHandlerImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; getHandlerImpl();</p>
+<div class="description">
+<p>Returns the <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a>. </p>
+</div>
+<h3><a id="20337">parseImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> parseImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;const std::string &amp; json<br />);</p>
+<div class="description">
+<p>Parses <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> from a string. </p>
+</div>
+<h3><a id="20339">parseImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> parseImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::istream &amp; in<br />);</p>
+<div class="description">
+<p>Parses <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> from an input stream. </p>
+</div>
+<h3><a id="20327">resetImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void resetImpl();</p>
+<div class="description">
+<p>Resets the parser. </p>
+</div>
+<h3><a id="20345">resultImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl"><a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a> resultImpl() const;</p>
+<div class="description">
+<p>Returns the result of parsing as <a href="Poco.Dynamic.Var.html" title="class Poco::Dynamic::Var">Dynamic::Var</a>; </p>
+</div>
+<h3><a id="20328">setAllowCommentsImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setAllowCommentsImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;bool comments<br />);</p>
+<div class="description">
+<p>Allow or disallow comments. By default, comments are not allowed. </p>
+</div>
+<h3><a id="20331">setAllowNullByteImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setAllowNullByteImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;bool nullByte<br />);</p>
+<div class="description">
+<p>Allow or disallow null byte in strings. </p>
+<p>By default, null byte is allowed. </p>
+</div>
+<h3><a id="20334">setDepthImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setDepthImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;std::size_t depth<br />);</p>
+<div class="description">
+<p>Sets the allowed <a href="Poco.JSON.html" title="namespace Poco::JSON">JSON</a> depth. </p>
+</div>
+<h3><a id="20341">setHandlerImpl</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/inline.png" alt="inline" title="inline" class="icon" /> </h3>
+<p class="decl">void setHandlerImpl(<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a href="Poco.JSON.Handler.html#20121" title="Poco::JSON::Handler::Ptr">Handler::Ptr</a> &amp; pHandler<br />);</p>
+<div class="description">
+<p>Set the <a href="Poco.JSON.Handler.html" title="class Poco::JSON::Handler">Handler</a>. </p>
+</div>
+<h2>Variables</h2>
+<h3><a id="20321">JSON_PARSER_STACK_SIZE</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::size_t <a href="Poco.JSON.ParserImpl.html#20321" title="Poco::JSON::ParserImpl::JSON_PARSER_STACK_SIZE">JSON_PARSER_STACK_SIZE</a> = 128;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="20320">JSON_PARSE_BUFFER_SIZE</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const std::size_t <a href="Poco.JSON.ParserImpl.html#20320" title="Poco::JSON::ParserImpl::JSON_PARSE_BUFFER_SIZE">JSON_PARSE_BUFFER_SIZE</a> = 4096;</p>
+<div class="description">
+<p></p>
+</div>
+<h3><a id="20322">JSON_UNLIMITED_DEPTH</a> <img src="images/protected.png" alt="protected" title="protected" class="icon" />  <img src="images/static.png" alt="static" title="static" class="icon" /> </h3>
+<p class="decl">static const int <a href="Poco.JSON.ParserImpl.html#20322" title="Poco::JSON::ParserImpl::JSON_UNLIMITED_DEPTH">JSON_UNLIMITED_DEPTH</a> = - 1;</p>
+<div class="description">
+<p></p>
+</div>
+<p class="footer">POCO C++ Libraries 1.9.2-all<br />
+Copyright &copy; 2019, <a href="http://pocoproject.org/" target="_blank">Applied Informatics Software Engineering GmbH and Contributors</a></p>
+
+</div>
+
+</div>
+</body>
+</html>
